@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-24T22:09:10+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T14:30:10+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "pl"
 }
@@ -18,7 +18,7 @@ Spis treści:
 - [Data Science w Chmurze: Podejście "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Quiz przed wykładem](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. Wprowadzenie](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [1.1 Czym jest Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [1.1 Co to jest Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.2 Projekt przewidywania niewydolności serca i wprowadzenie do zbioru danych](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [2. Trenowanie modelu za pomocą Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.1 Tworzenie przestrzeni roboczej Azure ML](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -28,7 +28,7 @@ Spis treści:
     - [2.5 Trenowanie modelu](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.1 Konfiguracja przestrzeni roboczej, eksperymentu, klastra obliczeniowego i zbioru danych](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.2 Konfiguracja AutoML i trenowanie](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [3. Wdrażanie modelu i konsumpcja punktu końcowego za pomocą Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [3. Wdrażanie modelu i korzystanie z punktu końcowego za pomocą Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.1 Zapisywanie najlepszego modelu](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.2 Wdrażanie modelu](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.3 Konsumpcja punktu końcowego](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -37,11 +37,11 @@ Spis treści:
   - [Przegląd i samodzielna nauka](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Zadanie domowe](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Quiz przed wykładem](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Quiz przed wykładem](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Wprowadzenie
 
-### 1.1 Czym jest Azure ML SDK?
+### 1.1 Co to jest Azure ML SDK?
 
 Data Scientist i deweloperzy AI używają Azure Machine Learning SDK do budowania i uruchamiania przepływów pracy związanych z uczeniem maszynowym za pomocą usługi Azure Machine Learning. Możesz korzystać z tej usługi w dowolnym środowisku Python, w tym Jupyter Notebooks, Visual Studio Code lub ulubionym IDE dla Pythona.
 
@@ -55,9 +55,9 @@ Kluczowe obszary SDK obejmują:
 
 [Dowiedz się więcej o Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-W [poprzedniej lekcji](../18-Low-Code/README.md) zobaczyliśmy, jak trenować, wdrażać i konsumować model w sposób Low code/No code. Użyliśmy zbioru danych dotyczącego niewydolności serca, aby wygenerować model przewidywania niewydolności serca. W tej lekcji zrobimy dokładnie to samo, ale używając Azure Machine Learning SDK.
+W [poprzedniej lekcji](../18-Low-Code/README.md) zobaczyliśmy, jak trenować, wdrażać i korzystać z modelu w sposób Low code/No code. Użyliśmy zbioru danych dotyczących niewydolności serca, aby wygenerować model przewidywania niewydolności serca. W tej lekcji zrobimy dokładnie to samo, ale używając Azure Machine Learning SDK.
 
-![schemat-projektu](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.pl.png)
+![schemat-projektu](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 Projekt przewidywania niewydolności serca i wprowadzenie do zbioru danych
 
@@ -66,21 +66,21 @@ Sprawdź [tutaj](../18-Low-Code/README.md) wprowadzenie do projektu przewidywani
 ## 2. Trenowanie modelu za pomocą Azure ML SDK
 ### 2.1 Tworzenie przestrzeni roboczej Azure ML
 
-Dla uproszczenia będziemy pracować w notatniku Jupyter. Zakładamy, że masz już przestrzeń roboczą i instancję obliczeniową. Jeśli masz już przestrzeń roboczą, możesz przejść bezpośrednio do sekcji 2.3 Tworzenie notatnika.
+Dla uproszczenia będziemy pracować w notatniku Jupyter. Oznacza to, że masz już przestrzeń roboczą i instancję obliczeniową. Jeśli masz już przestrzeń roboczą, możesz przejść bezpośrednio do sekcji 2.3 Tworzenie notatnika.
 
 Jeśli nie, postępuj zgodnie z instrukcjami w sekcji **2.1 Tworzenie przestrzeni roboczej Azure ML** w [poprzedniej lekcji](../18-Low-Code/README.md), aby utworzyć przestrzeń roboczą.
 
 ### 2.2 Tworzenie instancji obliczeniowej
 
-W [przestrzeni roboczej Azure ML](https://ml.azure.com/), którą utworzyliśmy wcześniej, przejdź do menu Compute, gdzie zobaczysz różne dostępne zasoby obliczeniowe.
+W [przestrzeni roboczej Azure ML](https://ml.azure.com/), którą utworzyliśmy wcześniej, przejdź do menu obliczeń, gdzie zobaczysz różne dostępne zasoby obliczeniowe.
 
-![instancja-obliczeniowa-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.pl.png)
+![instancja-obliczeniowa-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
-Stwórzmy instancję obliczeniową, aby uruchomić notatnik Jupyter. 
-1. Kliknij przycisk + New. 
+Stwórz instancję obliczeniową, aby uruchomić notatnik Jupyter. 
+1. Kliknij przycisk + Nowy. 
 2. Nadaj nazwę swojej instancji obliczeniowej.
-3. Wybierz opcje: CPU lub GPU, rozmiar VM i liczbę rdzeni.
-4. Kliknij przycisk Create.
+3. Wybierz opcje: CPU lub GPU, rozmiar maszyny wirtualnej i liczbę rdzeni.
+4. Kliknij przycisk Utwórz.
 
 Gratulacje, właśnie stworzyłeś instancję obliczeniową! Użyjemy tej instancji do stworzenia notatnika w sekcji [Tworzenie Notatników](../../../../5-Data-Science-In-Cloud/19-Azure).
 
@@ -89,24 +89,24 @@ Jeśli jeszcze nie załadowałeś zbioru danych, odwołaj się do sekcji **2.3 �
 
 ### 2.4 Tworzenie Notatników
 
-> **_UWAGA:_** W kolejnym kroku możesz stworzyć nowy notatnik od podstaw lub załadować [notatnik, który stworzyliśmy](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) w Azure ML Studio. Aby go załadować, po prostu kliknij menu "Notebook" i załaduj notatnik.
+> **_UWAGA:_** W następnym kroku możesz stworzyć nowy notatnik od podstaw lub załadować [notatnik, który stworzyliśmy](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) w Azure ML Studio. Aby go załadować, po prostu kliknij menu "Notebook" i załaduj notatnik.
 
-Notatniki są bardzo ważnym elementem procesu data science. Mogą być używane do przeprowadzania eksploracyjnej analizy danych (EDA), wywoływania klastra obliczeniowego w celu trenowania modelu, a także klastra inferencyjnego w celu wdrożenia punktu końcowego.
+Notatniki są bardzo ważnym elementem procesu data science. Mogą być używane do przeprowadzania eksploracyjnej analizy danych (EDA), wywoływania klastra obliczeniowego w celu trenowania modelu, wywoływania klastra inferencyjnego w celu wdrożenia punktu końcowego.
 
-Aby stworzyć notatnik, potrzebujemy węzła obliczeniowego, który obsługuje instancję notatnika Jupyter. Wróć do [przestrzeni roboczej Azure ML](https://ml.azure.com/) i kliknij na Instancje obliczeniowe. Na liście instancji obliczeniowych powinieneś zobaczyć [instancję obliczeniową, którą stworzyliśmy wcześniej](../../../../5-Data-Science-In-Cloud/19-Azure). 
+Aby stworzyć notatnik, potrzebujemy węzła obliczeniowego, który obsługuje instancję notatnika Jupyter. Wróć do [przestrzeni roboczej Azure ML](https://ml.azure.com/) i kliknij Instancje obliczeniowe. Na liście instancji obliczeniowych powinieneś zobaczyć [instancję obliczeniową, którą stworzyliśmy wcześniej](../../../../5-Data-Science-In-Cloud/19-Azure). 
 
-1. W sekcji Applications kliknij opcję Jupyter. 
-2. Zaznacz pole "Yes, I understand" i kliknij przycisk Continue.
-![notatnik-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.pl.png)
-3. Powinno otworzyć się nowe okno przeglądarki z instancją notatnika Jupyter. Kliknij przycisk "New", aby stworzyć nowy notatnik.
+1. W sekcji Aplikacje kliknij opcję Jupyter. 
+2. Zaznacz pole "Tak, rozumiem" i kliknij przycisk Kontynuuj.
+![notatnik-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
+3. Powinno to otworzyć nową kartę przeglądarki z instancją notatnika Jupyter. Kliknij przycisk "Nowy", aby stworzyć notatnik.
 
-![notatnik-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.pl.png)
+![notatnik-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 Teraz, gdy mamy notatnik, możemy rozpocząć trenowanie modelu za pomocą Azure ML SDK.
 
 ### 2.5 Trenowanie modelu
 
-Przede wszystkim, jeśli masz jakiekolwiek wątpliwości, odwołaj się do [dokumentacji Azure ML SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). Zawiera ona wszystkie niezbędne informacje dotyczące modułów, które omówimy w tej lekcji.
+Przede wszystkim, jeśli masz jakiekolwiek wątpliwości, odwołaj się do [dokumentacji Azure ML SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). Zawiera ona wszystkie niezbędne informacje, aby zrozumieć moduły, które zobaczymy w tej lekcji.
 
 #### 2.5.1 Konfiguracja przestrzeni roboczej, eksperymentu, klastra obliczeniowego i zbioru danych
 
@@ -156,19 +156,19 @@ df.describe()
 
 Aby skonfigurować AutoML, użyj klasy [AutoMLConfig](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig(class)?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
-Jak opisano w dokumentacji, istnieje wiele parametrów, z którymi możesz eksperymentować. W tym projekcie użyjemy następujących parametrów:
+Jak opisano w dokumentacji, istnieje wiele parametrów, z którymi można eksperymentować. W tym projekcie użyjemy następujących parametrów:
 
-- `experiment_timeout_minutes`: Maksymalny czas (w minutach), przez jaki eksperyment może być uruchamiany, zanim zostanie automatycznie zatrzymany, a wyniki udostępnione.
+- `experiment_timeout_minutes`: Maksymalny czas (w minutach), przez jaki eksperyment może być uruchamiany, zanim zostanie automatycznie zatrzymany, a wyniki automatycznie udostępnione.
 - `max_concurrent_iterations`: Maksymalna liczba równoczesnych iteracji treningowych dozwolona dla eksperymentu.
 - `primary_metric`: Główny wskaźnik używany do określenia statusu eksperymentu.
 - `compute_target`: Cel obliczeniowy Azure Machine Learning, na którym ma być uruchomiony eksperyment AutoML.
-- `task`: Typ zadania do wykonania. Wartości mogą być 'classification', 'regression' lub 'forecasting', w zależności od rodzaju problemu AutoML.
+- `task`: Typ zadania do wykonania. Wartości mogą być 'classification', 'regression' lub 'forecasting', w zależności od rodzaju problemu AutoML do rozwiązania.
 - `training_data`: Dane treningowe używane w eksperymencie. Powinny zawierać zarówno cechy treningowe, jak i kolumnę etykiet (opcjonalnie kolumnę wag próbek).
 - `label_column_name`: Nazwa kolumny etykiet.
 - `path`: Pełna ścieżka do folderu projektu Azure Machine Learning.
 - `enable_early_stopping`: Czy włączyć wczesne zakończenie, jeśli wynik nie poprawia się w krótkim okresie.
-- `featurization`: Wskaźnik, czy etap featuryzacji powinien być wykonywany automatycznie, czy nie, lub czy powinna być używana niestandardowa featuryzacja.
-- `debug_log`: Plik logów do zapisywania informacji debugowych.
+- `featurization`: Wskaźnik, czy krok featuryzacji powinien być wykonywany automatycznie, czy nie, lub czy powinna być używana niestandardowa featuryzacja.
+- `debug_log`: Plik logów do zapisywania informacji debugowania.
 
 ```python
 from azureml.train.automl import AutoMLConfig
@@ -197,12 +197,12 @@ Teraz, gdy konfiguracja jest ustawiona, możesz wytrenować model za pomocą nas
 ```python
 remote_run = experiment.submit(automl_config)
 ```
-Możesz uruchomić widget RunDetails, aby wyświetlić różne eksperymenty.
+Możesz uruchomić widżet RunDetails, aby zobaczyć różne eksperymenty.
 ```python
 from azureml.widgets import RunDetails
 RunDetails(remote_run).show()
 ```
-## 3. Wdrażanie modelu i konsumpcja punktu końcowego za pomocą Azure ML SDK
+## 3. Wdrażanie modelu i korzystanie z punktu końcowego za pomocą Azure ML SDK
 
 ### 3.1 Zapisywanie najlepszego modelu
 
@@ -254,7 +254,7 @@ Ten krok powinien zająć kilka minut.
 
 ### 3.3 Konsumpcja punktu końcowego
 
-Możesz konsumować swój punkt końcowy, tworząc przykładowe dane wejściowe:
+Możesz korzystać z punktu końcowego, tworząc przykładowe dane wejściowe:
 
 ```python
 data = {
@@ -279,7 +279,7 @@ data = {
 
 test_sample = str.encode(json.dumps(data))
 ```
-A następnie możesz wysłać te dane wejściowe do swojego modelu w celu uzyskania przewidywań:
+A następnie możesz wysłać te dane wejściowe do swojego modelu w celu przewidywania:
 ```python
 response = aci_service.run(input_data=test_sample)
 response
@@ -292,11 +292,11 @@ Gratulacje! Właśnie skorzystałeś z modelu wdrożonego i wytrenowanego na Azu
 
 ## 🚀 Wyzwanie
 
-Jest wiele innych rzeczy, które można zrobić za pomocą SDK, niestety nie możemy omówić ich wszystkich w tej lekcji. Ale dobra wiadomość: nauczenie się, jak przeszukiwać dokumentację SDK, może zaprowadzić Cię daleko na własną rękę. Sprawdź dokumentację Azure ML SDK i znajdź klasę `Pipeline`, która pozwala tworzyć potoki. Potok to zbiór kroków, które można wykonać jako przepływ pracy.
+Jest wiele innych rzeczy, które możesz zrobić za pomocą SDK, niestety nie możemy omówić ich wszystkich w tej lekcji. Ale dobra wiadomość: nauczenie się, jak przeszukiwać dokumentację SDK, może zaprowadzić Cię daleko na własną rękę. Sprawdź dokumentację Azure ML SDK i znajdź klasę `Pipeline`, która pozwala tworzyć potoki. Potok to zbiór kroków, które można wykonać jako przepływ pracy.
 
 **Wskazówka:** Przejdź do [dokumentacji SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) i wpisz słowa kluczowe w pasku wyszukiwania, takie jak "Pipeline". Powinieneś znaleźć klasę `azureml.pipeline.core.Pipeline` w wynikach wyszukiwania.
 
-## [Quiz po wykładzie](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Quiz po wykładzie](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
 ## Przegląd i samodzielna nauka
 
@@ -306,5 +306,7 @@ W tej lekcji nauczyłeś się, jak wytrenować, wdrożyć i wykorzystać model d
 
 [Projekt Data Science z użyciem Azure ML SDK](assignment.md)
 
+---
+
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

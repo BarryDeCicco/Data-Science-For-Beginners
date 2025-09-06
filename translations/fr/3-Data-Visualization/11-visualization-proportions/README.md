@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "af6a12015c6e250e500b570a9fa42593",
-  "translation_date": "2025-08-25T18:41:29+00:00",
+  "original_hash": "42119bcc97bee88254e381156d770f3c",
+  "translation_date": "2025-09-05T12:25:42+00:00",
   "source_file": "3-Data-Visualization/11-visualization-proportions/README.md",
   "language_code": "fr"
 }
@@ -21,9 +21,9 @@ Dans cette leçon, vous utiliserez un ensemble de données axé sur la nature po
 
 > 💡 Un projet très intéressant appelé [Charticulator](https://charticulator.com) de Microsoft Research propose une interface gratuite de glisser-déposer pour les visualisations de données. Dans l'un de leurs tutoriels, ils utilisent également cet ensemble de données sur les champignons ! Vous pouvez donc explorer les données et apprendre à utiliser la bibliothèque en même temps : [Tutoriel Charticulator](https://charticulator.com/tutorials/tutorial4.html).
 
-## [Quiz avant la leçon](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/20)
+## [Quiz avant la leçon](https://ff-quizzes.netlify.app/en/ds/quiz/20)
 
-## Faites connaissance avec vos champignons 🍄
+## Apprenez à connaître vos champignons 🍄
 
 Les champignons sont très intéressants. Importons un ensemble de données pour les étudier :
 
@@ -35,12 +35,12 @@ mushrooms.head()
 ```  
 Un tableau est affiché avec des données intéressantes pour l'analyse :
 
-| classe     | forme du chapeau | surface du chapeau | couleur du chapeau | meurtri | odeur    | attache des lamelles | espacement des lamelles | taille des lamelles | couleur des lamelles | forme du pied | racine du pied | surface du pied au-dessus de l'anneau | surface du pied en dessous de l'anneau | couleur du pied au-dessus de l'anneau | couleur du pied en dessous de l'anneau | type de voile | couleur du voile | nombre d'anneaux | type d'anneau | couleur des spores | population | habitat |
-| --------- | ---------------- | ------------------ | ------------------ | ------- | ------- | -------------------- | ----------------------- | ------------------- | -------------------- | ------------- | -------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------- | ---------------- | ---------------- | ------------- | ----------------- | ---------- | ------- |
-| Toxique   | Convexe          | Lisse             | Marron            | Meurtri | Piquant | Libre                | Serré                  | Étroit             | Noir                | Élargi        | Égal           | Lisse                               | Lisse                               | Blanc                                | Blanc                                | Partiel       | Blanc            | Un               | Pendant       | Noir              | Dispersé   | Urbain  |
-| Comestible| Convexe          | Lisse             | Jaune             | Meurtri | Amande  | Libre                | Serré                  | Large              | Noir                | Élargi        | Massue         | Lisse                               | Lisse                               | Blanc                                | Blanc                                | Partiel       | Blanc            | Un               | Pendant       | Marron            | Nombreux   | Herbes  |
-| Comestible| Cloché           | Lisse             | Blanc             | Meurtri | Anis    | Libre                | Serré                  | Large              | Marron              | Élargi        | Massue         | Lisse                               | Lisse                               | Blanc                                | Blanc                                | Partiel       | Blanc            | Un               | Pendant       | Marron            | Nombreux   | Prairies|
-| Toxique   | Convexe          | Écailleux         | Blanc             | Meurtri | Piquant | Libre                | Serré                  | Étroit             | Marron              | Élargi        | Égal           | Lisse                               | Lisse                               | Blanc                                | Blanc                                | Partiel       | Blanc            | Un               | Pendant       | Noir              | Dispersé   | Urbain  |
+| classe     | forme du chapeau | surface du chapeau | couleur du chapeau | meurtri | odeur    | attachement des lamelles | espacement des lamelles | taille des lamelles | couleur des lamelles | forme de la tige | racine de la tige | surface de la tige au-dessus de l'anneau | surface de la tige en dessous de l'anneau | couleur de la tige au-dessus de l'anneau | couleur de la tige en dessous de l'anneau | type de voile | couleur du voile | nombre d'anneaux | type d'anneau | couleur des spores | population | habitat |
+| --------- | ---------------- | ------------------ | ------------------ | ------- | ------- | ----------------------- | ----------------------- | ------------------- | -------------------- | ---------------- | ---------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------- | ---------------- | --------------- | ------------- | ----------------- | ---------- | ------- |
+| Toxique   | Convexe          | Lisse             | Marron            | Meurtri | Piquant | Libre                  | Serré                  | Étroit             | Noir                | Élargie          | Égale            | Lisse                                 | Lisse                                 | Blanc                                  | Blanc                                  | Partiel       | Blanc           | Un               | Pendant       | Noir              | Dispersé   | Urbain  |
+| Comestible| Convexe          | Lisse             | Jaune             | Meurtri | Amande  | Libre                  | Serré                  | Large              | Noir                | Élargie          | Club             | Lisse                                 | Lisse                                 | Blanc                                  | Blanc                                  | Partiel       | Blanc           | Un               | Pendant       | Marron            | Nombreux   | Herbes  |
+| Comestible| Cloché           | Lisse             | Blanc             | Meurtri | Anis    | Libre                  | Serré                  | Large              | Marron              | Élargie          | Club             | Lisse                                 | Lisse                                 | Blanc                                  | Blanc                                  | Partiel       | Blanc           | Un               | Pendant       | Marron            | Nombreux   | Prairies|
+| Toxique   | Convexe          | Écailleux         | Blanc             | Meurtri | Piquant | Libre                  | Serré                  | Étroit             | Marron              | Élargie          | Égale            | Lisse                                 | Lisse                                 | Blanc                                  | Blanc                                  | Partiel       | Blanc           | Un               | Pendant       | Noir              | Dispersé   | Urbain  |
 
 Vous remarquez immédiatement que toutes les données sont textuelles. Vous devrez convertir ces données pour pouvoir les utiliser dans un graphique. La plupart des données, en fait, sont représentées comme un objet :
 
@@ -71,13 +71,13 @@ edibleclass=mushrooms.groupby(['class']).count()
 edibleclass
 ```  
 
-Maintenant, si vous imprimez les données des champignons, vous pouvez voir qu'elles ont été regroupées en catégories selon la classe toxique/comestible :
+Maintenant, si vous affichez les données des champignons, vous pouvez voir qu'elles ont été regroupées en catégories selon la classe toxique/comestible :
 
-|           | forme du chapeau | surface du chapeau | couleur du chapeau | meurtri | odeur | attache des lamelles | espacement des lamelles | taille des lamelles | couleur des lamelles | forme du pied | ... | surface du pied en dessous de l'anneau | couleur du pied au-dessus de l'anneau | couleur du pied en dessous de l'anneau | type de voile | couleur du voile | nombre d'anneaux | type d'anneau | couleur des spores | population | habitat |
-| --------- | ---------------- | ------------------ | ------------------ | ------- | ---- | -------------------- | ----------------------- | ------------------- | -------------------- | ------------- | --- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------- | ---------------- | ---------------- | ------------- | ----------------- | ---------- | ------- |
-| classe    |                  |                    |                    |         |      |                      |                         |                     |                      |               |     |                                    |                                    |                                    |               |                |                  |               |                   |            |         |
-| Comestible| 4208             | 4208               | 4208               | 4208    | 4208 | 4208                | 4208                    | 4208                | 4208                 | 4208          | ... | 4208                               | 4208                               | 4208                               | 4208          | 4208           | 4208              | 4208          | 4208              | 4208       | 4208    |
-| Toxique   | 3916             | 3916               | 3916               | 3916    | 3916 | 3916                | 3916                    | 3916                | 3916                 | 3916          | ... | 3916                               | 3916                               | 3916                               | 3916          | 3916           | 3916              | 3916          | 3916              | 3916       | 3916    |
+|           | forme du chapeau | surface du chapeau | couleur du chapeau | meurtri | odeur | attachement des lamelles | espacement des lamelles | taille des lamelles | couleur des lamelles | forme de la tige | ... | surface de la tige en dessous de l'anneau | couleur de la tige au-dessus de l'anneau | couleur de la tige en dessous de l'anneau | type de voile | couleur du voile | nombre d'anneaux | type d'anneau | couleur des spores | population | habitat |
+| --------- | ---------------- | ------------------ | ------------------ | ------- | ---- | ----------------------- | ----------------------- | ------------------- | -------------------- | ---------------- | --- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------- | ---------------- | --------------- | ------------- | ----------------- | ---------- | ------- |
+| classe    |                  |                    |                    |         |      |                         |                         |                     |                      |                  |     |                                       |                                       |                                       |               |                |                 |               |                   |            |         |
+| Comestible| 4208             | 4208               | 4208               | 4208    | 4208 | 4208                    | 4208                    | 4208                | 4208                 | 4208             | ... | 4208                                   | 4208                                   | 4208                                   | 4208          | 4208           | 4208            | 4208          | 4208              | 4208       | 4208    |
+| Toxique   | 3916             | 3916               | 3916               | 3916    | 3916 | 3916                    | 3916                    | 3916                | 3916                 | 3916             | ... | 3916                                   | 3916                                   | 3916                                   | 3916          | 3916           | 3916            | 3916          | 3916              | 3916       | 3916    |
 
 Si vous suivez l'ordre présenté dans ce tableau pour créer vos étiquettes de catégorie de classe, vous pouvez construire un diagramme circulaire :
 
@@ -91,11 +91,11 @@ plt.show()
 ```  
 Voilà, un diagramme circulaire montrant les proportions de ces données selon ces deux classes de champignons. Il est très important de respecter l'ordre des étiquettes, surtout ici, alors assurez-vous de vérifier l'ordre avec lequel le tableau des étiquettes est construit !
 
-![diagramme circulaire](../../../../translated_images/pie1-wb.e201f2fcc335413143ce37650fb7f5f0bb21358e7823a327ed8644dfb84be9db.fr.png)
+![diagramme circulaire](../../../../3-Data-Visualization/11-visualization-proportions/images/pie1-wb.png)
 
 ## Diagrammes en anneau !
 
-Un diagramme circulaire un peu plus visuellement intéressant est un diagramme en anneau, qui est un diagramme circulaire avec un trou au milieu. Regardons nos données en utilisant cette méthode.
+Un diagramme circulaire un peu plus visuellement intéressant est un diagramme en anneau, qui est un diagramme circulaire avec un trou au centre. Regardons nos données en utilisant cette méthode.
 
 Examinez les différents habitats où poussent les champignons :
 
@@ -121,7 +121,7 @@ plt.title('Mushroom Habitats')
 plt.show()
 ```  
 
-![diagramme en anneau](../../../../translated_images/donut-wb.be3c12a22712302b5d10c40014d5389d4a1ae4412fe1655b3cf4af57b64f799a.fr.png)
+![diagramme en anneau](../../../../3-Data-Visualization/11-visualization-proportions/images/donut-wb.png)
 
 Ce code dessine un graphique et un cercle central, puis ajoute ce cercle central au graphique. Modifiez la largeur du cercle central en changeant `0.40` pour une autre valeur.
 
@@ -167,20 +167,20 @@ fig = plt.figure(
 )
 ```  
 
-Avec un diagramme en gaufre, vous pouvez clairement voir les proportions des couleurs de chapeau dans cet ensemble de données sur les champignons. Fait intéressant, il y a beaucoup de champignons à chapeau vert !
+Avec un diagramme en gaufre, vous pouvez clairement voir les proportions des couleurs de chapeau dans cet ensemble de données sur les champignons. Fait intéressant, il y a de nombreux champignons à chapeau vert !
 
-![diagramme en gaufre](../../../../translated_images/waffle.5455dbae4ccf17d53bb40ff0a657ecef7b8aa967e27a19cc96325bd81598f65e.fr.png)
+![diagramme en gaufre](../../../../3-Data-Visualization/11-visualization-proportions/images/waffle.png)
 
-✅ PyWaffle prend en charge les icônes dans les graphiques qui utilisent n'importe quelle icône disponible dans [Font Awesome](https://fontawesome.com/). Faites des expériences pour créer un diagramme en gaufre encore plus intéressant en utilisant des icônes au lieu de carrés.
+✅ Pywaffle prend en charge les icônes dans les graphiques qui utilisent n'importe quelle icône disponible dans [Font Awesome](https://fontawesome.com/). Faites des expériences pour créer un diagramme en gaufre encore plus intéressant en utilisant des icônes au lieu de carrés.
 
 Dans cette leçon, vous avez appris trois façons de visualiser les proportions. Tout d'abord, vous devez regrouper vos données en catégories, puis décider de la meilleure façon de les afficher - circulaire, en anneau ou en gaufre. Tous sont délicieux et offrent à l'utilisateur un aperçu instantané d'un ensemble de données.
 
 ## 🚀 Défi
 
 Essayez de recréer ces graphiques savoureux dans [Charticulator](https://charticulator.com).  
-## [Quiz après la leçon](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/21)
+## [Quiz après la leçon](https://ff-quizzes.netlify.app/en/ds/quiz/21)
 
-## Révision et étude personnelle
+## Révision et auto-apprentissage
 
 Parfois, il n'est pas évident de savoir quand utiliser un diagramme circulaire, en anneau ou en gaufre. Voici quelques articles à lire sur ce sujet :
 
@@ -193,10 +193,11 @@ https://www.mit.edu/~mbarker/formula1/f1help/11-ch-c6.htm
 https://medium.datadriveninvestor.com/data-visualization-done-the-right-way-with-tableau-waffle-chart-fdf2a19be402  
 
 Faites des recherches pour trouver plus d'informations sur cette décision délicate.  
-
 ## Devoir
 
 [Essayez-le dans Excel](assignment.md)  
+
+---
 
 **Avertissement** :  
 Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

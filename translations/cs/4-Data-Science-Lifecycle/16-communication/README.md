@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1ac43023e78bfe76481a32c878ace516",
-  "translation_date": "2025-08-26T16:34:50+00:00",
+  "original_hash": "e4eae0345bfb6c9c936fca47081e57f8",
+  "translation_date": "2025-09-05T17:49:38+00:00",
   "source_file": "4-Data-Science-Lifecycle/16-communication/README.md",
   "language_code": "cs"
 }
@@ -13,158 +13,158 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Životní cyklus datové vědy: Komunikace - _Sketchnote od [@nitya](https://twitter.com/nitya)_ |
 
-## [Kvíz před lekcí](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/30)
+## [Kvíz před přednáškou](https://ff-quizzes.netlify.app/en/ds/quiz/30)
 
-Otestujte si své znalosti toho, co vás čeká, pomocí výše uvedeného kvízu před lekcí!
+Otestujte si své znalosti pomocí kvízu před přednáškou výše!
 
 # Úvod
 
-### Co je to komunikace?
-Začněme tuto lekci definicí toho, co znamená komunikovat. **Komunikovat znamená předávat nebo vyměňovat si informace.** Informace mohou být nápady, myšlenky, pocity, zprávy, skryté signály, data – cokoliv, co chce **_odesílatel_** (ten, kdo informace posílá) předat **_příjemci_** (ten, kdo informace přijímá), aby to pochopil. V této lekci budeme odesílatele označovat jako komunikátory a příjemce jako publikum.
+### Co je komunikace?
+Začněme tuto lekci definicí komunikace. **Komunikovat znamená předávat nebo vyměňovat informace.** Informace mohou být nápady, myšlenky, pocity, zprávy, skryté signály, data – cokoli, co chce **_odesílatel_** (ten, kdo informace posílá) předat **_příjemci_** (ten, kdo informace přijímá). V této lekci budeme o odesílatelích mluvit jako o komunikátorech a o příjemcích jako o publiku.
 
-### Datová komunikace a vyprávění příběhů
-Chápeme, že cílem komunikace je předávat nebo vyměňovat si informace. Ale při komunikaci dat by vaším cílem nemělo být pouze předat čísla vašemu publiku. Vaším cílem by mělo být sdělit příběh, který je podložen vašimi daty – efektivní datová komunikace a vyprávění příběhů jdou ruku v ruce. Vaše publikum si pravděpodobněji zapamatuje příběh, který vyprávíte, než číslo, které uvedete. Později v této lekci si projdeme několik způsobů, jak můžete pomocí vyprávění příběhů efektivněji komunikovat svá data.
+### Komunikace dat a vyprávění příběhů
+Chápeme, že cílem komunikace je předávat nebo vyměňovat informace. Ale při komunikaci dat by vaším cílem nemělo být pouze předávat čísla publiku. Vaším cílem by mělo být sdělit příběh, který je podložen vašimi daty – efektivní komunikace dat a vyprávění příběhů jdou ruku v ruce. Vaše publikum si spíše zapamatuje příběh, který vyprávíte, než čísla, která uvádíte. Později v této lekci si projdeme několik způsobů, jak můžete pomocí vyprávění příběhů efektivněji komunikovat svá data.
 
 ### Typy komunikace
 V průběhu této lekce budou diskutovány dva různé typy komunikace: jednosměrná komunikace a obousměrná komunikace.
 
-**Jednosměrná komunikace** nastává, když odesílatel posílá informace příjemci, aniž by dostal zpětnou vazbu nebo odpověď. Příklady jednosměrné komunikace vidíme každý den – v hromadných e-mailech, když zprávy přinášejí nejnovější události, nebo když se objeví televizní reklama a informuje vás o tom, proč je jejich produkt skvělý. V každém z těchto případů odesílatel neusiluje o výměnu informací. Snaží se pouze předat nebo doručit informace.
+**Jednosměrná komunikace** nastává, když odesílatel posílá informace příjemci, aniž by dostal zpětnou vazbu nebo odpověď. Příklady jednosměrné komunikace vidíme každý den – hromadné e-maily, zprávy, které přinášejí nejnovější události, nebo televizní reklamy, které vás informují o tom, proč je jejich produkt skvělý. V každém z těchto případů odesílatel neusiluje o výměnu informací, ale pouze o jejich předání.
 
-**Obousměrná komunikace** nastává, když všechny zúčastněné strany fungují jako odesílatelé i příjemci. Odesílatel začne komunikovat s příjemcem a příjemce poskytne zpětnou vazbu nebo odpověď. Obousměrná komunikace je to, co si obvykle představíme, když mluvíme o komunikaci. Obvykle si představíme lidi zapojené do konverzace – ať už osobně, po telefonu, na sociálních sítích nebo prostřednictvím textových zpráv.
+**Obousměrná komunikace** nastává, když všechny zúčastněné strany fungují jako odesílatelé i příjemci. Odesílatel začne komunikovat s příjemcem, který poskytne zpětnou vazbu nebo odpověď. Obousměrná komunikace je to, co si obvykle představujeme pod pojmem komunikace. Obvykle si představujeme lidi zapojené do konverzace – buď osobně, nebo prostřednictvím telefonního hovoru, sociálních médií či textové zprávy.
 
-Při komunikaci dat nastanou situace, kdy budete používat jednosměrnou komunikaci (například při prezentaci na konferenci nebo před velkou skupinou, kde se otázky nebudou klást přímo po skončení), a situace, kdy budete používat obousměrnou komunikaci (například při přesvědčování několika zainteresovaných stran, aby podpořily váš návrh, nebo při snaze přesvědčit kolegu, že stojí za to investovat čas a úsilí do vytvoření něčeho nového).
+Při komunikaci dat se mohou vyskytnout situace, kdy budete používat jednosměrnou komunikaci (například při prezentaci na konferenci nebo před velkou skupinou, kde se otázky nebudou klást ihned poté) a situace, kdy budete používat obousměrnou komunikaci (například při přesvědčování několika zainteresovaných stran o investici nebo při přesvědčování kolegy, že stojí za to věnovat čas a úsilí na vytvoření něčeho nového).
 
 # Efektivní komunikace
 
 ### Vaše odpovědnost jako komunikátora
-Při komunikaci je vaší povinností zajistit, aby si příjemce odnesl informace, které chcete, aby si odnesl. Když komunikujete data, nechcete, aby si příjemci odnesli jen čísla – chcete, aby si odnesli příběh, který je podložen vašimi daty. Dobrý komunikátor dat je dobrý vypravěč.
+Při komunikaci je vaší povinností zajistit, aby si příjemci odnesli informace, které chcete, aby si odnesli. Při komunikaci dat nechcete, aby si příjemci odnesli pouze čísla, ale příběh, který je podložen vašimi daty. Dobrý komunikátor dat je dobrý vypravěč.
 
 Jak vyprávět příběh pomocí dat? Existuje nekonečně mnoho způsobů – ale níže je uvedeno 6, o kterých budeme mluvit v této lekci.
-1. Pochopte své publikum, svůj kanál a svou metodu komunikace
-2. Začněte s cílem na mysli
-3. Přistupujte k tomu jako k opravdovému příběhu
-4. Používejte smysluplná slova a fráze
-5. Používejte emoce
+1.	Pochopte své publikum, svůj kanál a způsob komunikace
+2.	Začněte s cílem na mysli
+3.	Přistupujte k tomu jako k opravdovému příběhu
+4.	Používejte smysluplná slova a fráze
+5.	Používejte emoce
 
 Každá z těchto strategií je podrobněji vysvětlena níže.
 
-### 1. Pochopte své publikum, svůj kanál a svou metodu komunikace
-Způsob, jakým komunikujete s rodinnými příslušníky, se pravděpodobně liší od způsobu, jakým komunikujete s přáteli. Pravděpodobně používáte jiná slova a fráze, která lidé, s nimiž mluvíte, lépe pochopí. Stejný přístup byste měli zvolit při komunikaci dat. Přemýšlejte o tom, s kým komunikujete. Přemýšlejte o jejich cílech a o kontextu, který mají ohledně situace, kterou jim vysvětlujete.
+### 1. Pochopte své publikum, svůj kanál a způsob komunikace
+Způsob, jakým komunikujete s rodinnými příslušníky, se pravděpodobně liší od způsobu, jakým komunikujete s přáteli. Pravděpodobně používáte jiná slova a fráze, které lidé, s nimiž mluvíte, lépe pochopí. Stejný přístup byste měli zvolit při komunikaci dat. Přemýšlejte o tom, komu komunikujete. Přemýšlejte o jejich cílech a kontextu, který mají ohledně situace, kterou jim vysvětlujete.
 
-Většinu svého publika pravděpodobně můžete zařadit do jedné z kategorií. V článku _Harvard Business Review_ “[How to Tell a Story with Data](http://blogs.hbr.org/2013/04/how-to-tell-a-story-with-data/)” identifikuje výkonný stratég společnosti Dell, Jim Stikeleather, pět kategorií publika:
+Vaše publikum můžete pravděpodobně zařadit do jedné z kategorií. V článku _Harvard Business Review_ „[Jak vyprávět příběh pomocí dat](http://blogs.hbr.org/2013/04/how-to-tell-a-story-with-data/)“ identifikuje strategický poradce společnosti Dell Jim Stikeleather pět kategorií publika.
 
-- **Začátečník**: první setkání s tématem, ale nechce přílišné zjednodušení
-- **Obecný posluchač**: má povědomí o tématu, ale hledá přehled a hlavní témata
-- **Manažer**: podrobné, akční pochopení složitostí a vzájemných vztahů s přístupem k detailům
-- **Expert**: více zkoumání a objevování, méně vyprávění příběhů, s velkým důrazem na detaily
-- **Vedoucí pracovník**: má čas pouze na pochopení významu a závěrů vážených pravděpodobností
+ - **Nováček**: první kontakt s tématem, ale nechce přílišné zjednodušení
+ - **Obecný uživatel**: povědomí o tématu, hledá přehledné porozumění a hlavní témata
+ - **Manažer**: podrobné, akční porozumění složitostem a vzájemným vztahům s přístupem k detailům
+ - **Expert**: více zkoumání a objevování, méně vyprávění příběhů, s velkým množstvím detailů
+ - **Vedoucí pracovník**: má čas pouze na pochopení významu a závěrů vážených pravděpodobností
 
 Tyto kategorie mohou ovlivnit způsob, jakým prezentujete data svému publiku.
 
-Kromě přemýšlení o kategorii vašeho publika byste měli také zvážit kanál, který používáte ke komunikaci. Váš přístup by měl být mírně odlišný, pokud píšete memorandum nebo e-mail, než když máte schůzku nebo prezentujete na konferenci.
+Kromě přemýšlení o kategorii vašeho publika byste měli také zvážit kanál, který používáte k komunikaci s publikem. Váš přístup by měl být mírně odlišný, pokud píšete memorandum nebo e-mail, oproti tomu, když máte schůzku nebo prezentujete na konferenci.
 
-Na vrcholu pochopení vašeho publika je také klíčové vědět, jak s ním budete komunikovat (používáte jednosměrnou nebo obousměrnou komunikaci).
+Na základě pochopení vašeho publika je také důležité vědět, jakým způsobem s ním budete komunikovat (jednosměrně nebo obousměrně).
 
-Pokud komunikujete s většinou publika, které je v kategorii Začátečník, a používáte jednosměrnou komunikaci, musíte nejprve publikum vzdělat a poskytnout mu správný kontext. Poté jim musíte představit svá data, vysvětlit, co znamenají, a proč jsou důležitá. V tomto případě byste se měli zaměřit na maximální srozumitelnost, protože vaše publikum vám nebude moci klást přímé otázky.
+Pokud komunikujete s většinou publika, které je nováčkem, a používáte jednosměrnou komunikaci, musíte nejprve publikum vzdělat a poskytnout mu správný kontext. Poté musíte prezentovat svá data, vysvětlit, co vaše data znamenají a proč jsou důležitá. V tomto případě byste se měli zaměřit na jasnost, protože vaše publikum nebude mít možnost klást přímé otázky.
 
-Pokud komunikujete s většinou publika v kategorii Manažer a používáte obousměrnou komunikaci, pravděpodobně nebudete muset své publikum vzdělávat nebo mu poskytovat mnoho kontextu. Možná budete moci rovnou přejít k diskusi o datech, která jste shromáždili, a proč jsou důležitá. V tomto scénáři byste se však měli zaměřit na načasování a kontrolu své prezentace. Při obousměrné komunikaci (zejména s publikem v kategorii Manažer, které hledá „akční pochopení složitostí a vzájemných vztahů s přístupem k detailům“) mohou během interakce vyvstat otázky, které mohou diskusi odvést od příběhu, který se snažíte vyprávět. Když k tomu dojde, můžete zasáhnout a vrátit diskusi zpět na správnou cestu.
+Pokud komunikujete s většinou publika, které je manažerské, a používáte obousměrnou komunikaci, pravděpodobně nebudete muset své publikum vzdělávat nebo mu poskytovat mnoho kontextu. Můžete se rovnou pustit do diskuse o datech, která jste shromáždili, a proč jsou důležitá. V tomto scénáři byste se však měli zaměřit na načasování a kontrolu své prezentace. Při obousměrné komunikaci (zejména s manažerským publikem, které hledá „akční porozumění složitostem a vzájemným vztahům s přístupem k detailům“) se mohou během interakce objevit otázky, které mohou diskusi odvést směrem, který nesouvisí s příběhem, který se snažíte vyprávět. Když k tomu dojde, můžete zasáhnout a vrátit diskusi zpět na správnou cestu.
 
 ### 2. Začněte s cílem na mysli
-Začít s cílem na mysli znamená pochopit, jaké závěry chcete, aby si vaše publikum odneslo, ještě předtím, než s ním začnete komunikovat. Promyšlenost ohledně toho, co chcete, aby si vaše publikum odneslo, vám může pomoci vytvořit příběh, který bude vaše publikum schopno sledovat. Začít s cílem na mysli je vhodné jak pro jednosměrnou, tak pro obousměrnou komunikaci.
+Začít s cílem na mysli znamená pochopit zamýšlené závěry pro vaše publikum ještě předtím, než s ním začnete komunikovat. Promyšlený přístup k tomu, co chcete, aby si vaše publikum odneslo, vám může pomoci vytvořit příběh, který vaše publikum dokáže sledovat. Začít s cílem na mysli je vhodné jak pro jednosměrnou, tak pro obousměrnou komunikaci.
 
 Jak začít s cílem na mysli? Před komunikací vašich dat si napište klíčové závěry. Poté se při každém kroku přípravy příběhu, který chcete vyprávět pomocí dat, zeptejte sami sebe: „Jak to zapadá do příběhu, který vyprávím?“
 
-Buďte si vědomi – i když je ideální začít s cílem na mysli, nechcete komunikovat pouze data, která podporují vaše zamýšlené závěry. Tomu se říká cherry-picking, což nastává, když komunikátor sděluje pouze data, která podporují jeho argument, a ignoruje všechna ostatní data.
+Buďte si vědomi – zatímco začít s cílem na mysli je ideální, nechcete komunikovat pouze data, která podporují vaše zamýšlené závěry. Tomu se říká selektivní výběr, což nastává, když komunikátor sděluje pouze data, která podporují jeho argument, a ignoruje všechna ostatní data.
 
-Pokud všechna data, která jste shromáždili, jasně podporují vaše zamýšlené závěry, skvělé. Pokud však existují data, která vaše závěry nepodporují, nebo dokonce podporují argument proti vašim klíčovým závěrům, měli byste tato data také komunikovat. Pokud k tomu dojde, buďte vůči svému publiku upřímní a dejte mu vědět, proč se rozhodujete držet svého příběhu, i když všechna data jej nutně nepodporují.
+Pokud všechna data, která jste shromáždili, jasně podporují vaše zamýšlené závěry, skvělé. Ale pokud existují data, která vaše závěry nepodporují, nebo dokonce podporují argument proti vašim klíčovým závěrům, měli byste tato data také komunikovat. Pokud k tomu dojde, buďte vůči svému publiku upřímní a dejte mu vědět, proč se rozhodujete držet svého příběhu, i když všechna data ho nutně nepodporují.
 
 ### 3. Přistupujte k tomu jako k opravdovému příběhu
-Tradiční příběh se odehrává v 5 fázích. Možná jste tyto fáze slyšeli vyjádřené jako Expozice, Stoupající akce, Vyvrcholení, Klesající akce a Rozuzlení. Nebo snadněji zapamatovatelné: Kontext, Konflikt, Vyvrcholení, Uzavření, Závěr. Při komunikaci vašich dat a příběhu můžete použít podobný přístup.
+Tradiční příběh se odehrává v 5 fázích. Možná jste tyto fáze slyšeli vyjádřené jako expozice, stoupající akce, vyvrcholení, klesající akce a rozuzlení. Nebo jednodušší na zapamatování: kontext, konflikt, vyvrcholení, uzavření, závěr. Při komunikaci vašich dat a vašeho příběhu můžete použít podobný přístup.
 
-Můžete začít kontextem, nastavit scénu a ujistit se, že vaše publikum je na stejné vlně. Poté představte konflikt. Proč jste potřebovali tato data shromáždit? Jaké problémy jste se snažili vyřešit? Poté přichází vyvrcholení. Jaká jsou data? Co znamenají? Jaká řešení nám data naznačují? Poté přejdete k uzavření, kde můžete zopakovat problém a navrhované řešení/řešení. Nakonec přichází závěr, kde můžete shrnout své klíčové závěry a doporučit další kroky, které by měl tým podniknout.
+Můžete začít kontextem, nastavit scénu a ujistit se, že vaše publikum je na stejné vlně. Poté představte konflikt. Proč jste potřebovali shromáždit tato data? Jaké problémy jste se snažili vyřešit? Poté přichází vyvrcholení. Jaká jsou data? Co data znamenají? Jaká řešení nám data říkají, že potřebujeme? Poté přejdete k uzavření, kde můžete zopakovat problém a navrhovaná řešení. Nakonec přicházíme k závěru, kde můžete shrnout klíčové závěry a doporučené další kroky.
 
 ### 4. Používejte smysluplná slova a fráze
-Pokud bychom spolu pracovali na produktu a já bych vám řekl: „Naši uživatelé potřebují dlouhou dobu na onboarding na naší platformě,“ jak dlouhou dobu byste odhadovali? Hodinu? Týden? Těžko říct. Co kdybych to řekl celému publiku? Každý v publiku by mohl mít jinou představu o tom, jak dlouho onboarding trvá.
+Pokud bychom spolu pracovali na produktu a já bych vám řekl: „Naši uživatelé potřebují dlouhou dobu na onboarding na naší platformě,“ jak dlouhou dobu byste odhadli? Hodinu? Týden? Je těžké to vědět. Co kdybych to řekl celému publiku? Každý v publiku by mohl mít jinou představu o tom, jak dlouho uživatelé potřebují na onboarding na naší platformě.
 
 Místo toho, co kdybych řekl: „Naši uživatelé potřebují v průměru 3 minuty na registraci a onboarding na naší platformě.“
 
-Tato zpráva je jasnější. Při komunikaci dat je snadné si myslet, že všichni v publiku přemýšlejí stejně jako vy. Ale to není vždy pravda. Zajištění jasnosti vašich dat a jejich významu je jednou z vašich odpovědností jako komunikátora. Pokud data nebo váš příběh nejsou jasné, vaše publikum bude mít problém sledovat a je méně pravděpodobné, že pochopí vaše klíčové závěry.
+Toto sdělení je jasnější. Při komunikaci dat může být snadné si myslet, že všichni ve vašem publiku přemýšlejí stejně jako vy. Ale to není vždy pravda. Jasné sdělení vašich dat a jejich významu je jednou z vašich odpovědností jako komunikátora. Pokud data nebo váš příběh nejsou jasné, vaše publikum bude mít problém sledovat a je méně pravděpodobné, že pochopí vaše klíčové závěry.
 
-Můžete komunikovat data jasněji, když používáte smysluplná slova a fráze místo vágních. Níže je několik příkladů.
+Můžete komunikovat data jasněji, když používáte smysluplná slova a fráze místo vágních. Níže je uvedeno několik příkladů.
 
-- Měli jsme *impozantní* rok!
-  - Jeden člověk by si mohl myslet, že impozantní znamená 2% - 3% nárůst příjmů, a jiný by si mohl myslet, že to znamená 50% - 60% nárůst.
-- Úspěšnost našich uživatelů se *dramaticky* zvýšila.
-  - Jak velký nárůst je dramatický nárůst?
-- Tento úkol bude vyžadovat *významné* úsilí.
-  - Kolik úsilí je významné?
+ - Měli jsme *impozantní* rok!
+	 - Jeden člověk by si mohl myslet, že impozantní znamená 2% - 3% nárůst příjmů, a jiný člověk by si mohl myslet, že to znamená 50% - 60% nárůst.
+ - Úspěšnost našich uživatelů se *dramaticky* zvýšila.
+	 - Jak velký nárůst je dramatický nárůst?
+ - Tento projekt bude vyžadovat *významné* úsilí.
+	 - Kolik úsilí je významné?
 
-Používání vágních slov může být užitečné jako úvod k dalším datům, která přijdou, nebo jako shrnutí příběhu, který jste právě vyprávěli. Ale zvažte, zda zajistit, aby každá část vaší prezentace byla pro vaše publikum jasná.
+Používání vágních slov může být užitečné jako úvod k dalším datům, která přicházejí, nebo jako shrnutí příběhu, který jste právě vyprávěli. Ale zvažte, zda zajistit, aby každá část vaší prezentace byla jasná pro vaše publikum.
 
 ### 5. Používejte emoce
-Emoce jsou klíčové při vyprávění příběhů. Jsou ještě důležitější, když vyprávíte příběh pomocí dat. Při komunikaci dat je vše zaměřeno na závěry, které chcete, aby si vaše publikum odneslo. Když u publika vyvoláte emoci, pomůže jim to vcítit se a zvýší pravděpodobnost, že podniknou kroky. Emoce také zvyšují pravděpodobnost, že si publikum zapamatuje vaši zprávu.
+Emoce jsou klíčové při vyprávění příběhů. Jsou ještě důležitější, když vyprávíte příběh pomocí dat. Při komunikaci dat je vše zaměřeno na závěry, které chcete, aby si vaše publikum odneslo. Když u publika vyvoláte emoci, pomáhá jim to vcítit se a zvyšuje pravděpodobnost, že podniknou kroky. Emoce také zvyšují pravděpodobnost, že si publikum zapamatuje vaše sdělení.
 
-Možná jste to zažili u televizních reklam. Některé reklamy jsou velmi vážné a používají smutné emoce, aby se spojily s publikem a zdůraznily data, která prezentují. Nebo některé reklamy jsou velmi optimistické a veselé, což vás může přimět spojit jejich data s pocitem štěstí.
+Možná jste se s tím setkali u televizních reklam. Některé reklamy jsou velmi vážné a používají smutnou emoci, aby se spojily se svým publikem a aby data, která prezentují, opravdu vynikla. Nebo některé reklamy jsou velmi optimistické a šťastné, což vás může přimět spojit jejich data s pocitem štěstí.
 
-Jak používat emoce při komunikaci dat? Níže je několik způsobů.
+Jak používat emoce při komunikaci dat? Níže jsou uvedeny některé způsoby.
 
-- Používejte svědectví a osobní příběhy
-  - Při shromažďování dat se snažte sbírat jak kvantitativní, tak kvalitativní data a integrovat oba typy dat při komunikaci. Pokud jsou vaše data převážně kvantitativní, hledejte příběhy jednotlivců, abyste se dozvěděli více o jejich zkušenostech s tím, co vám vaše data říkají.
-- Používejte obrázky
-  - Obrázky pomáhají publiku vidět se v určité situaci. Když používáte obrázky, můžete publikum nasměrovat k emoci, kterou by podle vás mělo mít ohledně vašich dat.
-- Používejte barvy
-  - Různé barvy vyvolávají různé emoce. Populární barvy a emoce, které vyvolávají, jsou uvedeny níže. Buďte si vědomi, že barvy mohou mít v různých kulturách odlišné významy.
-    - Modrá obvykle vyvolává pocity klidu a důvěry
-    - Zelená je obvykle spojována s přírodou a životním prostředím
-    - Červená obvykle znamená vášeň a vzrušení
-    - Žlutá obvykle znamená optimismus a štěstí
+ - Používejte svědectví a osobní příběhy
+	- Při sběru dat se snažte sbírat jak kvantitativní, tak kvalitativní data a integrovat oba typy dat při komunikaci. Pokud jsou vaše data převážně kvantitativní, hledejte příběhy od jednotlivců, abyste se dozvěděli více o jejich zkušenostech s tím, co vaše data říkají.
+ - Používejte obrázky
+	 - Obrázky pomáhají publiku vidět sebe v dané situaci. Když používáte obrázky, můžete publikum nasměrovat k emoci, kterou by podle vás mělo mít ohledně vašich dat.
+ - Používejte barvy
+	 - Různé barvy vyvolávají různé emoce. Populární barvy a emoce, které vyvolávají, jsou uvedeny níže. Buďte si vědomi, že barvy mohou mít v různých kulturách odlišné významy.
+		 - Modrá obvykle vyvolává emoce klidu a důvěry
+		 - Zelená je obvykle spojována s přírodou a životním prostředím
+		 - Červená je obvykle vášeň a vzrušení
+		 - Žlutá je obvykle optimismus a štěstí
 
 # Případová studie komunikace
-Emerson je produktový manažer pro mobilní aplikaci. Emerson si všiml, že zákazníci podávají o 42 % více stížností a hlášení chyb o víkendech. Emerson si také všiml, že zákazníci, kteří podají stížnost, která zůstane nezodpovězena déle než 48 hodin, mají o 32 % vyšší pravděpodobnost, že aplikaci ohodnotí známkou 1 nebo 2 v obchodě s aplikacemi.
+Emerson je produktový manažer mobilní aplikace. Emerson si všiml, že zákazníci podávají o 42 % více stížností a hlášení chyb o víkendech. Emerson si také všiml, že zákazníci, kteří podají stížnost, která zůstane nevyřízená déle než 48 hodin, mají o 32 % vyšší pravděpodobnost, že aplikaci ohodnotí známkou 1 nebo 2 v obchodě s aplikacemi.
 
-Po provedení výzkumu má Emerson několik řešení, která tento problém vyřeší. Emerson si domluví 30minutovou schůzku se třemi vedoucími společnosti, aby jim sdělil data a navrhovaná řešení.
+Po provedení výzkumu má Emerson několik řešení, která problém vyřeší. Emerson si naplánuje 30minutovou schůzku se třemi vedoucími společnosti, aby komunikoval data a navrhovaná řešení.
 
 Během této schůzky je cílem Emersona, aby vedoucí společnosti pochopili, že následující dvě řešení mohou zlepšit hodnocení aplikace, což pravděpodobně povede k vyšším příjmům.
 
 **Řešení 1.** Najmout pracovníky zákaznické podpory na víkendy
 
-**Řešení 2.** Zakoupit nový systém pro správu zákaznických požadavků, který umožní pracovníkům zákaznické podpory snadno identifikovat, které stížnosti jsou v front
-Na schůzce Emerson strávil 5 minut vysvětlováním, proč je špatné mít nízké hodnocení v obchodě s aplikacemi, 10 minut popisováním výzkumného procesu a identifikace trendů, 10 minut probíráním některých nedávných stížností zákazníků a posledních 5 minut povrchním zmíněním dvou možných řešení.
+**Řešení 2.** Zakoupit nový systém pro správu zákaznických požadavků, kde pracovníci zákaznické podpory mohou snadno identifikovat, které stížnosti jsou v frontě nejdéle – aby věděli, které řešit nejdříve.
 
-Byl to efektivní způsob, jak Emerson během této schůzky komunikoval?
+Během schůzky Emerson stráví 5 minut vysvětlováním,
+Byl to účinný způsob, jak Emerson komunikoval během této schůzky?
 
-Během schůzky se jeden z vedoucích společnosti zaměřil na 10 minut stížností zákazníků, které Emerson probíral. Po schůzce byly tyto stížnosti jedinou věcí, kterou si tento vedoucí zapamatoval. Jiný vedoucí se primárně soustředil na Emersonův popis výzkumného procesu. Třetí vedoucí si sice pamatoval navržená řešení, ale nebyl si jistý, jak by tato řešení mohla být implementována.
+Během schůzky se jeden vedoucí společnosti zaměřil na 10 minut zákaznických stížností, které Emerson probíral. Po schůzce byly tyto stížnosti jedinou věcí, kterou si tento vedoucí týmu pamatoval. Další vedoucí společnosti se primárně soustředil na Emersonův popis výzkumného procesu. Třetí vedoucí společnosti si sice pamatoval navržená řešení od Emersona, ale nebyl si jistý, jak by se tato řešení dala implementovat.
 
-V uvedené situaci je vidět, že existoval významný rozdíl mezi tím, co chtěl Emerson, aby si vedoucí týmů ze schůzky odnesli, a tím, co si skutečně odnesli. Níže je uveden jiný přístup, který by mohl Emerson zvážit.
+V uvedené situaci je vidět, že existoval významný rozdíl mezi tím, co chtěl Emerson, aby si vedoucí týmů ze schůzky odnesli, a tím, co si nakonec skutečně odnesli. Níže je uveden jiný přístup, který by Emerson mohl zvážit.
 
 Jak by mohl Emerson tento přístup zlepšit?  
 Kontext, Konflikt, Vyvrcholení, Uzavření, Závěr  
-**Kontext** – Emerson by mohl strávit prvních 5 minut představením celé situace a ujistit se, že vedoucí týmů chápou, jak problémy ovlivňují metriky, které jsou pro společnost klíčové, například příjmy.
+**Kontext** - Emerson by mohl strávit prvních 5 minut představením celé situace a ujistit se, že vedoucí týmů chápou, jak problémy ovlivňují metriky, které jsou pro společnost klíčové, například příjmy.
 
-Mohlo by to být prezentováno takto: „V současné době má naše aplikace hodnocení 2,5 v obchodě s aplikacemi. Hodnocení v obchodě s aplikacemi je klíčové pro optimalizaci viditelnosti aplikace, což ovlivňuje, kolik uživatelů naši aplikaci najde při vyhledávání, a jak je naše aplikace vnímána potenciálními uživateli. A samozřejmě, počet uživatelů přímo souvisí s příjmy.“
+Mohlo by to být formulováno takto: "V současné době má naše aplikace hodnocení 2,5 v obchodě s aplikacemi. Hodnocení v obchodě s aplikacemi je klíčové pro optimalizaci viditelnosti aplikace, což ovlivňuje, kolik uživatelů naši aplikaci vidí při vyhledávání, a jak je naše aplikace vnímána potenciálními uživateli. A samozřejmě, počet uživatelů, které máme, je přímo spojen s příjmy."
 
-**Konflikt** Emerson by pak mohl přejít k popisu konfliktu během následujících 5 minut.
+**Konflikt** Emerson by pak mohl dalších 5 minut mluvit o konfliktu.
 
-Mohlo by to znít takto: „Uživatelé podávají o 42 % více stížností a hlášení chyb o víkendech. Zákazníci, kteří podají stížnost, na kterou nedostanou odpověď do 48 hodin, mají o 32 % menší pravděpodobnost, že naší aplikaci dají hodnocení vyšší než 2 v obchodě s aplikacemi. Zlepšení hodnocení naší aplikace v obchodě na 4 by zvýšilo naši viditelnost o 20–30 %, což podle mého odhadu zvýší příjmy o 10 %.“ Samozřejmě by měl být Emerson připraven tato čísla obhájit.
+Mohlo by to být formulováno takto: "Uživatelé podávají o 42 % více stížností a hlášení chyb o víkendech. Zákazníci, kteří podají stížnost, která zůstane nevyřešená déle než 48 hodin, mají o 32 % menší pravděpodobnost, že naší aplikaci dají hodnocení vyšší než 2 v obchodě s aplikacemi. Zlepšení hodnocení naší aplikace v obchodě s aplikacemi na 4 by zlepšilo naši viditelnost o 20–30 %, což podle mého odhadu zvýší příjmy o 10 %." Samozřejmě by měl být Emerson připraven tyto čísla obhájit.
 
-**Vyvrcholení** Po vytvoření základního rámce by mohl Emerson přejít k vyvrcholení na dalších přibližně 5 minut.
+**Vyvrcholení** Po položení základů by Emerson mohl přejít k vyvrcholení na dalších 5 minut.
 
-Emerson by mohl představit navrhovaná řešení, popsat, jak tato řešení řeší uvedené problémy, jak by mohla být implementována do stávajících pracovních postupů, kolik by řešení stála, jaká by byla návratnost investic, a možná i ukázat screenshoty nebo návrhy, jak by řešení vypadala po implementaci. Emerson by také mohl sdílet svědectví uživatelů, kteří čekali více než 48 hodin na vyřešení své stížnosti, a dokonce i svědectví současného zástupce zákaznické podpory ve společnosti, který by mohl komentovat aktuální systém pro správu tiketů.
+Emerson by mohl představit navrhovaná řešení, vysvětlit, jak tato řešení řeší uvedené problémy, jak by se tato řešení dala implementovat do stávajících pracovních postupů, kolik by řešení stála, jaká by byla návratnost investice, a možná dokonce ukázat některé snímky obrazovky nebo návrhy, jak by řešení vypadala po implementaci. Emerson by také mohl sdílet svědectví od uživatelů, jejichž stížnosti byly vyřešeny po více než 48 hodinách, a dokonce svědectví od současného zástupce zákaznického servisu ve společnosti, který má komentáře k současnému systému pro správu tiketů.
 
-**Uzavření** Nyní by mohl Emerson strávit 5 minut zopakováním problémů, kterým společnost čelí, znovu projít navrhovaná řešení a shrnout, proč jsou tato řešení ta správná.
+**Uzavření** Nyní může Emerson strávit 5 minut opakováním problémů, kterým společnost čelí, znovu projít navrhovaná řešení a přezkoumat, proč jsou tato řešení ta správná.
 
-**Závěr** Protože se jedná o schůzku s několika zainteresovanými stranami, kde bude probíhat obousměrná komunikace, mohl by Emerson naplánovat 10 minut na otázky, aby se ujistil, že vše, co bylo vedoucím týmů nejasné, bude objasněno před koncem schůzky.
+**Závěr** Protože se jedná o schůzku s několika zainteresovanými stranami, kde bude použita obousměrná komunikace, mohl by Emerson naplánovat 10 minut na otázky, aby se ujistil, že vše, co bylo vedoucím týmů nejasné, bude objasněno před koncem schůzky.
 
-Pokud by Emerson použil přístup č. 2, je mnohem pravděpodobnější, že si vedoucí týmů ze schůzky odnesou přesně to, co Emerson zamýšlel – že způsob, jakým jsou řešeny stížnosti a chyby, by mohl být zlepšen, a že existují dvě řešení, která by mohla být zavedena, aby k tomuto zlepšení došlo. Tento přístup by byl mnohem efektivnější při komunikaci dat a příběhu, který chce Emerson sdělit.
+Pokud by Emerson použil přístup č. 2, je mnohem pravděpodobnější, že si vedoucí týmů ze schůzky odnesou přesně to, co Emerson zamýšlel – že způsob, jakým jsou stížnosti a chyby řešeny, by mohl být zlepšen, a že existují 2 řešení, která by mohla být zavedena, aby se toto zlepšení uskutečnilo. Tento přístup by byl mnohem efektivnějším způsobem, jak komunikovat data a příběh, který chce Emerson sdělit.
 
 # Závěr  
 ### Shrnutí hlavních bodů  
 - Komunikace znamená předávání nebo výměnu informací.  
-- Při komunikaci dat by vaším cílem nemělo být pouze předat čísla publiku. Vaším cílem by mělo být sdělit příběh, který je podložen vašimi daty.  
-- Existují dva typy komunikace: jednosměrná komunikace (informace jsou sdělovány bez očekávání odpovědi) a obousměrná komunikace (informace jsou sdělovány oběma směry).  
-- Existuje mnoho strategií, jak vyprávět příběh pomocí dat. Pět strategií, které jsme probrali, jsou:  
+- Při komunikaci dat by vaším cílem nemělo být pouze předávání čísel publiku. Vaším cílem by mělo být sdělit příběh, který je podložen vašimi daty.  
+- Existují 2 typy komunikace: Jednosměrná komunikace (informace jsou sdělovány bez úmyslu získat odpověď) a Obousměrná komunikace (informace jsou sdělovány tam a zpět).  
+- Existuje mnoho strategií, které můžete použít k vyprávění příběhu pomocí dat. 5 strategií, které jsme probírali, jsou:  
   - Pochopte své publikum, médium a způsob komunikace  
-  - Začněte s koncem na mysli  
+  - Začněte s cílem na mysli  
   - Přistupujte k tomu jako k opravdovému příběhu  
   - Používejte smysluplná slova a fráze  
   - Využívejte emoce  
@@ -208,11 +208,11 @@ Pokud by Emerson použil přístup č. 2, je mnohem pravděpodobnější, že si
 
 [1. Communicating Data - Communicating Data with Tableau [Book] (oreilly.com)](https://www.oreilly.com/library/view/communicating-data-with/9781449372019/ch01.html)  
 
-## [Post-Lecture Quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/31)  
+## [Post-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/31)  
 
-Zopakujte si, co jste se právě naučili, pomocí výše uvedeného kvízu!  
+Ověřte si, co jste se právě naučili, pomocí kvízu po přednášce výše!  
 
-## Zadání  
+## Úkol  
 
 [Market Research](assignment.md)  
 

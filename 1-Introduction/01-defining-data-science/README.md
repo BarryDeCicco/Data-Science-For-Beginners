@@ -8,7 +8,7 @@
 
 [![Defining Data Science Video](images/video-def-ds.png)](https://youtu.be/beZ7Mb_oz9I)
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/0)
+## [Pre-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/0)
 
 ## What is Data?
 In our everyday life, we are constantly surrounded by data. The text you are reading now is data.  The list of phone numbers of your friends in your smartphone is data, as well as the current time displayed on your watch. As human beings, we naturally operate with data by counting the money we have or by writing letters to our friends.
@@ -147,13 +147,13 @@ In this challenge, we will try to find concepts relevant to the field of Data Sc
 
 ![Word Cloud for Data Science](images/ds_wordcloud.png)
 
-Visit [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') to read through the code.  You can also run the code, and see how it performs all data transformations in real time. 
+Visit [`notebook.ipynb`](./notebook.ipynb ':ignore') to read through the code.  You can also run the code, and see how it performs all data transformations in real time. 
 
 > If you do not know how to run code in a Jupyter Notebook, have a look at [this article](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
 
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
+## [Post-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/1)
 
 ## Assignments
 

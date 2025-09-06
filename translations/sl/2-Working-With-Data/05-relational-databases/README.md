@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "870a0086adbc313a8eea5489bdcb2522",
-  "translation_date": "2025-08-30T18:12:04+00:00",
+  "original_hash": "9399d7b4767e75068f95ce5c660b285c",
+  "translation_date": "2025-09-05T19:35:42+00:00",
   "source_file": "2-Working-With-Data/05-relational-databases/README.md",
   "language_code": "sl"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Delo z podatki: Relacijske baze podatkov - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-Verjetno ste v preteklosti že uporabljali preglednico za shranjevanje informacij. Imeli ste niz vrstic in stolpcev, kjer so vrstice vsebovale informacije (ali podatke), stolpci pa so opisovali te informacije (včasih imenovane metapodatki). Relacijska baza podatkov temelji na tem osnovnem principu stolpcev in vrstic v tabelah, kar omogoča razporeditev informacij v več tabelah. To vam omogoča delo z bolj zapletenimi podatki, izogibanje podvajanju in večjo prilagodljivost pri raziskovanju podatkov. Raziskali bomo koncepte relacijske baze podatkov.
+Verjetno ste v preteklosti že uporabljali preglednico za shranjevanje informacij. Imeli ste niz vrstic in stolpcev, kjer so vrstice vsebovale informacije (ali podatke), stolpci pa so opisovali te informacije (včasih imenovane metapodatki). Relacijska baza podatkov temelji na tem osnovnem principu stolpcev in vrstic v tabelah, kar omogoča razporeditev informacij med več tabelami. To vam omogoča delo z bolj zapletenimi podatki, izogibanje podvajanju in večjo prilagodljivost pri raziskovanju podatkov. Raziskali bomo koncepte relacijske baze podatkov.
 
-## [Predhodni kviz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## [Predhodni kviz](https://ff-quizzes.netlify.app/en/ds/quiz/8)
 
 ## Vse se začne s tabelami
 
 Jedro relacijske baze podatkov so tabele. Tako kot pri preglednici je tabela zbirka stolpcev in vrstic. Vrstica vsebuje podatke ali informacije, s katerimi želimo delati, kot so ime mesta ali količina padavin. Stolpci opisujejo podatke, ki jih hranijo.
 
-Začnimo z raziskovanjem tako, da ustvarimo tabelo za shranjevanje informacij o mestih. Morda začnemo z njihovim imenom in državo. To lahko shranite v tabelo, kot je prikazano spodaj:
+Začnimo raziskovanje z ustvarjanjem tabele za shranjevanje informacij o mestih. Morda začnemo z njihovim imenom in državo. To lahko shranite v tabelo, kot je prikazano spodaj:
 
 | Mesto    | Država        |
 | -------- | ------------- |
@@ -33,7 +33,7 @@ Opazite, da imena stolpcev **mesto**, **država** in **prebivalstvo** opisujejo 
 
 ## Pomanjkljivosti pristopa z eno tabelo
 
-Verjetno se vam zgornja tabela zdi precej poznana. Dodajmo nekaj dodatnih podatkov v našo nastajajočo bazo podatkov - letne padavine (v milimetrih). Osredotočili se bomo na leta 2018, 2019 in 2020. Če bi jih dodali za Tokio, bi to izgledalo nekako takole:
+Verjetno se vam zgornja tabela zdi precej znana. Dodajmo nekaj dodatnih podatkov v našo nastajajočo bazo podatkov - letne padavine (v milimetrih). Osredotočili se bomo na leta 2018, 2019 in 2020. Če bi jih dodali za Tokio, bi to izgledalo nekako takole:
 
 | Mesto | Država | Leto | Količina |
 | ----- | ------- | ---- | ------ |
@@ -41,7 +41,7 @@ Verjetno se vam zgornja tabela zdi precej poznana. Dodajmo nekaj dodatnih podatk
 | Tokio | Japonska | 2019 | 1874   |
 | Tokio | Japonska | 2018 | 1445   |
 
-Kaj opazite pri naši tabeli? Morda opazite, da podvajamo ime in državo mesta znova in znova. To bi lahko zavzelo precej prostora za shranjevanje, kar je večinoma nepotrebno. Navsezadnje ima Tokio samo eno ime, ki nas zanima.
+Kaj opazite pri naši tabeli? Morda opazite, da večkrat podvajamo ime in državo mesta. To bi lahko zavzelo precej prostora za shranjevanje, kar je večinoma nepotrebno. Navsezadnje ima Tokio samo eno ime, ki nas zanima.
 
 OK, poskusimo nekaj drugega. Dodajmo nove stolpce za vsako leto:
 
@@ -51,7 +51,7 @@ OK, poskusimo nekaj drugega. Dodajmo nove stolpce za vsako leto:
 | Atlanta  | Združene države | 1779 | 1111 | 1683 |
 | Auckland | Nova Zelandija | 1386 | 942  | 1176 |
 
-Čeprav se s tem izognemo podvajanju vrstic, to prinaša nekaj drugih izzivov. Strukturo tabele bi morali spreminjati vsakič, ko se pojavi novo leto. Poleg tega bo z rastjo naših podatkov uporaba let kot stolpcev otežila pridobivanje in izračunavanje vrednosti.
+Čeprav se s tem izognemo podvajanju vrstic, to prinaša nekaj drugih izzivov. Strukturo tabele bi morali spreminjati vsakič, ko se pojavi novo leto. Poleg tega bo z rastjo podatkov uporaba let kot stolpcev otežila pridobivanje in izračunavanje vrednosti.
 
 Zato potrebujemo več tabel in relacije. Z razdelitvijo podatkov se lahko izognemo podvajanju in pridobimo večjo prilagodljivost pri delu s podatki.
 
@@ -65,7 +65,7 @@ Vrnimo se k našim podatkom in določimo, kako jih želimo razdeliti. Vemo, da �
 | Atlanta  | Združene države |
 | Auckland | Nova Zelandija |
 
-Preden ustvarimo naslednjo tabelo, moramo ugotoviti, kako bomo sklicevali na vsako mesto. Potrebujemo neko obliko identifikatorja, ID ali (v tehničnih izrazih baze podatkov) primarni ključ. Primarni ključ je vrednost, ki se uporablja za identifikacijo ene specifične vrstice v tabeli. Čeprav bi to lahko temeljilo na sami vrednosti (na primer, lahko uporabimo ime mesta), bi moral biti skoraj vedno številka ali drug identifikator. Nočemo, da se ID kdaj spremeni, saj bi to prekinilo relacijo. V večini primerov bo primarni ključ ali ID samodejno generirana številka.
+Preden ustvarimo naslednjo tabelo, moramo ugotoviti, kako bomo sklicevali na vsako mesto. Potrebujemo neko obliko identifikatorja, ID ali (v tehničnih izrazih baze podatkov) primarni ključ. Primarni ključ je vrednost, ki se uporablja za identifikacijo ene specifične vrstice v tabeli. Čeprav bi to lahko temeljilo na sami vrednosti (na primer, lahko uporabimo ime mesta), bi moral biti skoraj vedno številka ali drug identifikator. Ne želimo, da se ID kdaj spremeni, saj bi to prekinilo relacijo. V večini primerov bo primarni ključ ali ID samodejno generirana številka.
 
 > ✅ Primarni ključ je pogosto okrajšan kot PK
 
@@ -117,7 +117,7 @@ FROM cities;
 
 `SELECT` je mesto, kjer navedete stolpce, in `FROM` je mesto, kjer navedete tabele.
 
-> [NOTE] Sintaksa SQL ni občutljiva na velike in male črke, kar pomeni, da `select` in `SELECT` pomenita isto. Vendar pa so lahko stolpci in tabele občutljivi na velike in male črke, odvisno od vrste baze podatkov, ki jo uporabljate. Zato je dobra praksa, da vedno obravnavate vse v programiranju, kot da je občutljivo na velike in male črke. Pri pisanju SQL poizvedb je običajna konvencija, da ključne besede pišete z velikimi črkami.
+> [NOTE] Sintaksa SQL ni občutljiva na velike in male črke, kar pomeni, da `select` in `SELECT` pomenita isto. Vendar pa so lahko stolpci in tabele občutljivi na velike in male črke, odvisno od vrste baze podatkov, ki jo uporabljate. Zato je najboljša praksa, da vedno obravnavate vse v programiranju, kot da je občutljivo na velike in male črke. Pri pisanju SQL poizvedb je običajna konvencija, da ključne besede pišete z velikimi črkami.
 
 Zgornja poizvedba bo prikazala vsa mesta. Predstavljajte si, da želimo prikazati samo mesta v Novi Zelandiji. Potrebujemo neko obliko filtra. Ključna beseda SQL za to je `WHERE`, ali "kjer nekaj drži".
 
@@ -136,7 +136,7 @@ Do zdaj smo pridobivali podatke iz ene same tabele. Zdaj želimo združiti podat
 
 V našem primeru bomo uskladili stolpec **mesto_id** v tabeli **padavine** s stolpcem **mesto_id** v tabeli **mesta**. To bo uskladilo vrednost padavin z ustreznim mestom. Vrsta združitve, ki jo bomo izvedli, se imenuje *notranja* združitev, kar pomeni, da se vrstice, ki se ne ujemajo z ničemer iz druge tabele, ne bodo prikazale. V našem primeru ima vsako mesto padavine, zato bo vse prikazano.
 
-Pridobimo padavine za leto 2019 za vsa naša mesta.
+Pridobimo podatke o padavinah za leto 2019 za vsa naša mesta.
 
 To bomo naredili v korakih. Prvi korak je združitev podatkov z navedbo stolpcev za povezavo - **mesto_id**, kot je bilo poudarjeno prej.
 
@@ -167,7 +167,7 @@ WHERE rainfall.year = 2019
 
 ## Povzetek
 
-Relacijske baze podatkov temeljijo na razdelitvi informacij med več tabel, ki se nato združijo za prikaz in analizo. To omogoča visoko stopnjo prilagodljivosti za izvajanje izračunov in drugačno manipulacijo podatkov. Videli ste osnovne koncepte relacijske baze podatkov in kako izvesti združitev med dvema tabelama.
+Relacijske baze podatkov temeljijo na delitvi informacij med več tabelami, ki se nato združijo za prikaz in analizo. To zagotavlja visoko stopnjo prilagodljivosti za izvajanje izračunov in drugačno manipulacijo podatkov. Videli ste osnovne koncepte relacijske baze podatkov in kako izvesti združitev med dvema tabelama.
 
 ## 🚀 Izziv
 
@@ -175,11 +175,11 @@ Na internetu je na voljo veliko relacijskih baz podatkov. Raziskujte podatke z u
 
 ## Kviz po predavanju
 
-## [Kviz po predavanju](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
+## [Kviz po predavanju](https://ff-quizzes.netlify.app/en/ds/quiz/9)
 
 ## Pregled in samostojno učenje
 
-Na voljo je več virov na [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum), kjer lahko nadaljujete raziskovanje konceptov SQL in relacijskih baz podatkov.
+Na voljo je več virov na [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum), ki vam omogočajo nadaljnje raziskovanje konceptov SQL in relacijskih baz podatkov.
 
 - [Opis konceptov relacijskih podatkov](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
 - [Začnite z poizvedbami v Transact-SQL](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum) (Transact-SQL je različica SQL)
@@ -192,4 +192,4 @@ Na voljo je več virov na [Microsoft Learn](https://docs.microsoft.com/learn?WT.
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.

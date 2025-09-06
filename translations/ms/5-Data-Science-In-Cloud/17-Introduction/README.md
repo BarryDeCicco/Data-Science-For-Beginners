@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "408c55cab2880daa4e78616308bd5db7",
-  "translation_date": "2025-08-28T18:00:18+00:00",
+  "original_hash": "5f8e7cdefa096664ae86f795be571580",
+  "translation_date": "2025-09-06T00:03:23+00:00",
   "source_file": "5-Data-Science-In-Cloud/17-Introduction/README.md",
   "language_code": "ms"
 }
@@ -15,11 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Dalam pelajaran ini, anda akan mempelajari prinsip asas Awan, kemudian anda akan melihat mengapa ia menarik untuk menggunakan perkhidmatan Awan bagi menjalankan projek sains data anda, dan kita akan melihat beberapa contoh projek sains data yang dijalankan di Awan.
 
-## [Kuiz Pra-Kuliah](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/32)
+## [Kuiz Pra-Kuliah](https://ff-quizzes.netlify.app/en/ds/quiz/32)
 
 ## Apa itu Awan?
 
-Awan, atau Pengkomputeran Awan, adalah penyampaian pelbagai perkhidmatan pengkomputeran bayar-semasa-guna yang dihoskan pada infrastruktur melalui internet. Perkhidmatan ini termasuk penyelesaian seperti storan, pangkalan data, rangkaian, perisian, analitik, dan perkhidmatan pintar.
+Awan, atau Pengkomputeran Awan, adalah penyampaian pelbagai perkhidmatan pengkomputeran secara bayar-semasa-guna yang dihoskan pada infrastruktur melalui internet. Perkhidmatan ini termasuk penyelesaian seperti storan, pangkalan data, rangkaian, perisian, analitik, dan perkhidmatan pintar.
 
 Kita biasanya membezakan Awan Awam, Awan Peribadi, dan Awan Hibrid seperti berikut:
 
@@ -42,7 +42,7 @@ Pembangun dan profesional IT memilih untuk bekerja dengan Awan atas pelbagai seb
 * Inovasi: anda boleh memperkuat aplikasi anda dengan mengintegrasikan perkhidmatan inovatif yang dicipta oleh penyedia Awan terus ke dalam aplikasi anda.
 * Fleksibiliti: anda hanya membayar untuk perkhidmatan yang anda perlukan dan boleh memilih daripada pelbagai perkhidmatan. Anda biasanya membayar mengikut penggunaan dan menyesuaikan perkhidmatan anda mengikut keperluan yang berubah.
 * Bajet: anda tidak perlu membuat pelaburan awal untuk membeli perkakasan dan perisian, menyediakan dan menjalankan pusat data di lokasi, dan anda hanya membayar untuk apa yang anda gunakan.
-* Skalabiliti: sumber anda boleh meningkat atau menurun mengikut keperluan projek anda, yang bermaksud aplikasi anda boleh menggunakan lebih atau kurang kuasa pengkomputeran, storan, dan jalur lebar, dengan menyesuaikan kepada faktor luaran pada bila-bila masa.
+* Skalabiliti: sumber anda boleh berkembang mengikut keperluan projek anda, yang bermaksud aplikasi anda boleh menggunakan lebih atau kurang kuasa pengkomputeran, storan, dan jalur lebar, dengan menyesuaikan kepada faktor luaran pada bila-bila masa.
 * Produktiviti: anda boleh memberi tumpuan kepada perniagaan anda daripada menghabiskan masa pada tugas yang boleh diuruskan oleh orang lain, seperti mengurus pusat data.
 * Kebolehpercayaan: Pengkomputeran Awan menawarkan beberapa cara untuk membuat sandaran data anda secara berterusan dan anda boleh menyediakan rancangan pemulihan bencana untuk memastikan perniagaan dan perkhidmatan anda terus berjalan, walaupun dalam masa krisis.
 * Keselamatan: anda boleh mendapat manfaat daripada dasar, teknologi, dan kawalan yang memperkuat keselamatan projek anda.
@@ -51,7 +51,7 @@ Ini adalah beberapa sebab yang paling biasa mengapa orang memilih untuk mengguna
 
 * Menyimpan sejumlah besar data: daripada membeli, mengurus, dan melindungi pelayan besar, anda boleh menyimpan data anda terus di awan, dengan penyelesaian seperti Azure Cosmos DB, Azure SQL Database, dan Azure Data Lake Storage.
 * Melakukan Integrasi Data: integrasi data adalah bahagian penting dalam Sains Data, yang membolehkan anda membuat peralihan daripada pengumpulan data kepada tindakan. Dengan perkhidmatan integrasi data yang ditawarkan di awan, anda boleh mengumpul, mengubah, dan mengintegrasikan data daripada pelbagai sumber ke dalam satu gudang data, dengan Data Factory.
-* Memproses data: memproses sejumlah besar data memerlukan banyak kuasa pengkomputeran, dan tidak semua orang mempunyai akses kepada mesin yang cukup kuat untuk itu, sebab itulah ramai orang memilih untuk menggunakan kuasa pengkomputeran besar awan untuk menjalankan dan menyebarkan penyelesaian mereka.
+* Memproses data: memproses sejumlah besar data memerlukan banyak kuasa pengkomputeran, dan tidak semua orang mempunyai akses kepada mesin yang cukup kuat untuk itu, sebab itulah ramai orang memilih untuk menggunakan kuasa pengkomputeran besar awan secara langsung untuk menjalankan dan menyebarkan penyelesaian mereka.
 * Menggunakan perkhidmatan analitik data: perkhidmatan awan seperti Azure Synapse Analytics, Azure Stream Analytics, dan Azure Databricks membantu anda mengubah data anda menjadi wawasan yang boleh diambil tindakan.
 * Menggunakan perkhidmatan Pembelajaran Mesin dan kecerdasan data: Daripada memulakan dari awal, anda boleh menggunakan algoritma pembelajaran mesin yang ditawarkan oleh penyedia awan, dengan perkhidmatan seperti AzureML. Anda juga boleh menggunakan perkhidmatan kognitif seperti ucapan-ke-teks, teks-ke-ucapan, penglihatan komputer, dan banyak lagi.
 
@@ -59,10 +59,10 @@ Ini adalah beberapa sebab yang paling biasa mengapa orang memilih untuk mengguna
 
 Mari kita buat ini lebih nyata dengan melihat beberapa senario.
 
-### Analisis Sentimen Media Sosial Secara Masa Nyata
+### Analisis sentimen media sosial secara masa nyata
 Kita akan mulakan dengan senario yang biasa dikaji oleh mereka yang baru bermula dengan pembelajaran mesin: analisis sentimen media sosial secara masa nyata.
 
-Katakan anda menjalankan laman web berita dan anda ingin memanfaatkan data langsung untuk memahami kandungan apa yang mungkin menarik minat pembaca anda. Untuk mengetahui lebih lanjut tentang itu, anda boleh membina program yang melakukan analisis sentimen masa nyata terhadap data daripada penerbitan Twitter, mengenai topik yang relevan dengan pembaca anda.
+Katakan anda menjalankan laman web berita dan anda ingin memanfaatkan data langsung untuk memahami kandungan apa yang mungkin menarik minat pembaca anda. Untuk mengetahui lebih lanjut tentang itu, anda boleh membina program yang melakukan analisis sentimen masa nyata terhadap data daripada penerbitan Twitter, mengenai topik yang relevan kepada pembaca anda.
 
 Indikator utama yang akan anda lihat adalah jumlah tweet mengenai topik tertentu (hashtag) dan sentimen, yang ditentukan menggunakan alat analitik yang melakukan analisis sentimen sekitar topik yang ditentukan.
 
@@ -70,14 +70,14 @@ Langkah-langkah yang diperlukan untuk mencipta projek ini adalah seperti berikut
 
 * Buat hab acara untuk input penstriman, yang akan mengumpul data daripada Twitter.
 * Konfigurasikan dan mulakan aplikasi klien Twitter, yang akan memanggil API Penstriman Twitter.
-* Buat pekerjaan Analitik Penstriman.
+* Buat pekerjaan Stream Analytics.
 * Tentukan input dan pertanyaan pekerjaan.
 * Buat sink output dan tentukan output pekerjaan.
 * Mulakan pekerjaan.
 
 Untuk melihat proses penuh, lihat [dokumentasi](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-twitter-sentiment-analysis-trends?WT.mc_id=academic-77958-bethanycheum&ocid=AID30411099).
 
-### Analisis Kertas Saintifik
+### Analisis kertas saintifik
 Mari kita ambil contoh lain daripada projek yang dicipta oleh [Dmitry Soshnikov](http://soshnikov.com), salah seorang penulis kurikulum ini.
 
 Dmitry mencipta alat yang menganalisis kertas COVID. Dengan mengkaji projek ini, anda akan melihat bagaimana anda boleh mencipta alat yang mengekstrak pengetahuan daripada kertas saintifik, mendapatkan wawasan, dan membantu penyelidik menavigasi melalui koleksi kertas yang besar dengan cara yang efisien.
@@ -86,7 +86,7 @@ Mari kita lihat langkah-langkah yang digunakan untuk ini:
 * Mengekstrak dan memproses maklumat dengan [Text Analytics for Health](https://docs.microsoft.com/azure/cognitive-services/text-analytics/how-tos/text-analytics-for-health?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 * Menggunakan [Azure ML](https://azure.microsoft.com/services/machine-learning?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) untuk memparallelkan pemprosesan.
 * Menyimpan dan membuat pertanyaan maklumat dengan [Cosmos DB](https://azure.microsoft.com/services/cosmos-db?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
-* Mencipta papan pemuka interaktif untuk penerokaan dan visualisasi data menggunakan Power BI.
+* Membuat papan pemuka interaktif untuk penerokaan dan visualisasi data menggunakan Power BI.
 
 Untuk melihat proses penuh, lawati [blog Dmitry](https://soshnikov.com/science/analyzing-medical-papers-with-azure-and-text-analytics-for-health/).
 
@@ -101,7 +101,7 @@ Sumber:
 
 ## Kuiz Pasca-Kuliah
 
-[Kuiz pasca-kuliah](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/33)
+## [Kuiz Pasca-Kuliah](https://ff-quizzes.netlify.app/en/ds/quiz/33)
 
 ## Tugasan
 
@@ -110,4 +110,4 @@ Sumber:
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "870a0086adbc313a8eea5489bdcb2522",
-  "translation_date": "2025-08-24T20:53:09+00:00",
+  "original_hash": "9399d7b4767e75068f95ce5c660b285c",
+  "translation_date": "2025-09-05T13:36:25+00:00",
   "source_file": "2-Working-With-Data/05-relational-databases/README.md",
   "language_code": "es"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Trabajando con Datos: Bases de Datos Relacionales - _Sketchnote por [@nitya](https://twitter.com/nitya)_ |
 
-Es probable que hayas usado una hoja de cálculo en el pasado para almacenar información. Tenías un conjunto de filas y columnas, donde las filas contenían la información (o datos) y las columnas describían la información (a veces llamada metadatos). Una base de datos relacional se basa en este principio central de columnas y filas en tablas, permitiéndote tener información distribuida en múltiples tablas. Esto te permite trabajar con datos más complejos, evitar duplicación y tener flexibilidad en la forma en que exploras los datos. Vamos a explorar los conceptos de una base de datos relacional.
+Es probable que hayas usado una hoja de cálculo en el pasado para almacenar información. Tenías un conjunto de filas y columnas, donde las filas contenían la información (o datos) y las columnas describían la información (a veces llamada metadatos). Una base de datos relacional se basa en este principio fundamental de columnas y filas en tablas, permitiéndote tener información distribuida en múltiples tablas. Esto te permite trabajar con datos más complejos, evitar duplicación y tener flexibilidad en la forma en que exploras los datos. Vamos a explorar los conceptos de una base de datos relacional.
 
-## [Cuestionario previo a la clase](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## [Cuestionario previo a la clase](https://ff-quizzes.netlify.app/en/ds/quiz/8)
 
 ## Todo comienza con tablas
 
@@ -29,7 +29,7 @@ Comencemos nuestra exploración creando una tabla para almacenar información so
 | Atlanta  | Estados Unidos|
 | Auckland | Nueva Zelanda |
 
-Nota que los nombres de las columnas **ciudad**, **país** y **población** describen los datos que se están almacenando, y cada fila tiene información sobre una ciudad.
+Observa que los nombres de las columnas **ciudad**, **país** y **población** describen los datos que se están almacenando, y cada fila tiene información sobre una ciudad.
 
 ## Las limitaciones de un enfoque de tabla única
 
@@ -57,7 +57,7 @@ Por eso necesitamos múltiples tablas y relaciones. Al dividir nuestros datos po
 
 ## Los conceptos de relaciones
 
-Volvamos a nuestros datos y determinemos cómo queremos dividirlos. Sabemos que queremos almacenar el nombre y el país de nuestras ciudades, así que esto probablemente funcione mejor en una tabla.
+Regresemos a nuestros datos y determinemos cómo queremos dividirlos. Sabemos que queremos almacenar el nombre y el país de nuestras ciudades, así que esto probablemente funcione mejor en una tabla.
 
 | Ciudad   | País          |
 | -------- | ------------- |
@@ -95,15 +95,15 @@ Con nuestra tabla de ciudades creada, almacenemos la lluvia. En lugar de duplica
 | 8           | 3       | 2019 | 942      |
 | 9           | 3       | 2020 | 1176     |
 
-Nota la columna **city_id** dentro de la tabla recién creada **lluvia**. Esta columna contiene valores que hacen referencia a los IDs en la tabla **ciudades**. En términos técnicos de datos relacionales, esto se llama **clave foránea**; es una clave primaria de otra tabla. Puedes pensar en ella como una referencia o un puntero. **city_id** 1 hace referencia a Tokio.
+Observa la columna **city_id** dentro de la tabla recién creada **lluvia**. Esta columna contiene valores que hacen referencia a los IDs en la tabla **ciudades**. En términos técnicos de datos relacionales, esto se llama una **clave foránea**; es una clave primaria de otra tabla. Puedes pensar en ella como una referencia o un puntero. **city_id** 1 hace referencia a Tokio.
 
 > [!NOTE] La clave foránea se abrevia frecuentemente como FK
 
 ## Recuperando los datos
 
-Con nuestros datos separados en dos tablas, podrías preguntarte cómo los recuperamos. Si estamos usando una base de datos relacional como MySQL, SQL Server u Oracle, podemos usar un lenguaje llamado Structured Query Language o SQL. SQL (a veces pronunciado "sequel") es un lenguaje estándar utilizado para recuperar y modificar datos en una base de datos relacional.
+Con nuestros datos separados en dos tablas, podrías preguntarte cómo los recuperamos. Si estamos usando una base de datos relacional como MySQL, SQL Server u Oracle, podemos usar un lenguaje llamado Lenguaje de Consulta Estructurada o SQL. SQL (a veces pronunciado "sequel") es un lenguaje estándar utilizado para recuperar y modificar datos en una base de datos relacional.
 
-Para recuperar datos usas el comando `SELECT`. En su núcleo, **seleccionas** las columnas que quieres ver **de** la tabla en la que están contenidas. Si quisieras mostrar solo los nombres de las ciudades, podrías usar lo siguiente:
+Para recuperar datos usas el comando `SELECT`. En su núcleo, **seleccionas** las columnas que deseas ver **de** la tabla en la que están contenidas. Si quisieras mostrar solo los nombres de las ciudades, podrías usar lo siguiente:
 
 ```sql
 SELECT city
@@ -117,9 +117,9 @@ FROM cities;
 
 `SELECT` es donde enumeras las columnas, y `FROM` es donde enumeras las tablas.
 
-> [NOTE] La sintaxis de SQL no distingue entre mayúsculas y minúsculas, lo que significa que `select` y `SELECT` significan lo mismo. Sin embargo, dependiendo del tipo de base de datos que estés usando, las columnas y tablas podrían ser sensibles a mayúsculas y minúsculas. Como resultado, es una buena práctica tratar siempre todo en programación como si fuera sensible a mayúsculas y minúsculas. Al escribir consultas SQL, la convención común es poner las palabras clave en letras mayúsculas.
+> [NOTE] La sintaxis de SQL no distingue entre mayúsculas y minúsculas, lo que significa que `select` y `SELECT` significan lo mismo. Sin embargo, dependiendo del tipo de base de datos que estés usando, las columnas y tablas podrían ser sensibles a mayúsculas y minúsculas. Como resultado, es una buena práctica tratar todo en programación como si fuera sensible a mayúsculas y minúsculas. Al escribir consultas SQL, la convención común es poner las palabras clave en letras mayúsculas.
 
-La consulta anterior mostrará todas las ciudades. Imaginemos que solo queremos mostrar ciudades en Nueva Zelanda. Necesitamos algún tipo de filtro. La palabra clave de SQL para esto es `WHERE`, o "donde algo es verdadero".
+La consulta anterior mostrará todas las ciudades. Imaginemos que solo queremos mostrar las ciudades en Nueva Zelanda. Necesitamos algún tipo de filtro. La palabra clave de SQL para esto es `WHERE`, o "donde algo es verdadero".
 
 ```sql
 SELECT city
@@ -134,11 +134,11 @@ WHERE country = 'New Zealand';
 
 Hasta ahora hemos recuperado datos de una sola tabla. Ahora queremos reunir los datos de **ciudades** y **lluvia**. Esto se hace *uniéndolos* juntos. Efectivamente crearás una conexión entre las dos tablas y emparejarás los valores de una columna de cada tabla.
 
-En nuestro ejemplo, emparejaremos la columna **city_id** en **lluvia** con la columna **city_id** en **ciudades**. Esto emparejará el valor de lluvia con su respectiva ciudad. El tipo de unión que realizaremos se llama *inner join*, lo que significa que si alguna fila no coincide con nada de la otra tabla, no se mostrará. En nuestro caso, cada ciudad tiene datos de lluvia, por lo que todo se mostrará.
+En nuestro ejemplo, emparejaremos la columna **city_id** en **lluvia** con la columna **city_id** en **ciudades**. Esto emparejará el valor de lluvia con su respectiva ciudad. El tipo de unión que realizaremos se llama unión *interna*, lo que significa que si alguna fila no coincide con nada de la otra tabla, no se mostrará. En nuestro caso, cada ciudad tiene datos de lluvia, por lo que todo se mostrará.
 
 Recuperemos la lluvia de 2019 para todas nuestras ciudades.
 
-Vamos a hacerlo en pasos. El primer paso es unir los datos indicando las columnas para la conexión - **city_id** como se destacó antes.
+Vamos a hacerlo en pasos. El primer paso es unir los datos indicando las columnas para la conexión: **city_id** como se destacó antes.
 
 ```sql
 SELECT cities.city
@@ -167,7 +167,7 @@ WHERE rainfall.year = 2019
 
 ## Resumen
 
-Las bases de datos relacionales se centran en dividir la información entre múltiples tablas que luego se reúnen para su visualización y análisis. Esto proporciona un alto grado de flexibilidad para realizar cálculos y manipular datos. Has visto los conceptos centrales de una base de datos relacional y cómo realizar una unión entre dos tablas.
+Las bases de datos relacionales se centran en dividir la información entre múltiples tablas que luego se reúnen para su visualización y análisis. Esto proporciona un alto grado de flexibilidad para realizar cálculos y manipular datos. Has visto los conceptos básicos de una base de datos relacional y cómo realizar una unión entre dos tablas.
 
 ## 🚀 Desafío
 
@@ -175,11 +175,11 @@ Existen numerosas bases de datos relacionales disponibles en internet. Puedes ex
 
 ## Cuestionario posterior a la clase
 
-## [Cuestionario posterior a la clase](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
+## [Cuestionario posterior a la clase](https://ff-quizzes.netlify.app/en/ds/quiz/9)
 
 ## Revisión y Autoestudio
 
-Hay varios recursos disponibles en [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) para que continúes tu exploración de SQL y conceptos de bases de datos relacionales.
+Hay varios recursos disponibles en [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) para que continúes tu exploración de conceptos de SQL y bases de datos relacionales.
 
 - [Describir conceptos de datos relacionales](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
 - [Comienza a consultar con Transact-SQL](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum) (Transact-SQL es una versión de SQL)
@@ -189,5 +189,7 @@ Hay varios recursos disponibles en [Microsoft Learn](https://docs.microsoft.com/
 
 [Título de la tarea](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

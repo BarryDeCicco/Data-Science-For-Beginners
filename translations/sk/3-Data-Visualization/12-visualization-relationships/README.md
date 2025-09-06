@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cad419b574d5c35eaa417e9abfdcb0c8",
-  "translation_date": "2025-08-26T16:55:10+00:00",
+  "original_hash": "0764fd4077f3f04a1d968ec371227744",
+  "translation_date": "2025-09-06T11:46:10+00:00",
   "source_file": "3-Data-Visualization/12-visualization-relationships/README.md",
   "language_code": "sk"
 }
@@ -19,9 +19,9 @@ Tento dataset obsahuje približne 600 položiek a zobrazuje produkciu medu v mno
 
 Bude zaujímavé vizualizovať vzťah medzi produkciou v danom štáte za rok a napríklad cenou medu v tom istom štáte. Alternatívne by ste mohli vizualizovať vzťah medzi výnosom medu na kolóniu v jednotlivých štátoch. Toto obdobie zahŕňa aj ničivý fenomén 'CCD' alebo 'Colony Collapse Disorder', ktorý bol prvýkrát zaznamenaný v roku 2006 (http://npic.orst.edu/envir/ccd.html), takže ide o dojímavý dataset na štúdium. 🐝
 
-## [Kvíz pred prednáškou](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/22)
+## [Kvíz pred prednáškou](https://ff-quizzes.netlify.app/en/ds/quiz/22)
 
-V tejto lekcii môžete použiť knižnicu Seaborn, ktorú ste už používali, ako skvelý nástroj na vizualizáciu vzťahov medzi premennými. Obzvlášť zaujímavá je funkcia `relplot` v Seaborne, ktorá umožňuje rýchlo vytvárať bodové a čiarové grafy na vizualizáciu '[štatistických vzťahov](https://seaborn.pydata.org/tutorial/relational.html?highlight=relationships)', čo umožňuje dátovému analytikovi lepšie pochopiť, ako sa premenné navzájom ovplyvňujú.
+V tejto lekcii môžete použiť knižnicu Seaborn, ktorú ste už používali, ako skvelý nástroj na vizualizáciu vzťahov medzi premennými. Obzvlášť zaujímavé je použitie funkcie `relplot` v Seaborne, ktorá umožňuje rýchlo vytvárať bodové a čiarové grafy na vizualizáciu '[štatistických vzťahov](https://seaborn.pydata.org/tutorial/relational.html?highlight=relationships)', čo umožňuje dátovému analytikovi lepšie pochopiť, ako sa premenné navzájom ovplyvňujú.
 
 ## Bodové grafy
 
@@ -51,7 +51,7 @@ Vytvorte základný bodový graf na zobrazenie vzťahu medzi cenou za libru medu
 ```python
 sns.relplot(x="priceperlb", y="state", data=honey, height=15, aspect=.5);
 ```
-![scatterplot 1](../../../../translated_images/scatter1.5e1aa5fd6706c5d12b5e503ccb77f8a930f8620f539f524ddf56a16c039a5d2f.sk.png)
+![bodový graf 1](../../../../translated_images/scatter1.5e1aa5fd6706c5d12b5e503ccb77f8a930f8620f539f524ddf56a16c039a5d2f.sk.png)
 
 Teraz zobrazte tie isté údaje s farebnou schémou pripomínajúcou med, aby ste ukázali, ako sa cena vyvíja v priebehu rokov. Môžete to dosiahnuť pridaním parametra 'hue', ktorý ukáže zmenu rok čo rok:
 
@@ -60,9 +60,9 @@ Teraz zobrazte tie isté údaje s farebnou schémou pripomínajúcou med, aby st
 ```python
 sns.relplot(x="priceperlb", y="state", hue="year", palette="YlOrBr", data=honey, height=15, aspect=.5);
 ```
-![scatterplot 2](../../../../translated_images/scatter2.c0041a58621ca702990b001aa0b20cd68c1e1814417139af8a7211a2bed51c5f.sk.png)
+![bodový graf 2](../../../../translated_images/scatter2.c0041a58621ca702990b001aa0b20cd68c1e1814417139af8a7211a2bed51c5f.sk.png)
 
-S touto zmenou farebnej schémy môžete vidieť, že cena za libru medu má zjavne silný progres v priebehu rokov. Ak sa pozriete na vzorku údajov (napríklad štát Arizona), môžete vidieť vzor zvyšovania cien rok čo rok, s niekoľkými výnimkami:
+S touto zmenou farebnej schémy môžete vidieť, že v priebehu rokov existuje zjavný silný progres v cene medu za libru. Ak sa pozriete na vzorku údajov na overenie (napríklad vyberte štát Arizona), môžete vidieť vzor zvyšovania cien rok čo rok, s niekoľkými výnimkami:
 
 | štát | počet kolónií | výnos na kolóniu | celková produkcia | zásoby  | cena za libru | hodnota produkcie | rok |
 | ----- | ------------- | ---------------- | ----------------- | ------- | ------------- | ----------------- | --- |
@@ -82,31 +82,31 @@ S touto zmenou farebnej schémy môžete vidieť, že cena za libru medu má zja
 | AZ    | 23000         | 53              | 1219000           | 427000  | 1.55          | 1889000           | 2011 |
 | AZ    | 22000         | 46              | 1012000           | 253000  | 1.79          | 1811000           | 2012 |
 
-Ďalším spôsobom, ako vizualizovať tento progres, je použiť veľkosť namiesto farby. Pre používateľov s poruchami farebného videnia by to mohla byť lepšia možnosť. Upravte svoju vizualizáciu tak, aby zvýšenie ceny bolo znázornené zväčšením obvodu bodov:
+Ďalším spôsobom, ako vizualizovať tento progres, je použiť veľkosť namiesto farby. Pre používateľov s poruchami farebného vnímania by to mohla byť lepšia možnosť. Upravte svoju vizualizáciu tak, aby ukázala nárast ceny zväčšením obvodu bodov:
 
 ```python
 sns.relplot(x="priceperlb", y="state", size="year", data=honey, height=15, aspect=.5);
 ```
 Vidíte, že veľkosť bodov sa postupne zväčšuje.
 
-![scatterplot 3](../../../../translated_images/scatter3.3c160a3d1dcb36b37900ebb4cf97f34036f28ae2b7b8e6062766c7c1dfc00853.sk.png)
+![bodový graf 3](../../../../translated_images/scatter3.3c160a3d1dcb36b37900ebb4cf97f34036f28ae2b7b8e6062766c7c1dfc00853.sk.png)
 
-Je to jednoduchý prípad ponuky a dopytu? Kvôli faktorom, ako je zmena klímy a kolaps kolónií, je k dispozícii menej medu na predaj rok čo rok, a preto cena rastie?
+Je to jednoduchý prípad ponuky a dopytu? Kvôli faktorom, ako je klimatická zmena a kolaps kolónií, je k dispozícii menej medu na predaj rok čo rok, a preto cena rastie?
 
 Aby sme objavili koreláciu medzi niektorými premennými v tomto datasete, preskúmajme niekoľko čiarových grafov.
 
 ## Čiarové grafy
 
-Otázka: Je zrejmý nárast ceny medu za libru rok čo rok? Najjednoduchšie to zistíte vytvorením jedného čiarového grafu:
+Otázka: Existuje jasný nárast ceny medu za libru rok čo rok? Najjednoduchšie to zistíte vytvorením jedného čiarového grafu:
 
 ```python
 sns.relplot(x="year", y="priceperlb", kind="line", data=honey);
 ```
 Odpoveď: Áno, s niekoľkými výnimkami okolo roku 2003:
 
-![line chart 1](../../../../translated_images/line1.f36eb465229a3b1fe385cdc93861aab3939de987d504b05de0b6cd567ef79f43.sk.png)
+![čiarový graf 1](../../../../translated_images/line1.f36eb465229a3b1fe385cdc93861aab3939de987d504b05de0b6cd567ef79f43.sk.png)
 
-✅ Keďže Seaborn agreguje údaje do jednej čiary, zobrazuje "viacero meraní pre každú hodnotu x tým, že vykresľuje priemer a 95% interval spoľahlivosti okolo priemeru". [Zdroj](https://seaborn.pydata.org/tutorial/relational.html). Toto časovo náročné správanie môžete vypnúť pridaním `ci=None`.
+✅ Pretože Seaborn agreguje údaje okolo jednej čiary, zobrazuje "viacero meraní pri každej hodnote x tým, že vykresľuje priemer a 95% interval spoľahlivosti okolo priemeru". [Zdroj](https://seaborn.pydata.org/tutorial/relational.html). Toto časovo náročné správanie môžete vypnúť pridaním `ci=None`.
 
 Otázka: No, v roku 2003 môžeme tiež vidieť nárast v zásobách medu? Čo ak sa pozriete na celkovú produkciu rok čo rok?
 
@@ -114,9 +114,9 @@ Otázka: No, v roku 2003 môžeme tiež vidieť nárast v zásobách medu? Čo a
 sns.relplot(x="year", y="totalprod", kind="line", data=honey);
 ```
 
-![line chart 2](../../../../translated_images/line2.a5b3493dc01058af6402e657aaa9ae1125fafb5e7d6630c777aa60f900a544e4.sk.png)
+![čiarový graf 2](../../../../translated_images/line2.a5b3493dc01058af6402e657aaa9ae1125fafb5e7d6630c777aa60f900a544e4.sk.png)
 
-Odpoveď: Nie celkom. Ak sa pozriete na celkovú produkciu, zdá sa, že v tomto konkrétnom roku skutočne vzrástla, aj keď všeobecne množstvo vyprodukovaného medu v týchto rokoch klesá.
+Odpoveď: Nie celkom. Ak sa pozriete na celkovú produkciu, zdá sa, že v tom konkrétnom roku skutočne vzrástla, aj keď všeobecne množstvo vyprodukovaného medu v týchto rokoch klesá.
 
 Otázka: V tom prípade, čo mohlo spôsobiť ten nárast ceny medu okolo roku 2003?
 
@@ -135,10 +135,11 @@ sns.relplot(
     col="year", 
     col_wrap=3,
     kind="line"
+    )
 ```
 V tejto vizualizácii môžete porovnať výnos na kolóniu a počet kolónií rok čo rok, vedľa seba, s nastavením wrap na 3 pre stĺpce:
 
-![facet grid](../../../../translated_images/facet.6a34851dcd540050dcc0ead741be35075d776741668dd0e42f482c89b114c217.sk.png)
+![mriežka aspektov](../../../../translated_images/facet.6a34851dcd540050dcc0ead741be35075d776741668dd0e42f482c89b114c217.sk.png)
 
 Pre tento dataset nič zvlášť nevyniká, pokiaľ ide o počet kolónií a ich výnos, rok čo rok a štát po štáte. Existuje iný spôsob, ako nájsť koreláciu medzi týmito dvoma premennými?
 
@@ -161,17 +162,18 @@ sns.despine(right=False)
 plt.ylabel('colony yield')
 ax.figure.legend();
 ```
-![superimposed plots](../../../../translated_images/dual-line.a4c28ce659603fab2c003f4df816733df2bf41d1facb7de27989ec9afbf01b33.sk.png)
+![prekryté grafy](../../../../translated_images/dual-line.a4c28ce659603fab2c003f4df816733df2bf41d1facb7de27989ec9afbf01b33.sk.png)
 
-Aj keď nič výrazne nevyniká okolo roku 2003, umožňuje nám to ukončiť túto lekciu na trochu pozitívnejšiu nôtu: aj keď počet kolónií celkovo klesá, ich počet sa stabilizuje, aj keď ich výnos na kolóniu klesá.
+Aj keď okolo roku 2003 nič zvlášť nevyniká, umožňuje nám to ukončiť túto lekciu na trochu pozitívnejšiu nôtu: aj keď počet kolónií celkovo klesá, ich počet sa stabilizuje, aj keď ich výnos na kolóniu klesá.
 
 Do toho, včely, do toho!
 
 🐝❤️
 ## 🚀 Výzva
 
-V tejto lekcii ste sa dozvedeli viac o iných využitiach bodových grafov a mriežok aspektov, vrátane mriežok aspektov. Vyzvite sa na vytvorenie mriežky aspektov pomocou iného datasetu, možno takého, ktorý ste použili pred týmito lekciami. Všimnite si, ako dlho trvá ich vytvorenie a ako musíte byť opatrní pri počte mriežok, ktoré potrebujete vykresliť pomocou týchto techník.
-## [Kvíz po prednáške](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/23)
+V tejto lekcii ste sa dozvedeli viac o iných využitiach bodových grafov a mriežok čiar, vrátane mriežok aspektov. Vyzvite sa na vytvorenie mriežky aspektov pomocou iného datasetu, možno takého, ktorý ste použili pred týmito lekciami. Všimnite si, ako dlho trvá ich vytvorenie a ako musíte byť opatrní pri počte mriežok, ktoré potrebujete vykresliť pomocou týchto techník.
+
+## [Kvíz po prednáške](https://ff-quizzes.netlify.app/en/ds/quiz/23)
 
 ## Prehľad a samoštúdium
 
@@ -183,4 +185,4 @@ V tejto lekcii ste sa dozvedeli viac o iných využitiach bodových grafov a mri
 ---
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

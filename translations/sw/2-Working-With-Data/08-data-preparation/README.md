@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3ade580a06b5f04d57cc83a768a8fb77",
-  "translation_date": "2025-08-26T14:34:23+00:00",
+  "original_hash": "1b560955ff39a2bcf2a049fce474a951",
+  "translation_date": "2025-09-05T17:08:39+00:00",
   "source_file": "2-Working-With-Data/08-data-preparation/README.md",
   "language_code": "sw"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 |Maandalizi ya Data - _Sketchnote na [@nitya](https://twitter.com/nitya)_ |
 
-## [Maswali ya Awali ya Somo](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/14)
+## [Maswali ya Awali ya Somo](https://ff-quizzes.netlify.app/en/ds/quiz/14)
 
-Kutegemea chanzo chake, data ghafi inaweza kuwa na kutokubaliana fulani ambazo zitasababisha changamoto katika uchambuzi na uundaji wa mifano. Kwa maneno mengine, data hii inaweza kuainishwa kama "chafu" na itahitaji kusafishwa. Somo hili linazingatia mbinu za kusafisha na kubadilisha data ili kushughulikia changamoto za data iliyopotea, isiyo sahihi, au isiyokamilika. Mada zilizojadiliwa katika somo hili zitatumia Python na maktaba ya Pandas na zitaonyeshwa [katika daftari](notebook.ipynb) ndani ya saraka hii.
+Kutegemea chanzo chake, data ghafi inaweza kuwa na kutokubaliana fulani ambazo zitasababisha changamoto katika uchambuzi na uundaji wa mifano. Kwa maneno mengine, data hii inaweza kuainishwa kama "chafu" na itahitaji kusafishwa. Somo hili linazingatia mbinu za kusafisha na kubadilisha data ili kushughulikia changamoto za data iliyopotea, isiyo sahihi, au isiyokamilika. Mada zilizojadiliwa katika somo hili zitatumia Python na maktaba ya Pandas na zitaonyeshwa katika [notebook](../../../../2-Working-With-Data/08-data-preparation/notebook.ipynb) ndani ya saraka hii.
 
 ## Umuhimu wa Kusafisha Data
 
 - **Urahisi wa matumizi na matumizi tena**: Wakati data imepangwa vizuri na kuhalalishwa, ni rahisi kuitafuta, kuitumia, na kushirikiana na wengine.
 
-- **Uthabiti**: Sayansi ya data mara nyingi inahitaji kufanya kazi na seti zaidi ya moja ya data, ambapo seti za data kutoka vyanzo tofauti zinahitaji kuunganishwa pamoja. Kuhakikisha kwamba kila seti ya data ina kiwango cha kawaida kutahakikisha kuwa data bado ni muhimu wakati zote zimeunganishwa kuwa seti moja ya data.
+- **Uthabiti**: Sayansi ya data mara nyingi inahitaji kufanya kazi na seti zaidi ya moja ya data, ambapo seti za data kutoka vyanzo tofauti zinahitaji kuunganishwa pamoja. Kuhakikisha kwamba kila seti ya data ina kiwango cha kawaida cha uhalalishaji kutahakikisha kuwa data bado ni muhimu wakati zote zimeunganishwa kuwa seti moja ya data.
 
 - **Usahihi wa mifano**: Data ambayo imesafishwa inaboresha usahihi wa mifano inayotegemea data hiyo.
 
@@ -29,11 +29,11 @@ Kutegemea chanzo chake, data ghafi inaweza kuwa na kutokubaliana fulani ambazo z
 
 - **Kuchunguza seti ya data**: Uchunguzi wa data, ambao unajadiliwa katika [somo la baadaye](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle/15-analyzing), unaweza kukusaidia kugundua data inayohitaji kusafishwa. Kuangalia kwa macho thamani ndani ya seti ya data kunaweza kuweka matarajio ya jinsi sehemu nyingine itakavyokuwa, au kutoa wazo la matatizo yanayoweza kutatuliwa. Uchunguzi unaweza kuhusisha kuuliza maswali ya msingi, kuonyesha data kwa njia ya picha, na kuchukua sampuli.
 
-- **Uundaji**: Kutegemea chanzo, data inaweza kuwa na kutokubaliana katika jinsi inavyowasilishwa. Hii inaweza kusababisha matatizo katika kutafuta na kuwakilisha thamani, ambapo inaonekana ndani ya seti ya data lakini haijawakilishwa vizuri katika picha au matokeo ya maswali. Matatizo ya kawaida ya uundaji yanahusisha kutatua nafasi tupu, tarehe, na aina za data. Kutatua masuala ya uundaji mara nyingi ni jukumu la watu wanaotumia data. Kwa mfano, viwango vya jinsi tarehe na namba zinavyowasilishwa vinaweza kutofautiana kulingana na nchi.
+- **Uundaji**: Kutegemea chanzo, data inaweza kuwa na kutokubaliana katika jinsi inavyowasilishwa. Hii inaweza kusababisha matatizo katika kutafuta na kuwakilisha thamani, ambapo inaonekana ndani ya seti ya data lakini haijawakilishwa vizuri katika picha au matokeo ya maswali. Matatizo ya kawaida ya uundaji yanahusisha kutatua nafasi tupu, tarehe, na aina za data. Kutatua masuala ya uundaji kwa kawaida ni jukumu la watu wanaotumia data. Kwa mfano, viwango vya jinsi tarehe na namba zinavyowasilishwa vinaweza kutofautiana kulingana na nchi.
 
 - **Marudio**: Data ambayo ina tukio zaidi ya moja inaweza kutoa matokeo yasiyo sahihi na kwa kawaida inapaswa kuondolewa. Hii inaweza kuwa tukio la kawaida wakati wa kuunganisha seti mbili au zaidi za data pamoja. Hata hivyo, kuna hali ambapo marudio katika seti za data zilizounganishwa zina vipande vinavyoweza kutoa taarifa za ziada na zinaweza kuhitaji kuhifadhiwa.
 
-- **Data Iliyopotea**: Data iliyopotea inaweza kusababisha matokeo yasiyo sahihi pamoja na matokeo dhaifu au yenye upendeleo. Wakati mwingine haya yanaweza kutatuliwa kwa "kupakia tena" data, kujaza thamani zilizopotea kwa hesabu na msimbo kama Python, au tu kuondoa thamani na data inayohusiana. Kuna sababu nyingi kwa nini data inaweza kupotea na hatua zinazochukuliwa kutatua thamani zilizopotea zinaweza kutegemea jinsi na kwa nini zilipotea.
+- **Data Iliyopotea**: Data iliyopotea inaweza kusababisha matokeo yasiyo sahihi pamoja na matokeo dhaifu au yenye upendeleo. Wakati mwingine haya yanaweza kutatuliwa kwa "kupakia tena" data, kujaza thamani zilizopotea kwa hesabu na msimbo kama Python, au kwa urahisi kuondoa thamani na data inayohusiana. Kuna sababu nyingi kwa nini data inaweza kupotea na hatua zinazochukuliwa kutatua thamani hizi zilizopotea zinaweza kutegemea jinsi na kwa nini zilipotea.
 
 ## Kuchunguza Taarifa za DataFrame
 > **Lengo la kujifunza:** Mwisho wa sehemu hii ndogo, unapaswa kuwa na ujuzi wa kupata taarifa za jumla kuhusu data iliyohifadhiwa katika DataFrames za pandas.
@@ -73,7 +73,7 @@ Data columns (total 4 columns):
 dtypes: float64(4)
 memory usage: 4.8 KB
 ```
-Kutoka hapa, tunajua kwamba seti ya data ya *Iris* ina maingizo 150 katika nguzo nne bila maingizo tupu. Data yote imehifadhiwa kama namba za nukta zinazozunguka za biti 64.
+Kutoka hapa, tunajua kwamba seti ya data ya *Iris* ina maingizo 150 katika nguzo nne bila maingizo tupu. Data yote imehifadhiwa kama namba za nukta zinazozunguka za 64-bit.
 
 - **DataFrame.head()**: Kisha, ili kuangalia yaliyomo halisi ya `DataFrame`, tunatumia njia ya `head()`. Hebu tuone safu chache za mwanzo za `iris_df` yetu:
 ```python
@@ -104,13 +104,13 @@ iris_df.tail()
 ## Kushughulikia Data Iliyopotea
 > **Lengo la kujifunza:** Mwisho wa sehemu hii ndogo, unapaswa kujua jinsi ya kubadilisha au kuondoa thamani tupu kutoka DataFrames.
 
-Mara nyingi seti za data unazotaka kutumia (au unazopaswa kutumia) zina thamani zilizopotea ndani yake. Jinsi data iliyopotea inavyoshughulikiwa hubeba na yenyewe maamuzi madogo ambayo yanaweza kuathiri uchambuzi wako wa mwisho na matokeo halisi ya ulimwengu.
+Mara nyingi seti za data unazotaka kutumia (au unazopaswa kutumia) zina thamani zilizopotea ndani yake. Jinsi data iliyopotea inavyoshughulikiwa ina athari ndogo ambazo zinaweza kuathiri uchambuzi wako wa mwisho na matokeo halisi ya ulimwengu.
 
-Pandas hushughulikia thamani zilizopotea kwa njia mbili. Ya kwanza umeiona hapo awali katika sehemu zilizopita: `NaN`, au Sio Namba. Hii ni thamani maalum ambayo ni sehemu ya maelezo ya nukta zinazozunguka za IEEE na hutumika tu kuonyesha thamani za nukta zinazozunguka zilizopotea.
+Pandas hushughulikia thamani zilizopotea kwa njia mbili. Ya kwanza umeiona hapo awali katika sehemu zilizopita: `NaN`, au Not a Number. Hii ni thamani maalum ambayo ni sehemu ya maelezo ya nukta zinazozunguka za IEEE na hutumika tu kuonyesha thamani za nukta zinazozunguka zilizopotea.
 
-Kwa thamani zilizopotea mbali na nukta zinazozunguka, pandas hutumia kitu cha Python `None`. Ingawa inaweza kuonekana kuwa ni mkanganyiko kwamba utakutana na aina mbili tofauti za thamani zinazosema kimsingi jambo moja, kuna sababu za kimaandishi za mpango kwa chaguo hili la muundo na, kwa mazoezi, njia hii inawezesha pandas kutoa suluhisho nzuri kwa hali nyingi. Licha ya hili, zote `None` na `NaN` zina vikwazo ambavyo unahitaji kuwa makini navyo kuhusu jinsi zinavyoweza kutumika.
+Kwa thamani zilizopotea mbali na nukta zinazozunguka, pandas hutumia kitu cha Python `None`. Ingawa inaweza kuonekana kuwa ni mkanganyiko kwamba utakutana na aina mbili tofauti za thamani zinazosema kimsingi kitu kimoja, kuna sababu za kimaandishi za programu kwa chaguo hili la muundo na, kwa mazoezi, njia hii inaiwezesha pandas kutoa suluhisho nzuri kwa hali nyingi. Licha ya hili, zote `None` na `NaN` zina vizuizi ambavyo unahitaji kuzingatia kuhusu jinsi zinavyoweza kutumika.
 
-Angalia zaidi kuhusu `NaN` na `None` kutoka [daftari](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
+Angalia zaidi kuhusu `NaN` na `None` kutoka [notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
 
 - **Kugundua thamani tupu**: Katika `pandas`, njia za `isnull()` na `notnull()` ni njia zako kuu za kugundua data tupu. Zote zinarudisha maski za Boolean juu ya data yako. Tutatumia `numpy` kwa thamani za `NaN`:
 ```python
@@ -128,11 +128,11 @@ dtype: bool
 ```
 Angalia kwa makini matokeo. Je, kuna lolote linalokushangaza? Ingawa `0` ni null ya hesabu, bado ni namba kamili nzuri na pandas inaitendea kama hiyo. `''` ni kidogo zaidi ya hila. Ingawa tulitumia katika Sehemu ya 1 kuwakilisha thamani ya kamba tupu, bado ni kitu cha kamba na si uwakilishi wa null kulingana na pandas.
 
-Sasa, hebu tugeuze hili na tutumie njia hizi kwa namna zaidi kama unavyotumia kwa mazoezi. Unaweza kutumia maski za Boolean moja kwa moja kama `Series` au `DataFrame` index, ambayo inaweza kuwa muhimu wakati wa kujaribu kufanya kazi na thamani zilizopotea (au zilizopo) pekee.
+Sasa, hebu tugeuze hili na kutumia njia hizi kwa namna zaidi kama unavyotumia kwa mazoezi. Unaweza kutumia maski za Boolean moja kwa moja kama `Series` au `DataFrame` index, ambayo inaweza kuwa muhimu wakati wa kujaribu kufanya kazi na thamani zilizopotea (au zilizopo) pekee.
 
-> **Hitimisho**: Zote `isnull()` na `notnull()` zinatoa matokeo yanayofanana unapozitumia katika `DataFrame`s: zinaonyesha matokeo na index ya matokeo hayo, ambayo itakusaidia sana unaposhughulika na data yako.
+> **Hitimisho:** Zote `isnull()` na `notnull()` hutoa matokeo yanayofanana unapotumia katika `DataFrame`s: zinaonyesha matokeo na index ya matokeo hayo, ambayo yatakusaidia sana unaposhughulika na data yako.
 
-- **Kuondoa thamani tupu**: Zaidi ya kutambua thamani zilizopotea, pandas hutoa njia rahisi ya kuondoa thamani tupu kutoka `Series` na `DataFrame`s. (Hasa kwenye seti kubwa za data, mara nyingi ni busara zaidi kuondoa thamani zilizopotea [NA] kutoka uchambuzi wako kuliko kushughulika nazo kwa njia nyingine.) Ili kuona hili likifanya kazi, hebu turudi kwa `example1`:
+- **Kuondoa thamani tupu**: Zaidi ya kutambua thamani zilizopotea, pandas hutoa njia rahisi ya kuondoa thamani tupu kutoka `Series` na `DataFrame`s. (Hasa kwenye seti kubwa za data, mara nyingi ni busara zaidi kuondoa thamani zilizopotea [NA] kutoka uchambuzi wako kuliko kushughulika nazo kwa njia nyingine.) Ili kuona hili kwa vitendo, hebu turudi kwa `example1`:
 ```python
 example1 = example1.dropna()
 example1
@@ -142,7 +142,7 @@ example1
 2     
 dtype: object
 ```
-Kumbuka kwamba hii inapaswa kuonekana kama matokeo yako kutoka `example3[example3.notnull()]`. Tofauti hapa ni kwamba, badala ya kuindex tu kwenye thamani zilizofichwa, `dropna` imeondoa thamani zilizopotea kutoka `Series` `example1`.
+Kumbuka kwamba hii inapaswa kuonekana kama matokeo yako kutoka `example3[example3.notnull()]`. Tofauti hapa ni kwamba, badala ya kuindex kwenye thamani zilizofichwa, `dropna` imeondoa thamani zilizopotea kutoka `Series` `example1`.
 
 Kwa sababu `DataFrame`s zina vipimo viwili, zinatoa chaguo zaidi za kuondoa data.
 
@@ -179,9 +179,9 @@ example2.dropna(axis='columns')
 1	8
 2	9
 ```
-Kumbuka kwamba hii inaweza kuondoa data nyingi unazoweza kutaka kuhifadhi, hasa katika seti ndogo za data. Je, ikiwa unataka tu kuondoa safu au nguzo zinazojumuisha thamani kadhaa au hata zote tupu? Unaweza kutaja mipangilio hiyo katika `dropna` kwa vigezo vya `how` na `thresh`.
+Kumbuka kwamba hii inaweza kuondoa data nyingi ambayo unaweza kutaka kuhifadhi, hasa katika seti ndogo za data. Je, ikiwa unataka tu kuondoa safu au nguzo zinazojumuisha kadhaa au hata thamani zote tupu? Unaweza kutaja mipangilio hiyo katika `dropna` kwa vigezo vya `how` na `thresh`.
 
-Kwa msingi, `how='any'` (ikiwa ungependa kuangalia mwenyewe au kuona vigezo vingine ambavyo njia hiyo ina, endesha `example4.dropna?` katika seli ya msimbo). Unaweza badala yake kutaja `how='all'` ili kuondoa tu safu au nguzo zinazojumuisha thamani zote tupu. Hebu tuongeze mfano wetu wa `DataFrame` ili kuona hili likifanya kazi.
+Kwa msingi, `how='any'` (ikiwa ungependa kuangalia mwenyewe au kuona vigezo vingine ambavyo njia hiyo ina, endesha `example4.dropna?` katika seli ya msimbo). Unaweza badala yake kutaja `how='all'` ili kuondoa tu safu au nguzo zinazojumuisha thamani zote tupu. Hebu tuongeze `DataFrame` yetu ya mfano ili kuona hili kwa vitendo.
 
 ```python
 example2[3] = np.nan
@@ -193,7 +193,7 @@ example2
 |1     |2.0|5.0|8  |NaN|
 |2     |NaN|6.0|9  |NaN|
 
-Kigezo cha `thresh` kinakupa udhibiti wa kina zaidi: unaweka idadi ya thamani *zisizo tupu* ambazo safu au nguzo zinahitaji kuwa nazo ili kuhifadhiwa:
+Kigezo cha `thresh` kinakupa udhibiti wa kina zaidi: unataja idadi ya thamani *zisizo tupu* ambazo safu au nguzo inahitaji kuwa nazo ili kuhifadhiwa:
 ```python
 example2.dropna(axis='rows', thresh=3)
 ```
@@ -201,9 +201,9 @@ example2.dropna(axis='rows', thresh=3)
 	0	1	2	3
 1	2.0	5.0	8	NaN
 ```
-Hapa, safu ya kwanza na ya mwisho zimeondolewa, kwa sababu zinajumuisha thamani mbili tu zisizo tupu.
+Hapa, safu ya kwanza na ya mwisho zimeondolewa, kwa sababu zina thamani mbili tu zisizo tupu.
 
-- **Kujaza thamani tupu**: Kutegemea seti yako ya data, wakati mwingine inaweza kuwa na maana zaidi kujaza thamani tupu na zile halali badala ya kuziondoa. Unaweza kutumia `isnull` kufanya hivyo mahali pake, lakini hiyo inaweza kuwa kazi ngumu, hasa ikiwa una thamani nyingi za kujaza. Kwa sababu hii ni kazi ya kawaida sana katika sayansi ya data, pandas hutoa `fillna`, ambayo inarudisha nakala ya `Series` au `DataFrame` na thamani zilizopotea zimebadilishwa na moja unayochagua. Hebu tuunde mfano mwingine wa `Series` ili kuona jinsi hii inavyofanya kazi kwa mazoezi.
+- **Kujaza thamani tupu**: Kutegemea seti yako ya data, wakati mwingine inaweza kuwa na maana zaidi kujaza thamani tupu na zile halali badala ya kuondoa. Unaweza kutumia `isnull` kufanya hivi mahali pake, lakini hiyo inaweza kuwa kazi ngumu, hasa ikiwa una thamani nyingi za kujaza. Kwa sababu hii ni kazi ya kawaida katika sayansi ya data, pandas hutoa `fillna`, ambayo inarudisha nakala ya `Series` au `DataFrame` na thamani zilizopotea kubadilishwa na moja unayochagua. Hebu tuunde `Series` nyingine ya mfano ili kuona jinsi hii inavyofanya kazi kwa mazoezi.
 ```python
 example3 = pd.Series([1, np.nan, 2, None, 3], index=list('abcde'))
 example3
@@ -252,7 +252,7 @@ d    3.0
 e    3.0
 dtype: float64
 ```
-Kama unavyoweza kudhani, hii inafanya kazi sawa na `DataFrame`s, lakini unaweza pia kutaja `axis` ambayo kujaza thamani tupu kunafanyika. ukitumia tena `example2` iliyotumika hapo awali:
+Kama unavyoweza kudhani, hii inafanya kazi sawa na `DataFrame`s, lakini unaweza pia kutaja `axis` ambayo kujaza thamani tupu kunafanyika. Ukichukua tena `example2` iliyotumika hapo awali:
 ```python
 example2.fillna(method='ffill', axis=1)
 ```
@@ -263,15 +263,14 @@ example2.fillna(method='ffill', axis=1)
 2	NaN	6.0	9.0	9.0
 ```
 Kumbuka kwamba wakati thamani ya awali haipatikani kwa kujaza mbele, thamani tupu inabaki.
-> **Mambo Muhimu:** Kuna njia nyingi za kushughulikia thamani zilizokosekana katika seti zako za data. Mkakati maalum unaotumia (kuondoa, kubadilisha, au hata jinsi unavyobadilisha) unapaswa kuamuliwa na maelezo ya data hiyo. Utapata uelewa bora wa jinsi ya kushughulikia thamani zilizokosekana kadri unavyoshughulikia na kuingiliana na seti za data.
+> **Mafunzo Muhimu:** Kuna njia nyingi za kushughulikia thamani zinazokosekana katika seti zako za data. Mkakati maalum unaotumia (kuondoa, kubadilisha, au hata jinsi unavyobadilisha) unapaswa kuongozwa na maelezo ya data hiyo. Utapata uelewa bora wa jinsi ya kushughulikia thamani zinazokosekana kadri unavyoshughulikia na kuingiliana na seti za data.
+## Kuondoa Takwimu Zilizojirudia
 
-## Kuondoa data rudufu
+> **Lengo la kujifunza:** Mwisho wa sehemu hii ndogo, unapaswa kuwa na uelewa wa kutambua na kuondoa thamani zinazojirudia kutoka kwa DataFrames.
 
-> **Lengo la kujifunza:** Mwisho wa sehemu hii ndogo, unapaswa kuwa na ujuzi wa kutambua na kuondoa thamani rudufu kutoka kwa DataFrames.
+Mbali na data inayokosekana, mara nyingi utakutana na data iliyojirudia katika seti za data za ulimwengu halisi. Kwa bahati nzuri, `pandas` inatoa njia rahisi ya kugundua na kuondoa maingizo yaliyodukuliwa.
 
-Mbali na data iliyokosekana, mara nyingi utakutana na data rudufu katika seti za data za ulimwengu halisi. Kwa bahati nzuri, `pandas` inatoa njia rahisi ya kugundua na kuondoa maingizo rudufu.
-
-- **Kutambua rudufu: `duplicated`**: Unaweza kutambua kwa urahisi thamani rudufu kwa kutumia njia ya `duplicated` katika pandas, ambayo inarudisha mask ya Boolean inayoonyesha ikiwa ingizo katika `DataFrame` ni rudufu ya moja ya awali. Hebu tuunde mfano mwingine wa `DataFrame` ili kuona hili likifanya kazi.
+- **Kutambua data zinazojirudia: `duplicated`**: Unaweza kutambua kwa urahisi thamani zinazojirudia kwa kutumia njia ya `duplicated` katika pandas, ambayo inarudisha mask ya Boolean inayoonyesha ikiwa ingizo katika `DataFrame` ni nakala ya ingizo la awali. Hebu tuunde mfano mwingine wa `DataFrame` ili kuona hili likifanya kazi.
 ```python
 example4 = pd.DataFrame({'letters': ['A','B'] * 2 + ['B'],
                          'numbers': [1, 2, 1, 3, 3]})
@@ -296,7 +295,7 @@ example4.duplicated()
 4     True
 dtype: bool
 ```
-- **Kuondoa rudufu: `drop_duplicates`:** inarudisha nakala ya data ambayo thamani zote za `duplicated` ni `False`:
+- **Kuondoa data zinazojirudia: `drop_duplicates`:** inarudisha nakala ya data ambapo thamani zote za `duplicated` ni `False`:
 ```python
 example4.drop_duplicates()
 ```
@@ -316,20 +315,20 @@ letters	numbers
 1	B	2
 ```
 
-> **Mambo Muhimu:** Kuondoa data rudufu ni sehemu muhimu ya karibu kila mradi wa sayansi ya data. Data rudufu inaweza kubadilisha matokeo ya uchambuzi wako na kukupa matokeo yasiyo sahihi!
+> **Mafunzo muhimu:** Kuondoa data zinazojirudia ni sehemu muhimu ya karibu kila mradi wa sayansi ya data. Data zinazojirudia zinaweza kubadilisha matokeo ya uchambuzi wako na kukupa matokeo yasiyo sahihi!
 
 
 ## 🚀 Changamoto
 
 Vifaa vyote vilivyojadiliwa vinapatikana kama [Jupyter Notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/2-Working-With-Data/08-data-preparation/notebook.ipynb). Zaidi ya hayo, kuna mazoezi yaliyopo baada ya kila sehemu, jaribu kuyafanya!
 
-## [Jaribio Baada ya Somo](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/15)
+## [Jaribio la baada ya somo](https://ff-quizzes.netlify.app/en/ds/quiz/15)
 
 
 
-## Mapitio na Kujifunza Mwenyewe
+## Mapitio na Kujisomea
 
-Kuna njia nyingi za kugundua na kukaribia kuandaa data yako kwa uchambuzi na uundaji wa mifano, na kusafisha data ni hatua muhimu ambayo ni uzoefu wa "vitendo". Jaribu changamoto hizi kutoka Kaggle ili kuchunguza mbinu ambazo somo hili halikuzungumzia.
+Kuna njia nyingi za kugundua na kukaribia kuandaa data yako kwa uchambuzi na uundaji wa mifano, na kusafisha data ni hatua muhimu ambayo inahitaji uzoefu wa "vitendo". Jaribu changamoto hizi kutoka Kaggle ili kuchunguza mbinu ambazo somo hili halikuzifunika.
 
 - [Changamoto ya Kusafisha Data: Kuchambua Tarehe](https://www.kaggle.com/rtatman/data-cleaning-challenge-parsing-dates/)
 
@@ -343,4 +342,4 @@ Kuna njia nyingi za kugundua na kukaribia kuandaa data yako kwa uchambuzi na uun
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kibinadamu ya kitaalamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutokuelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

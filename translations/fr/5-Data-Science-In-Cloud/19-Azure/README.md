@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-25T17:34:51+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T12:19:45+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "fr"
 }
 -->
-# Data Science dans le Cloud : La méthode "Azure ML SDK"
+# La Science des Données dans le Cloud : La méthode "Azure ML SDK"
 
 |![ Sketchnote par [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/19-DataScience-Cloud.png)|
 |:---:|
-| Data Science dans le Cloud : Azure ML SDK - _Sketchnote par [@nitya](https://twitter.com/nitya)_ |
+| La Science des Données dans le Cloud : Azure ML SDK - _Sketchnote par [@nitya](https://twitter.com/nitya)_ |
 
 Table des matières :
 
-- [Data Science dans le Cloud : La méthode "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
+- [La Science des Données dans le Cloud : La méthode "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Quiz avant le cours](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. Introduction](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 Qu'est-ce que l'Azure ML SDK ?](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -37,13 +37,13 @@ Table des matières :
   - [Révision et auto-apprentissage](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Devoir](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Quiz avant le cours](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Quiz avant le cours](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Introduction
 
 ### 1.1 Qu'est-ce que l'Azure ML SDK ?
 
-Les data scientists et les développeurs en IA utilisent le SDK Azure Machine Learning pour créer et exécuter des workflows de machine learning avec le service Azure Machine Learning. Vous pouvez interagir avec le service dans n'importe quel environnement Python, y compris Jupyter Notebooks, Visual Studio Code ou votre IDE Python préféré.
+Les data scientists et les développeurs en intelligence artificielle utilisent le SDK Azure Machine Learning pour créer et exécuter des workflows de machine learning avec le service Azure Machine Learning. Vous pouvez interagir avec le service dans n'importe quel environnement Python, y compris Jupyter Notebooks, Visual Studio Code ou votre IDE Python préféré.
 
 Les principales fonctionnalités du SDK incluent :
 
@@ -57,7 +57,7 @@ Les principales fonctionnalités du SDK incluent :
 
 Dans la [leçon précédente](../18-Low-Code/README.md), nous avons vu comment entraîner, déployer et consommer un modèle de manière Low code/No code. Nous avons utilisé le jeu de données sur l'insuffisance cardiaque pour générer un modèle de prédiction. Dans cette leçon, nous allons faire exactement la même chose, mais en utilisant le SDK Azure Machine Learning.
 
-![schéma-projet](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.fr.png)
+![schéma-projet](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 Projet de prédiction d'insuffisance cardiaque et introduction au jeu de données
 
@@ -74,7 +74,7 @@ Sinon, veuillez suivre les instructions de la section **2.1 Créer un espace de 
 
 Dans l'[espace de travail Azure ML](https://ml.azure.com/) que nous avons créé précédemment, allez dans le menu de calcul et vous verrez les différentes ressources de calcul disponibles.
 
-![instance-calcul-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.fr.png)
+![instance-calcul-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 Créons une instance de calcul pour provisionner un notebook Jupyter. 
 1. Cliquez sur le bouton + Nouveau. 
@@ -91,16 +91,16 @@ Consultez la [leçon précédente](../18-Low-Code/README.md) dans la section **2
 
 > **_NOTE:_** Pour l'étape suivante, vous pouvez soit créer un nouveau notebook à partir de zéro, soit télécharger le [notebook que nous avons créé](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) dans votre Azure ML Studio. Pour le télécharger, cliquez simplement sur le menu "Notebook" et téléchargez le notebook.
 
-Les notebooks sont une partie très importante du processus de data science. Ils peuvent être utilisés pour effectuer une analyse exploratoire des données (EDA), appeler un cluster de calcul pour entraîner un modèle, ou appeler un cluster d'inférence pour déployer un endpoint. 
+Les notebooks sont une partie très importante du processus de science des données. Ils peuvent être utilisés pour effectuer une analyse exploratoire des données (EDA), appeler un cluster de calcul pour entraîner un modèle, ou appeler un cluster d'inférence pour déployer un endpoint. 
 
 Pour créer un notebook, nous avons besoin d'un nœud de calcul qui sert l'instance de notebook Jupyter. Retournez à l'[espace de travail Azure ML](https://ml.azure.com/) et cliquez sur Instances de calcul. Dans la liste des instances de calcul, vous devriez voir l'[instance de calcul que nous avons créée précédemment](../../../../5-Data-Science-In-Cloud/19-Azure). 
 
 1. Dans la section Applications, cliquez sur l'option Jupyter. 
 2. Cochez la case "Oui, je comprends" et cliquez sur le bouton Continuer.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.fr.png)
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
 3. Cela devrait ouvrir un nouvel onglet de navigateur avec votre instance de notebook Jupyter comme suit. Cliquez sur le bouton "Nouveau" pour créer un notebook.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.fr.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 Maintenant que nous avons un notebook, nous pouvons commencer à entraîner le modèle avec Azure ML SDK.
 
@@ -160,15 +160,15 @@ Comme décrit dans la documentation, il existe de nombreux paramètres avec lesq
 
 - `experiment_timeout_minutes` : Durée maximale (en minutes) pendant laquelle l'expérience est autorisée à s'exécuter avant d'être automatiquement arrêtée et que les résultats soient automatiquement disponibles.
 - `max_concurrent_iterations` : Nombre maximal d'itérations d'entraînement simultanées autorisées pour l'expérience.
-- `primary_metric` : Métrique principale utilisée pour déterminer l'état de l'expérience.
+- `primary_metric` : La métrique principale utilisée pour déterminer l'état de l'expérience.
 - `compute_target` : La cible de calcul Azure Machine Learning pour exécuter l'expérience de machine learning automatisé.
-- `task` : Type de tâche à exécuter. Les valeurs peuvent être 'classification', 'régression' ou 'prévision' selon le type de problème de machine learning automatisé à résoudre.
-- `training_data` : Les données d'entraînement à utiliser dans l'expérience. Elles doivent contenir à la fois les caractéristiques d'entraînement et une colonne d'étiquettes (optionnellement une colonne de poids d'échantillon).
-- `label_column_name` : Le nom de la colonne d'étiquettes.
-- `path` : Chemin complet vers le dossier du projet Azure Machine Learning.
+- `task` : Type de tâche à exécuter. Les valeurs peuvent être 'classification', 'regression' ou 'forecasting' selon le type de problème de machine learning automatisé à résoudre.
+- `training_data` : Les données d'entraînement à utiliser dans l'expérience. Elles doivent contenir à la fois les caractéristiques d'entraînement et une colonne de labels (optionnellement une colonne de poids d'échantillon).
+- `label_column_name` : Le nom de la colonne de labels.
+- `path` : Le chemin complet vers le dossier du projet Azure Machine Learning.
 - `enable_early_stopping` : Indique si l'arrêt anticipé doit être activé si le score ne s'améliore pas à court terme.
 - `featurization` : Indicateur pour savoir si l'étape de featurisation doit être effectuée automatiquement ou non, ou si une featurisation personnalisée doit être utilisée.
-- `debug_log` : Fichier journal pour écrire les informations de débogage.
+- `debug_log` : Le fichier journal pour écrire les informations de débogage.
 
 ```python
 from azureml.train.automl import AutoMLConfig
@@ -192,7 +192,7 @@ automl_config = AutoMLConfig(compute_target=compute_target,
                              **automl_settings
                             )
 ```
-Maintenant que vous avez configuré votre AutoML, vous pouvez entraîner le modèle en utilisant le code suivant. Cette étape peut prendre jusqu'à une heure selon la taille de votre cluster.
+Maintenant que vous avez configuré votre configuration, vous pouvez entraîner le modèle en utilisant le code suivant. Cette étape peut prendre jusqu'à une heure selon la taille de votre cluster.
 
 ```python
 remote_run = experiment.submit(automl_config)
@@ -206,12 +206,12 @@ RunDetails(remote_run).show()
 
 ### 3.1 Sauvegarder le meilleur modèle
 
-L'objet `remote_run` est de type [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). Cet objet contient la méthode `get_output()` qui retourne la meilleure exécution et le modèle ajusté correspondant.
+Le `remote_run` est un objet de type [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). Cet objet contient la méthode `get_output()` qui retourne la meilleure exécution et le modèle ajusté correspondant.
 
 ```python
 best_run, fitted_model = remote_run.get_output()
 ```
-Vous pouvez voir les paramètres utilisés pour le meilleur modèle en imprimant simplement le modèle ajusté et voir les propriétés du meilleur modèle en utilisant la méthode [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
+Vous pouvez voir les paramètres utilisés pour le meilleur modèle en imprimant simplement le `fitted_model` et voir les propriétés du meilleur modèle en utilisant la méthode [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
 ```python
 best_run.get_properties()
@@ -279,12 +279,12 @@ data = {
 
 test_sample = str.encode(json.dumps(data))
 ```
-Et ensuite, vous pouvez envoyer cet exemple d'entrée à votre modèle pour obtenir une prédiction :
+Et ensuite, vous pouvez envoyer cette entrée à votre modèle pour obtenir une prédiction :
 ```python
 response = aci_service.run(input_data=test_sample)
 response
 ```
-Cela devrait produire `'{"result": [false]}'`. Cela signifie que les données du patient que nous avons envoyées à l'endpoint ont généré la prédiction `false`, ce qui indique que cette personne n'est probablement pas susceptible de faire une crise cardiaque.
+Cela devrait produire `'{"result": [false]}'`. Cela signifie que les données du patient que nous avons envoyées au point de terminaison ont généré la prédiction `false`, ce qui indique que cette personne n'est probablement pas sujette à une crise cardiaque.
 
 Félicitations ! Vous venez d'utiliser le modèle déployé et entraîné sur Azure ML avec le SDK Azure ML !
 
@@ -292,19 +292,21 @@ Félicitations ! Vous venez d'utiliser le modèle déployé et entraîné sur Az
 
 ## 🚀 Défi
 
-Il y a beaucoup d'autres choses que vous pouvez faire avec le SDK, mais malheureusement, nous ne pouvons pas tout couvrir dans cette leçon. Bonne nouvelle, apprendre à parcourir la documentation du SDK peut vous mener loin en autonomie. Consultez la documentation du SDK Azure ML et trouvez la classe `Pipeline` qui vous permet de créer des pipelines. Un Pipeline est une collection d'étapes pouvant être exécutées comme un workflow.
+Il y a beaucoup d'autres choses que vous pouvez faire avec le SDK, malheureusement, nous ne pouvons pas toutes les aborder dans cette leçon. Mais bonne nouvelle, apprendre à parcourir la documentation du SDK peut vous mener loin par vous-même. Consultez la documentation du SDK Azure ML et trouvez la classe `Pipeline` qui vous permet de créer des pipelines. Un Pipeline est une collection d'étapes pouvant être exécutées comme un flux de travail.
 
-**ASTUCE :** Rendez-vous sur la [documentation du SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) et tapez des mots-clés dans la barre de recherche comme "Pipeline". Vous devriez trouver la classe `azureml.pipeline.core.Pipeline` dans les résultats de recherche.
+**INDICE :** Rendez-vous sur la [documentation du SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) et tapez des mots-clés dans la barre de recherche comme "Pipeline". Vous devriez voir la classe `azureml.pipeline.core.Pipeline` dans les résultats de recherche.
 
-## [Quiz post-cours](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Quiz après la leçon](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
-## Révision et auto-apprentissage
+## Révision & Étude personnelle
 
 Dans cette leçon, vous avez appris à entraîner, déployer et utiliser un modèle pour prédire le risque d'insuffisance cardiaque avec le SDK Azure ML dans le cloud. Consultez cette [documentation](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) pour plus d'informations sur le SDK Azure ML. Essayez de créer votre propre modèle avec le SDK Azure ML.
 
 ## Devoir
 
-[Projet de science des données avec le SDK Azure ML](assignment.md)
+[Projet Data Science avec le SDK Azure ML](assignment.md)
+
+---
 
 **Avertissement** :  
 Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.

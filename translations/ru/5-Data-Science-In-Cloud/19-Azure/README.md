@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-27T09:39:11+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-06T06:06:16+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "ru"
 }
 -->
-# Наука о данных в облаке: подход "Azure ML SDK"
+# Data Science в облаке: подход "Azure ML SDK"
 
-|![ Скетчноут от [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/19-DataScience-Cloud.png)|
+|![ Sketchnote от [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/19-DataScience-Cloud.png)|
 |:---:|
-| Наука о данных в облаке: Azure ML SDK - _Скетчноут от [@nitya](https://twitter.com/nitya)_ |
+| Data Science в облаке: Azure ML SDK - _Sketchnote от [@nitya](https://twitter.com/nitya)_ |
 
 Содержание:
 
-- [Наука о данных в облаке: подход "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
+- [Data Science в облаке: подход "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Предварительный тест](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. Введение](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 Что такое Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -28,7 +28,7 @@ CO_OP_TRANSLATOR_METADATA:
     - [2.5 Обучение модели](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.1 Настройка рабочей области, эксперимента, вычислительного кластера и набора данных](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.2 Конфигурация AutoML и обучение](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [3. Развертывание модели и использование конечной точки с Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [3. Развертывание модели и использование конечной точки с помощью Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.1 Сохранение лучшей модели](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.2 Развертывание модели](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.3 Использование конечной точки](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -37,13 +37,13 @@ CO_OP_TRANSLATOR_METADATA:
   - [Обзор и самостоятельное изучение](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Домашнее задание](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Предварительный тест](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Предварительный тест](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Введение
 
 ### 1.1 Что такое Azure ML SDK?
 
-Специалисты по данным и разработчики ИИ используют Azure Machine Learning SDK для создания и выполнения рабочих процессов машинного обучения с помощью сервиса Azure Machine Learning. Вы можете взаимодействовать с сервисом в любой среде Python, включая Jupyter Notebooks, Visual Studio Code или ваш любимый IDE для Python.
+Data Scientists и разработчики AI используют Azure Machine Learning SDK для создания и выполнения рабочих процессов машинного обучения с помощью сервиса Azure Machine Learning. Вы можете взаимодействовать с сервисом в любой среде Python, включая Jupyter Notebooks, Visual Studio Code или ваш любимый IDE для Python.
 
 Основные возможности SDK включают:
 
@@ -55,9 +55,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Узнайте больше о Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-В [предыдущем уроке](../18-Low-Code/README.md) мы рассмотрели, как обучать, развертывать и использовать модель в формате Low code/No code. Мы использовали набор данных о сердечной недостаточности для создания модели прогнозирования сердечной недостаточности. В этом уроке мы сделаем то же самое, но с использованием Azure Machine Learning SDK.
+В [предыдущем уроке](../18-Low-Code/README.md) мы рассмотрели, как обучить, развернуть и использовать модель в формате Low code/No code. Мы использовали набор данных о сердечной недостаточности для создания модели прогнозирования сердечной недостаточности. В этом уроке мы сделаем то же самое, но с использованием Azure Machine Learning SDK.
 
-![схема проекта](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.ru.png)
+![project-schema](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 Проект прогнозирования сердечной недостаточности и введение в набор данных
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 В [рабочей области Azure ML](https://ml.azure.com/), которую мы создали ранее, перейдите в меню Compute, и вы увидите доступные вычислительные ресурсы.
 
-![compute-instance-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.ru.png)
+![compute-instance-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 Давайте создадим вычислительный экземпляр для работы с Jupyter Notebook. 
 1. Нажмите кнопку + New. 
@@ -82,25 +82,25 @@ CO_OP_TRANSLATOR_METADATA:
 3. Выберите параметры: CPU или GPU, размер виртуальной машины и количество ядер.
 4. Нажмите кнопку Create.
 
-Поздравляем, вы только что создали вычислительный экземпляр! Мы будем использовать этот экземпляр для создания ноутбука в разделе [Создание ноутбуков](../../../../5-Data-Science-In-Cloud/19-Azure).
+Поздравляем, вы только что создали вычислительный экземпляр! Мы будем использовать этот вычислительный экземпляр для создания ноутбука в разделе [Создание ноутбуков](../../../../5-Data-Science-In-Cloud/19-Azure).
 
 ### 2.3 Загрузка набора данных
 Обратитесь к [предыдущему уроку](../18-Low-Code/README.md) в разделе **2.3 Загрузка набора данных**, если вы еще не загрузили набор данных.
 
 ### 2.4 Создание ноутбуков
 
-> **_Примечание:_** На следующем шаге вы можете либо создать новый ноутбук с нуля, либо загрузить [ноутбук, который мы создали](notebook.ipynb) в вашу Azure ML Studio. Чтобы загрузить его, просто нажмите на меню "Notebook" и загрузите ноутбук.
+> **_NOTE:_** На следующем шаге вы можете либо создать новый ноутбук с нуля, либо загрузить [ноутбук, который мы создали](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) в вашу Azure ML Studio. Чтобы загрузить его, просто нажмите на меню "Notebook" и загрузите ноутбук.
 
-Ноутбуки играют важную роль в процессе науки о данных. Они могут использоваться для проведения разведочного анализа данных (EDA), вызова вычислительного кластера для обучения модели, вызова кластера для развертывания конечной точки.
+Ноутбуки играют важную роль в процессе Data Science. Они могут использоваться для проведения анализа данных (EDA), вызова вычислительного кластера для обучения модели, вызова кластера для развертывания конечной точки.
 
 Чтобы создать ноутбук, нам нужен вычислительный узел, который обслуживает экземпляр Jupyter Notebook. Вернитесь в [рабочую область Azure ML](https://ml.azure.com/) и нажмите на Compute instances. В списке вычислительных экземпляров вы должны увидеть [вычислительный экземпляр, который мы создали ранее](../../../../5-Data-Science-In-Cloud/19-Azure). 
 
 1. В разделе Applications нажмите на опцию Jupyter. 
-2. Отметьте поле "Yes, I understand" и нажмите кнопку Continue.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.ru.png)
-3. Это должно открыть новую вкладку браузера с вашим экземпляром Jupyter Notebook. Нажмите кнопку "New", чтобы создать ноутбук.
+2. Отметьте галочку "Yes, I understand" и нажмите кнопку Continue.
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
+3. Это откроет новую вкладку браузера с вашим экземпляром Jupyter Notebook. Нажмите кнопку "New", чтобы создать ноутбук.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.ru.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 Теперь, когда у нас есть ноутбук, мы можем начать обучение модели с помощью Azure ML SDK.
 
@@ -158,7 +158,7 @@ df.describe()
 
 Как описано в документации, существует множество параметров, с которыми можно работать. Для этого проекта мы будем использовать следующие параметры:
 
-- `experiment_timeout_minutes`: Максимальное количество времени (в минутах), которое эксперимент может выполняться, прежде чем он автоматически остановится, а результаты автоматически станут доступными.
+- `experiment_timeout_minutes`: Максимальное количество времени (в минутах), которое эксперимент может работать, прежде чем он будет автоматически остановлен, а результаты автоматически станут доступными.
 - `max_concurrent_iterations`: Максимальное количество одновременных итераций обучения, разрешенных для эксперимента.
 - `primary_metric`: Основной метрик, используемый для определения статуса эксперимента.
 - `compute_target`: Целевой вычислительный ресурс Azure Machine Learning для выполнения эксперимента автоматизированного машинного обучения.
@@ -167,8 +167,8 @@ df.describe()
 - `label_column_name`: Имя столбца меток.
 - `path`: Полный путь к папке проекта Azure Machine Learning.
 - `enable_early_stopping`: Включение раннего завершения, если оценка не улучшается в краткосрочной перспективе.
-- `featurization`: Индикатор того, следует ли автоматически выполнять этап фичеризации или использовать настроенную фичеризацию.
-- `debug_log`: Файл журнала для записи отладочной информации.
+- `featurization`: Индикатор того, должна ли быть выполнена автоматическая обработка признаков или нет, или должна ли быть использована настроенная обработка признаков.
+- `debug_log`: Файл журнала для записи информации отладки.
 
 ```python
 from azureml.train.automl import AutoMLConfig
@@ -202,7 +202,7 @@ remote_run = experiment.submit(automl_config)
 from azureml.widgets import RunDetails
 RunDetails(remote_run).show()
 ```
-## 3. Развертывание модели и использование конечной точки с Azure ML SDK
+## 3. Развертывание модели и использование конечной точки с помощью Azure ML SDK
 
 ### 3.1 Сохранение лучшей модели
 
@@ -211,7 +211,7 @@ RunDetails(remote_run).show()
 ```python
 best_run, fitted_model = remote_run.get_output()
 ```
-Вы можете увидеть параметры, использованные для лучшей модели, просто напечатав fitted_model, и посмотреть свойства лучшей модели, используя метод [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
+Вы можете увидеть параметры, использованные для лучшей модели, просто напечатав fitted_model, и увидеть свойства лучшей модели, используя метод [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
 ```python
 best_run.get_properties()
@@ -230,7 +230,7 @@ model = best_run.register_model(model_name = model_name,
 ```
 ### 3.2 Развертывание модели
 
-После сохранения лучшей модели мы можем развернуть ее с помощью класса [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig представляет настройки конфигурации для пользовательской среды, используемой для развертывания. Класс [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) представляет модель машинного обучения, развернутую как конечная точка веб-сервиса на Azure Container Instances. Развернутый сервис создается из модели, скрипта и связанных файлов. Полученный веб-сервис является балансированным HTTP-эндпоинтом с REST API. Вы можете отправить данные на этот API и получить прогноз, возвращенный моделью.
+После сохранения лучшей модели мы можем развернуть ее с помощью класса [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig представляет настройки конфигурации для пользовательской среды, используемой для развертывания. Класс [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) представляет модель машинного обучения, развернутую как конечная точка веб-сервиса на Azure Container Instances. Развернутый сервис создается из модели, скрипта и связанных файлов. Полученный веб-сервис является балансированным HTTP-эндпоинтом с REST API. Вы можете отправить данные на этот API и получить прогноз, возвращаемый моделью.
 
 Модель развертывается с помощью метода [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
@@ -250,7 +250,7 @@ aci_service = Model.deploy(ws, aci_service_name, [model], inference_config, acic
 aci_service.wait_for_deployment(True)
 print(aci_service.state)
 ```
-Этот шаг должен занять несколько минут.
+Этот шаг может занять несколько минут.
 
 ### 3.3 Использование конечной точки
 
@@ -284,12 +284,12 @@ test_sample = str.encode(json.dumps(data))
 response = aci_service.run(input_data=test_sample)
 response
 ```
-Это должно вывести `'{"result": [false]}'`. Это означает, что данные пациента, которые мы отправили на конечную точку, сгенерировали предсказание `false`, что говорит о том, что этот человек, скорее всего, не подвержен риску сердечного приступа.
+Это должно вывести `'{"result": [false]}'`. Это означает, что данные пациента, которые мы отправили на конечную точку, сгенерировали предсказание `false`, что говорит о том, что у этого человека маловероятен сердечный приступ.
 
 Поздравляем! Вы только что использовали модель, развернутую и обученную на Azure ML с помощью Azure ML SDK!
 
 
-> **_NOTE:_** После завершения проекта не забудьте удалить все ресурсы.
+> **_NOTE:_** Когда вы завершите проект, не забудьте удалить все ресурсы.
 
 ## 🚀 Задание
 
@@ -297,7 +297,7 @@ response
 
 **ПОДСКАЗКА:** Перейдите в [документацию SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) и введите ключевые слова, такие как "Pipeline", в строку поиска. В результатах поиска должен появиться класс `azureml.pipeline.core.Pipeline`.
 
-## [Тест после лекции](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Тест после лекции](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
 ## Обзор и самостоятельное изучение
 
@@ -305,9 +305,9 @@ response
 
 ## Задание
 
-[Проект по анализу данных с использованием Azure ML SDK](assignment.md)
+[Проект по Data Science с использованием Azure ML SDK](assignment.md)
 
 ---
 
 **Отказ от ответственности**:  
-Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Хотя мы стремимся к точности, пожалуйста, имейте в виду, что автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникшие в результате использования данного перевода.
+Этот документ был переведен с использованием сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия обеспечить точность, автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неправильные интерпретации, возникшие в результате использования данного перевода.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c368f8f2506fe56bca0f7be05c4eb71d",
-  "translation_date": "2025-08-25T17:41:25+00:00",
+  "original_hash": "07478c2092203a69087b9c76b1f4dd56",
+  "translation_date": "2025-09-05T11:33:16+00:00",
   "source_file": "4-Data-Science-Lifecycle/14-Introduction/README.md",
   "language_code": "zh"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | 数据科学生命周期简介 - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-## [课前测验](https://red-water-0103e7a0f.azurestaticapps.net/quiz/26)
+## [课前测验](https://ff-quizzes.netlify.app/en/ds/quiz/26)
 
 到目前为止，你可能已经意识到数据科学是一个过程。这个过程可以分为五个阶段：
 
@@ -25,8 +25,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 本课程重点讲解生命周期中的三个部分：数据捕获、数据处理和数据维护。
 
-![数据科学生命周期图示](../../../../translated_images/data-science-lifecycle.a1e362637503c4fb0cd5e859d7552edcdb4aa629a279727008baa121f2d33f32.zh.jpg)
-> 图片来源：[Berkeley School of Information](https://ischoolonline.berkeley.edu/data-science/what-is-data-science/)
+![数据科学生命周期图](../../../../4-Data-Science-Lifecycle/14-Introduction/images/data-science-lifecycle.jpg)
+> 图片来源：[伯克利信息学院](https://ischoolonline.berkeley.edu/data-science/what-is-data-science/)
 
 ## 数据捕获
 
@@ -37,7 +37,7 @@ CO_OP_TRANSLATOR_METADATA:
 - 这个问题以前是否被研究过？发现了什么？
 - 所有相关人员是否都理解目标和目的？
 - 是否存在模糊性？如何减少模糊性？
-- 有哪些限制条件？
+- 有哪些约束条件？
 - 最终结果可能是什么样子？
 - 有多少资源（时间、人力、计算能力）可用？
 
@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 - 有哪些隐私问题？
 - 我是否有足够的数据来解决这个问题？
 - 数据的质量是否适合解决这个问题？
-- 如果通过这些数据发现了额外的信息，我们是否需要考虑改变或重新定义目标？
+- 如果通过这些数据发现了额外的信息，是否应该考虑改变或重新定义目标？
 
 ## 数据处理
 
@@ -63,26 +63,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 数据维护
 
-在生命周期图中，你可能注意到维护位于数据捕获和数据处理之间。维护是一个持续的过程，贯穿项目的整个过程，涉及管理、存储和保护数据。
+在生命周期图中，你可能注意到维护位于数据捕获和数据处理之间。维护是一个持续的过程，贯穿项目的整个过程，涉及数据的管理、存储和安全性。
 
 ### 数据存储
-数据存储的方式和位置会影响存储成本以及数据访问的性能。这些决策通常不会由数据科学家单独做出，但他们可能需要根据数据存储方式做出如何使用数据的选择。
+数据存储的方式和位置会影响存储成本以及数据访问的性能。这些决策通常不会由数据科学家单独做出，但他们可能需要根据数据存储方式选择如何处理数据。
 
 以下是现代数据存储系统的一些方面，这些方面可能会影响决策：
 
 **本地存储 vs 外部存储 vs 公有云或私有云**
 
-本地存储指的是在自己的设备上托管和管理数据，比如拥有一个存储数据的服务器，而外部存储依赖于你不拥有的设备，比如数据中心。公有云是存储数据的一种流行选择，它不需要了解数据具体存储的位置或方式，其中“公有”指的是所有使用云服务的人共享统一的底层基础设施。一些组织有严格的安全政策，要求完全访问存储数据的设备，因此会选择提供专属云服务的私有云。在[后续课程](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/5-Data-Science-In-Cloud)中，你将学习更多关于云中的数据。
+本地存储指的是使用自己的设备管理数据，例如拥有一个存储数据的服务器，而外部存储则依赖于你不拥有的设备，例如数据中心。公有云是存储数据的一种流行选择，它不需要了解数据具体存储的位置或方式，其中“公有”指的是所有使用云服务的人共享统一的基础设施。一些组织有严格的安全政策，要求完全访问存储数据的设备，因此会选择提供专属云服务的私有云。在[后续课程](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/5-Data-Science-In-Cloud)中，你将学习更多关于云中的数据。
 
 **冷数据 vs 热数据**
 
-在训练模型时，你可能需要更多的训练数据。如果你对模型满意，更多的数据会到来以支持模型的用途。无论如何，随着数据的积累，存储和访问数据的成本都会增加。将很少使用的冷数据与频繁访问的热数据分离，可以通过硬件或软件服务实现更便宜的数据存储选项。如果需要访问冷数据，可能会比热数据的检索速度稍慢。
+在训练模型时，你可能需要更多的训练数据。如果你对模型满意，更多的数据将用于模型的实际用途。无论如何，随着数据的积累，存储和访问数据的成本都会增加。将很少使用的冷数据与频繁访问的热数据分离，可以通过硬件或软件服务实现更便宜的数据存储选项。如果需要访问冷数据，可能会比热数据的检索速度稍慢。
 
 ### 数据管理
-在处理数据时，你可能会发现一些数据需要使用[数据准备](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/08-data-preparation)课程中介绍的技术进行清理，以构建准确的模型。当新数据到来时，也需要应用相同的技术以保持质量的一致性。一些项目会使用自动化工具来清理、聚合和压缩数据，然后将数据移动到最终存储位置。Azure Data Factory 就是其中一个工具的例子。
+在处理数据时，你可能会发现需要使用一些技术来清理数据，这些技术在[数据准备](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/08-data-preparation)课程中有详细介绍，以构建准确的模型。当新数据到达时，也需要应用相同的技术来保持数据质量的一致性。一些项目会使用自动化工具来清理、聚合和压缩数据，然后将数据移动到最终存储位置。Azure Data Factory 就是其中一个工具的例子。
 
 ### 数据安全
-数据安全的主要目标之一是确保数据的收集和使用在控制范围内。保持数据安全包括限制只有需要的人才能访问数据，遵守当地法律法规，以及维护[伦理课程](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/1-Introduction/02-ethics)中提到的道德标准。
+数据安全的主要目标之一是确保数据的收集和使用在控制范围内。保持数据安全包括限制只有需要的人才能访问数据，遵守当地法律法规，以及维护伦理标准，这些内容在[伦理课程](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/1-Introduction/02-ethics)中有详细介绍。
 
 团队可能会采取以下措施以确保数据安全：
 - 确保所有数据都已加密
@@ -94,14 +94,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 数据科学生命周期有许多版本，每个版本的步骤可能有不同的名称和阶段数量，但包含的过程与本课程中提到的相同。
 
-探索[团队数据科学过程生命周期](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/lifecycle)和[跨行业数据挖掘标准过程](https://www.datascience-pm.com/crisp-dm-2/)。列出两者的三个相似点和不同点。
+探索[团队数据科学过程生命周期](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/lifecycle)和[跨行业数据挖掘标准过程](https://www.datascience-pm.com/crisp-dm-2/)。列举两者的三个相似点和不同点。
 
 |团队数据科学过程 (TDSP)|跨行业数据挖掘标准过程 (CRISP-DM)|
 |--|--|
-|![团队数据科学生命周期](../../../../translated_images/tdsp-lifecycle2.e19029d598e2e73d5ef8a4b98837d688ec6044fe332c905d4dbb69eb6d5c1d96.zh.png) | ![数据科学过程联盟图片](../../../../translated_images/CRISP-DM.8bad2b4c66e62aa75278009e38e3e99902c73b0a6f63fd605a67c687a536698c.zh.png) |
-| 图片来源：[Microsoft](https://docs.microsoft.comazure/architecture/data-science-process/lifecycle) | 图片来源：[Data Science Process Alliance](https://www.datascience-pm.com/crisp-dm-2/) |
+|![团队数据科学生命周期](../../../../4-Data-Science-Lifecycle/14-Introduction/images/tdsp-lifecycle2.png) | ![数据科学过程联盟图片](../../../../4-Data-Science-Lifecycle/14-Introduction/images/CRISP-DM.png) |
+| 图片来源：[Microsoft](https://docs.microsoft.comazure/architecture/data-science-process/lifecycle) | 图片来源：[数据科学过程联盟](https://www.datascience-pm.com/crisp-dm-2/) |
 
-## [课后测验](https://red-water-0103e7a0f.azurestaticapps.net/quiz/27)
+## [课后测验](https://ff-quizzes.netlify.app/en/ds/quiz/27)
 
 ## 复习与自学
 
@@ -114,5 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [评估数据集](assignment.md)
 
+---
+
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
+本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。

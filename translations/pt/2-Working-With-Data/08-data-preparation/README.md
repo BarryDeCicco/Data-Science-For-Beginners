@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3ade580a06b5f04d57cc83a768a8fb77",
-  "translation_date": "2025-08-24T20:57:11+00:00",
+  "original_hash": "1b560955ff39a2bcf2a049fce474a951",
+  "translation_date": "2025-09-05T13:18:39+00:00",
   "source_file": "2-Working-With-Data/08-data-preparation/README.md",
   "language_code": "pt"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 |Preparação de Dados - _Sketchnote por [@nitya](https://twitter.com/nitya)_ |
 
-## [Questionário Pré-Aula](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/14)
+## [Questionário Pré-Aula](https://ff-quizzes.netlify.app/en/ds/quiz/14)
 
-Dependendo da sua origem, os dados brutos podem conter algumas inconsistências que dificultam a análise e modelagem. Em outras palavras, esses dados podem ser categorizados como "sujos" e precisarão ser limpos. Esta lição foca em técnicas para limpar e transformar os dados, lidando com desafios como dados ausentes, imprecisos ou incompletos. Os tópicos abordados nesta lição utilizarão Python e a biblioteca Pandas e serão [demonstrados no notebook](../../../../2-Working-With-Data/08-data-preparation/notebook.ipynb) dentro deste diretório.
+Dependendo da sua origem, os dados brutos podem conter algumas inconsistências que dificultam a análise e modelagem. Em outras palavras, esses dados podem ser categorizados como "sujos" e precisarão ser limpos. Esta lição foca em técnicas para limpar e transformar os dados, lidando com desafios como dados ausentes, imprecisos ou incompletos. Os tópicos abordados nesta lição utilizam Python e a biblioteca Pandas e serão [demonstrados no notebook](../../../../2-Working-With-Data/08-data-preparation/notebook.ipynb) dentro deste diretório.
 
 ## A importância de limpar os dados
 
@@ -27,18 +27,18 @@ Dependendo da sua origem, os dados brutos podem conter algumas inconsistências 
 
 ## Objetivos e estratégias comuns de limpeza
 
-- **Explorar um conjunto de dados**: A exploração de dados, que será abordada numa [lição futura](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle/15-analyzing), pode ajudar a identificar dados que precisam ser limpos. Observar visualmente os valores dentro de um conjunto de dados pode estabelecer expectativas sobre o restante ou fornecer uma ideia dos problemas que podem ser resolvidos. A exploração pode envolver consultas básicas, visualizações e amostragem.
+- **Explorar um conjunto de dados**: A exploração de dados, que será abordada em uma [lição futura](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/4-Data-Science-Lifecycle/15-analyzing), pode ajudar a identificar dados que precisam ser limpos. Observar visualmente os valores dentro de um conjunto de dados pode definir expectativas sobre o restante ou fornecer uma ideia dos problemas que podem ser resolvidos. A exploração pode envolver consultas básicas, visualizações e amostragem.
 
-- **Formatação**: Dependendo da origem, os dados podem ter inconsistências na forma como são apresentados. Isso pode causar problemas na pesquisa e representação dos valores, onde eles aparecem no conjunto de dados, mas não são devidamente representados em visualizações ou resultados de consultas. Problemas comuns de formatação incluem resolver espaços em branco, datas e tipos de dados. Resolver questões de formatação geralmente cabe às pessoas que estão utilizando os dados. Por exemplo, os padrões sobre como datas e números são apresentados podem variar de país para país.
+- **Formatação**: Dependendo da origem, os dados podem ter inconsistências na forma como são apresentados. Isso pode causar problemas na busca e representação dos valores, onde são vistos no conjunto de dados, mas não são representados corretamente em visualizações ou resultados de consultas. Problemas comuns de formatação envolvem resolver espaços em branco, datas e tipos de dados. Resolver questões de formatação geralmente depende das pessoas que estão utilizando os dados. Por exemplo, os padrões de apresentação de datas e números podem variar de país para país.
 
-- **Duplicações**: Dados que aparecem mais de uma vez podem produzir resultados imprecisos e geralmente devem ser removidos. Isso pode ocorrer frequentemente ao combinar dois ou mais conjuntos de dados. No entanto, há casos em que duplicações em conjuntos de dados combinados contêm informações adicionais que podem precisar ser preservadas.
+- **Duplicações**: Dados que possuem mais de uma ocorrência podem produzir resultados imprecisos e geralmente devem ser removidos. Isso pode ocorrer frequentemente ao combinar dois ou mais conjuntos de dados. No entanto, há casos em que duplicações em conjuntos combinados contêm informações adicionais que podem precisar ser preservadas.
 
 - **Dados ausentes**: Dados ausentes podem causar imprecisões, bem como resultados fracos ou tendenciosos. Às vezes, isso pode ser resolvido com um "recarregamento" dos dados, preenchendo os valores ausentes com cálculos e código, como Python, ou simplesmente removendo o valor e os dados correspondentes. Existem várias razões para os dados estarem ausentes, e as ações tomadas para resolver esses valores ausentes podem depender de como e por que eles desapareceram.
 
 ## Explorando informações de DataFrame
 > **Objetivo de aprendizagem:** Ao final desta subseção, você deve estar confortável em encontrar informações gerais sobre os dados armazenados em DataFrames do pandas.
 
-Depois de carregar seus dados no pandas, é provável que eles estejam em um DataFrame (consulte a [lição anterior](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/07-python#dataframe) para uma visão detalhada). No entanto, se o conjunto de dados no seu DataFrame tiver 60.000 linhas e 400 colunas, como começar a entender com o que está lidando? Felizmente, o [pandas](https://pandas.pydata.org/) fornece ferramentas convenientes para rapidamente obter informações gerais sobre um DataFrame, além das primeiras e últimas linhas.
+Depois de carregar seus dados no pandas, eles provavelmente estarão em um DataFrame (consulte a [lição anterior](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/07-python#dataframe) para uma visão detalhada). No entanto, se o conjunto de dados no seu DataFrame tiver 60.000 linhas e 400 colunas, como começar a entender com o que está lidando? Felizmente, o [pandas](https://pandas.pydata.org/) fornece ferramentas convenientes para rapidamente obter informações gerais sobre um DataFrame, além das primeiras e últimas linhas.
 
 Para explorar essa funcionalidade, vamos importar a biblioteca Python scikit-learn e usar um conjunto de dados icônico: o **conjunto de dados Iris**.
 
@@ -73,9 +73,9 @@ Data columns (total 4 columns):
 dtypes: float64(4)
 memory usage: 4.8 KB
 ```
-A partir disso, sabemos que o conjunto de dados *Iris* tem 150 entradas em quatro colunas sem entradas nulas. Todos os dados estão armazenados como números de ponto flutuante de 64 bits.
+A partir disso, sabemos que o conjunto de dados *Iris* tem 150 entradas em quatro colunas sem valores nulos. Todos os dados estão armazenados como números de ponto flutuante de 64 bits.
 
-- **DataFrame.head()**: Em seguida, para verificar o conteúdo real do `DataFrame`, usamos o método `head()`. Vamos ver como são as primeiras linhas do nosso `iris_df`:
+- **DataFrame.head()**: Em seguida, para verificar o conteúdo real do `DataFrame`, usamos o método `head()`. Vamos ver como as primeiras linhas do nosso `iris_df` se parecem:
 ```python
 iris_df.head()
 ```
@@ -104,11 +104,11 @@ iris_df.tail()
 ## Lidando com Dados Ausentes
 > **Objetivo de aprendizagem:** Ao final desta subseção, você deve saber como substituir ou remover valores nulos de DataFrames.
 
-Na maioria das vezes, os conjuntos de dados que você deseja usar (ou precisa usar) têm valores ausentes. Como os dados ausentes são tratados envolve escolhas sutis que podem afetar sua análise final e os resultados no mundo real.
+Na maioria das vezes, os conjuntos de dados que você deseja usar (ou precisa usar) têm valores ausentes. A forma como os dados ausentes são tratados traz consigo compensações sutis que podem afetar sua análise final e os resultados no mundo real.
 
 O pandas lida com valores ausentes de duas maneiras. A primeira, que você já viu em seções anteriores, é `NaN`, ou Not a Number. Este é, na verdade, um valor especial que faz parte da especificação IEEE de ponto flutuante e é usado apenas para indicar valores de ponto flutuante ausentes.
 
-Para valores ausentes que não sejam de ponto flutuante, o pandas usa o objeto `None` do Python. Embora possa parecer confuso encontrar dois tipos diferentes de valores que essencialmente dizem a mesma coisa, há razões programáticas sólidas para essa escolha de design e, na prática, isso permite que o pandas ofereça um bom compromisso para a grande maioria dos casos. Apesar disso, tanto `None` quanto `NaN` têm restrições que você precisa ter em mente em relação ao modo como podem ser usados.
+Para valores ausentes que não sejam de ponto flutuante, o pandas usa o objeto `None` do Python. Embora possa parecer confuso encontrar dois tipos diferentes de valores que essencialmente dizem a mesma coisa, há razões programáticas sólidas para essa escolha de design e, na prática, isso permite que o pandas ofereça um bom compromisso para a grande maioria dos casos. Apesar disso, tanto `None` quanto `NaN` possuem restrições que você precisa ter em mente em relação ao modo como podem ser usados.
 
 Confira mais sobre `NaN` e `None` no [notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/4-Data-Science-Lifecycle/15-analyzing/notebook.ipynb)!
 
@@ -126,13 +126,13 @@ example1.isnull()
 3     True
 dtype: bool
 ```
-Observe atentamente o resultado. Alguma coisa te surpreende? Embora `0` seja um nulo aritmético, ele é, no entanto, um número inteiro perfeitamente válido e o pandas o trata como tal. `''` é um pouco mais sutil. Embora o tenhamos usado na Seção 1 para representar um valor de string vazio, ele é, no entanto, um objeto de string e não uma representação de nulo para o pandas.
+Observe atentamente o resultado. Alguma coisa te surpreende? Embora `0` seja um nulo aritmético, ele é, no entanto, um número inteiro perfeitamente válido, e o pandas o trata como tal. `''` é um pouco mais sutil. Embora o tenhamos usado na Seção 1 para representar um valor de string vazio, ele é, no entanto, um objeto de string e não uma representação de nulo para o pandas.
 
 Agora, vamos inverter isso e usar esses métodos de uma maneira mais parecida com a prática. Você pode usar máscaras booleanas diretamente como um índice de ``Series`` ou ``DataFrame``, o que pode ser útil ao tentar trabalhar com valores ausentes (ou presentes) isolados.
 
 > **Conclusão**: Tanto os métodos `isnull()` quanto `notnull()` produzem resultados semelhantes quando usados em `DataFrame`s: eles mostram os resultados e o índice desses resultados, o que será extremamente útil ao lidar com seus dados.
 
-- **Removendo valores nulos**: Além de identificar valores ausentes, o pandas fornece um meio conveniente de remover valores nulos de `Series` e `DataFrame`s. (Particularmente em conjuntos de dados grandes, muitas vezes é mais aconselhável simplesmente remover valores ausentes [NA] da sua análise do que lidar com eles de outras maneiras.) Para ver isso em ação, vamos voltar ao `example1`:
+- **Removendo valores nulos**: Além de identificar valores ausentes, o pandas fornece um meio conveniente de remover valores nulos de `Series` e `DataFrame`s. (Particularmente em conjuntos de dados grandes, muitas vezes é mais aconselhável simplesmente remover valores ausentes [NA] da sua análise do que lidar com eles de outras formas.) Para ver isso em ação, vamos voltar ao `example1`:
 ```python
 example1 = example1.dropna()
 example1
@@ -158,7 +158,7 @@ example2
 |1     |2.0|5.0|8  |
 |2     |NaN|6.0|9  |
 
-(Você reparou que o pandas converteu duas das colunas para ponto flutuante para acomodar os `NaN`s?)
+(Você percebeu que o pandas converteu duas das colunas para ponto flutuante para acomodar os `NaN`s?)
 
 Você não pode remover um único valor de um `DataFrame`, então precisa remover linhas ou colunas inteiras. Dependendo do que você está fazendo, pode querer fazer uma coisa ou outra, e o pandas oferece opções para ambas. Como na ciência de dados as colunas geralmente representam variáveis e as linhas representam observações, é mais provável que você remova linhas de dados; a configuração padrão para `dropna()` é remover todas as linhas que contêm quaisquer valores nulos:
 
@@ -179,7 +179,7 @@ example2.dropna(axis='columns')
 1	8
 2	9
 ```
-Observe que isso pode remover muitos dados que você pode querer manter, particularmente em conjuntos de dados menores. E se você quiser apenas remover linhas ou colunas que contenham vários ou até mesmo todos os valores nulos? Você especifica essas configurações em `dropna` com os parâmetros `how` e `thresh`.
+Observe que isso pode remover muitos dados que você pode querer manter, especialmente em conjuntos de dados menores. E se você quiser remover apenas linhas ou colunas que contenham vários ou até mesmo todos os valores nulos? Você especifica essas configurações em `dropna` com os parâmetros `how` e `thresh`.
 
 Por padrão, `how='any'` (se quiser verificar por si mesmo ou ver quais outros parâmetros o método possui, execute `example4.dropna?` em uma célula de código). Você pode, alternativamente, especificar `how='all'` para remover apenas linhas ou colunas que contenham todos os valores nulos. Vamos expandir nosso exemplo de `DataFrame` para ver isso em ação.
 
@@ -193,7 +193,7 @@ example2
 |1     |2.0|5.0|8  |NaN|
 |2     |NaN|6.0|9  |NaN|
 
-O parâmetro `thresh` oferece um controle mais detalhado: você define o número de valores *não nulos* que uma linha ou coluna precisa ter para ser mantida:
+O parâmetro `thresh` oferece um controle mais refinado: você define o número de valores *não nulos* que uma linha ou coluna precisa ter para ser mantida:
 ```python
 example2.dropna(axis='rows', thresh=3)
 ```
@@ -263,15 +263,14 @@ example2.fillna(method='ffill', axis=1)
 2	NaN	6.0	9.0	9.0
 ```
 Observe que, quando um valor anterior não está disponível para preenchimento para frente, o valor nulo permanece.
-> **Conclusão:** Existem várias formas de lidar com valores em falta nos seus conjuntos de dados. A estratégia específica que utiliza (removê-los, substituí-los ou até mesmo como os substitui) deve ser ditada pelas particularidades desses dados. Quanto mais trabalhar e interagir com conjuntos de dados, melhor será a sua capacidade de lidar com valores em falta.
-
-## Remoção de dados duplicados
+> **Conclusão:** Existem várias formas de lidar com valores em falta nos seus conjuntos de dados. A estratégia específica que escolher (removê-los, substituí-los ou até mesmo como os substitui) deve ser orientada pelas particularidades desses dados. Quanto mais trabalhar e interagir com conjuntos de dados, melhor será a sua capacidade de lidar com valores em falta.
+## Remover dados duplicados
 
 > **Objetivo de aprendizagem:** No final desta subseção, deverá sentir-se confortável em identificar e remover valores duplicados de DataFrames.
 
 Além de dados em falta, é comum encontrar dados duplicados em conjuntos de dados do mundo real. Felizmente, o `pandas` oferece uma forma simples de detetar e remover entradas duplicadas.
 
-- **Identificar duplicados: `duplicated`**: Pode identificar facilmente valores duplicados utilizando o método `duplicated` no pandas, que devolve uma máscara booleana indicando se uma entrada num `DataFrame` é duplicada de uma anterior. Vamos criar outro exemplo de `DataFrame` para ver isto em ação.
+- **Identificar duplicados: `duplicated`**: Pode identificar facilmente valores duplicados utilizando o método `duplicated` do pandas, que devolve uma máscara Booleana indicando se uma entrada num `DataFrame` é duplicada de uma anterior. Vamos criar outro exemplo de `DataFrame` para ver isto em ação.
 ```python
 example4 = pd.DataFrame({'letters': ['A','B'] * 2 + ['B'],
                          'numbers': [1, 2, 1, 3, 3]})
@@ -296,7 +295,7 @@ example4.duplicated()
 4     True
 dtype: bool
 ```
-- **Remover duplicados: `drop_duplicates`:** devolve simplesmente uma cópia dos dados para os quais todos os valores `duplicated` são `False`:
+- **Remover duplicados: `drop_duplicates`:** devolve simplesmente uma cópia dos dados em que todos os valores `duplicated` são `False`:
 ```python
 example4.drop_duplicates()
 ```
@@ -321,24 +320,26 @@ letters	numbers
 
 ## 🚀 Desafio
 
-Todo o material discutido está disponível como um [Jupyter Notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/2-Working-With-Data/08-data-preparation/notebook.ipynb). Além disso, há exercícios após cada seção, experimente resolvê-los!
+Todo o material discutido está disponível como um [Jupyter Notebook](https://github.com/microsoft/Data-Science-For-Beginners/blob/main/2-Working-With-Data/08-data-preparation/notebook.ipynb). Além disso, há exercícios presentes após cada seção, experimente realizá-los!
 
-## [Questionário Pós-Aula](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/15)
+## [Questionário pós-aula](https://ff-quizzes.netlify.app/en/ds/quiz/15)
 
 
 
 ## Revisão e Autoestudo
 
-Existem muitas formas de descobrir e abordar a preparação dos seus dados para análise e modelação, e a limpeza dos dados é um passo importante que requer prática. Experimente estes desafios do Kaggle para explorar técnicas que esta lição não abordou.
+Existem várias formas de descobrir e abordar a preparação dos seus dados para análise e modelação, e a limpeza dos dados é um passo importante que exige prática. Experimente estes desafios do Kaggle para explorar técnicas que esta lição não abordou.
 
-- [Desafio de Limpeza de Dados: Análise de Datas](https://www.kaggle.com/rtatman/data-cleaning-challenge-parsing-dates/)
+- [Desafio de Limpeza de Dados: Analisar Datas](https://www.kaggle.com/rtatman/data-cleaning-challenge-parsing-dates/)
 
 - [Desafio de Limpeza de Dados: Escalar e Normalizar Dados](https://www.kaggle.com/rtatman/data-cleaning-challenge-scale-and-normalize-data)
 
 
 ## Tarefa
 
-[Avaliação de Dados de um Formulário](assignment.md)
+[Avaliar Dados de um Formulário](assignment.md)
+
+---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.

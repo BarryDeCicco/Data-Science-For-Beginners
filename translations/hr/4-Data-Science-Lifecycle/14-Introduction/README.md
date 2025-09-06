@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c368f8f2506fe56bca0f7be05c4eb71d",
-  "translation_date": "2025-08-30T18:27:40+00:00",
+  "original_hash": "07478c2092203a69087b9c76b1f4dd56",
+  "translation_date": "2025-09-05T19:21:26+00:00",
   "source_file": "4-Data-Science-Lifecycle/14-Introduction/README.md",
   "language_code": "hr"
 }
@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Uvod u životni ciklus podatkovne znanosti - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-## [Pre-Lekcija Kviz](https://red-water-0103e7a0f.azurestaticapps.net/quiz/26)
+## [Pre-Lecture Quiz](https://ff-quizzes.netlify.app/en/ds/quiz/26)
 
 Do sada ste vjerojatno shvatili da je podatkovna znanost proces. Taj proces može se podijeliti u 5 faza:
 
@@ -23,29 +23,29 @@ Do sada ste vjerojatno shvatili da je podatkovna znanost proces. Taj proces mož
 - Komunikacija
 - Održavanje
 
-Ova lekcija fokusira se na 3 dijela životnog ciklusa: prikupljanje, obrada i održavanje.
+Ova lekcija fokusira se na 3 dijela životnog ciklusa: prikupljanje, obradu i održavanje.
 
-![Dijagram životnog ciklusa podatkovne znanosti](../../../../translated_images/data-science-lifecycle.a1e362637503c4fb0cd5e859d7552edcdb4aa629a279727008baa121f2d33f32.hr.jpg)  
+![Dijagram životnog ciklusa podatkovne znanosti](../../../../4-Data-Science-Lifecycle/14-Introduction/images/data-science-lifecycle.jpg)  
 > Fotografija od [Berkeley School of Information](https://ischoolonline.berkeley.edu/data-science/what-is-data-science/)
 
 ## Prikupljanje
 
 Prva faza životnog ciklusa vrlo je važna jer su sljedeće faze ovisne o njoj. Praktično, to su dvije faze spojene u jednu: prikupljanje podataka i definiranje svrhe i problema koji se trebaju riješiti.  
-Definiranje ciljeva projekta zahtijeva dublji kontekst problema ili pitanja. Prvo, potrebno je identificirati i angažirati one kojima je potrebno rješenje problema. To mogu biti dionici u poslovanju ili sponzori projekta, koji mogu pomoći u identificiranju tko ili što će imati koristi od ovog projekta, kao i što i zašto im je to potrebno. Dobro definiran cilj trebao bi biti mjerljiv i kvantificiran kako bi se odredio prihvatljiv rezultat.
+Definiranje ciljeva projekta zahtijeva dublji kontekst problema ili pitanja. Prvo, potrebno je identificirati i angažirati one kojima je potrebno riješiti problem. To mogu biti dionici u poslovanju ili sponzori projekta, koji mogu pomoći u identificiranju tko ili što će imati koristi od ovog projekta, kao i što i zašto im je to potrebno. Dobro definiran cilj trebao bi biti mjerljiv i kvantificiran kako bi se odredio prihvatljiv rezultat.
 
 Pitanja koja podatkovni znanstvenik može postaviti:
 - Je li ovaj problem već bio obrađivan? Što je otkriveno?
 - Je li svrha i cilj razumljiv svima uključenima?
 - Postoji li nejasnoća i kako je smanjiti?
 - Koja su ograničenja?
-- Kako bi potencijalno mogao izgledati krajnji rezultat?
-- Koliko resursa (vrijeme, ljudi, računalni) je dostupno?
+- Kako bi mogao izgledati krajnji rezultat?
+- Koliko resursa (vremena, ljudi, računalnih) je dostupno?
 
 Sljedeći korak je identificiranje, prikupljanje, a zatim istraživanje podataka potrebnih za postizanje definiranih ciljeva. U ovoj fazi prikupljanja, podatkovni znanstvenici također moraju procijeniti količinu i kvalitetu podataka. To zahtijeva određeno istraživanje podataka kako bi se potvrdilo da će prikupljeni podaci podržati postizanje željenog rezultata.
 
 Pitanja koja podatkovni znanstvenik može postaviti o podacima:
 - Koji podaci su mi već dostupni?
-- Tko je vlasnik tih podataka?
+- Tko posjeduje ove podatke?
 - Koji su problemi privatnosti?
 - Imam li dovoljno podataka za rješavanje ovog problema?
 - Jesu li podaci prihvatljive kvalitete za ovaj problem?
@@ -53,11 +53,11 @@ Pitanja koja podatkovni znanstvenik može postaviti o podacima:
 
 ## Obrada
 
-Faza obrade u životnom ciklusu fokusira se na otkrivanje obrazaca u podacima kao i na modeliranje. Neke tehnike korištene u fazi obrade zahtijevaju statističke metode za otkrivanje obrazaca. Tipično, ovo bi bio zamoran zadatak za čovjeka s velikim skupom podataka, pa se oslanjamo na računala kako bi ubrzala proces. Ova faza također je mjesto gdje se podatkovna znanost i strojno učenje preklapaju. Kao što ste naučili u prvoj lekciji, strojno učenje je proces izgradnje modela za razumijevanje podataka. Modeli su prikaz odnosa između varijabli u podacima koji pomažu u predviđanju ishoda.
+Faza obrade u životnom ciklusu fokusira se na otkrivanje obrazaca u podacima kao i na modeliranje. Neke tehnike koje se koriste u fazi obrade zahtijevaju statističke metode za otkrivanje obrazaca. Tipično, ovo bi bio zamoran zadatak za čovjeka s velikim skupom podataka, pa se oslanjamo na računala da obave težak posao i ubrzaju proces. Ova faza također je mjesto gdje se podatkovna znanost i strojno učenje preklapaju. Kao što ste naučili u prvoj lekciji, strojno učenje je proces izgradnje modela za razumijevanje podataka. Modeli su reprezentacija odnosa između varijabli u podacima koji pomažu u predviđanju ishoda.
 
-Uobičajene tehnike korištene u ovoj fazi pokrivene su u kurikulumu ML za početnike. Slijedite poveznice kako biste saznali više o njima:
+Uobičajene tehnike koje se koriste u ovoj fazi pokrivene su u kurikulumu ML za početnike. Slijedite poveznice kako biste saznali više o njima:
 
-- [Klasifikacija](https://github.com/microsoft/ML-For-Beginners/tree/main/4-Classification): Organiziranje podataka u kategorije za učinkovitiju upotrebu.
+- [Klasifikacija](https://github.com/microsoft/ML-For-Beginners/tree/main/4-Classification): Organiziranje podataka u kategorije radi učinkovitije upotrebe.
 - [Grupiranje](https://github.com/microsoft/ML-For-Beginners/tree/main/5-Clustering): Grupiranje podataka u slične skupine.
 - [Regresija](https://github.com/microsoft/ML-For-Beginners/tree/main/2-Regression): Utvrđivanje odnosa između varijabli za predviđanje ili prognozu vrijednosti.
 
@@ -67,25 +67,25 @@ Na dijagramu životnog ciklusa možda ste primijetili da održavanje stoji izme�
 
 ### Pohrana podataka
 
-Razmatranja o tome kako i gdje se podaci pohranjuju mogu utjecati na trošak njihove pohrane kao i na performanse brzine pristupa podacima. Odluke poput ovih vjerojatno neće donositi samo podatkovni znanstvenik, ali se može naći u situaciji da donosi odluke o tome kako raditi s podacima na temelju načina njihove pohrane.
+Razmatranja o tome kako i gdje se podaci pohranjuju mogu utjecati na trošak njihove pohrane kao i na performanse brzine pristupa podacima. Odluke poput ovih vjerojatno neće donositi samo podatkovni znanstvenik, ali on može biti uključen u odabir načina rada s podacima na temelju načina njihove pohrane.
 
 Evo nekih aspekata modernih sustava za pohranu podataka koji mogu utjecati na te odluke:
 
-**Na lokaciji vs izvan lokacije vs javni ili privatni oblak**
+**Na vlastitoj opremi vs na tuđoj opremi vs javni ili privatni oblak**
 
-Na lokaciji odnosi se na upravljanje podacima na vlastitoj opremi, poput posjedovanja servera s tvrdim diskovima koji pohranjuju podatke, dok se izvan lokacije oslanja na opremu koju ne posjedujete, poput podatkovnog centra. Javni oblak popularan je izbor za pohranu podataka koji ne zahtijeva znanje o tome kako ili gdje su točno podaci pohranjeni, gdje se javni odnosi na jedinstvenu infrastrukturu koja je zajednička svima koji koriste oblak. Neke organizacije imaju stroge sigurnosne politike koje zahtijevaju da imaju potpuni pristup opremi na kojoj su podaci pohranjeni i oslanjaju se na privatni oblak koji pruža vlastite usluge oblaka. Više o podacima u oblaku naučit ćete u [kasnijim lekcijama](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/5-Data-Science-In-Cloud).
+Na vlastitoj opremi odnosi se na hosting i upravljanje podacima na vlastitoj opremi, poput posjedovanja servera s tvrdim diskovima koji pohranjuju podatke, dok se na tuđoj opremi oslanja na opremu koju ne posjedujete, poput podatkovnog centra. Javni oblak popularan je izbor za pohranu podataka koji ne zahtijeva znanje o tome kako ili gdje su točno podaci pohranjeni, gdje javni oblak označava jedinstvenu infrastrukturu koja je zajednička svim korisnicima oblaka. Neke organizacije imaju stroge sigurnosne politike koje zahtijevaju potpun pristup opremi na kojoj su podaci pohranjeni i oslanjaju se na privatni oblak koji pruža vlastite usluge oblaka. Više o podacima u oblaku naučit ćete u [kasnijim lekcijama](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/5-Data-Science-In-Cloud).
 
 **Hladni vs vrući podaci**
 
-Kada trenirate svoje modele, možda će vam trebati više podataka za treniranje. Ako ste zadovoljni svojim modelom, dolazit će novi podaci kako bi model služio svojoj svrsi. U svakom slučaju, trošak pohrane i pristupa podacima povećavat će se kako ih akumulirate. Razdvajanje rijetko korištenih podataka, poznatih kao hladni podaci, od često korištenih vrućih podataka može biti jeftinija opcija za pohranu podataka putem hardverskih ili softverskih usluga. Ako je potrebno pristupiti hladnim podacima, može potrajati malo duže u usporedbi s vrućim podacima.
+Kada trenirate svoje modele, možda će vam trebati više podataka za treniranje. Ako ste zadovoljni svojim modelom, novi podaci će dolaziti kako bi model služio svojoj svrsi. U svakom slučaju, trošak pohrane i pristupa podacima povećavat će se kako ih akumulirate. Razdvajanje rijetko korištenih podataka, poznatih kao hladni podaci, od često korištenih vrućih podataka može biti jeftinija opcija za pohranu podataka putem hardverskih ili softverskih usluga. Ako je potrebno pristupiti hladnim podacima, može potrajati malo duže u usporedbi s vrućim podacima.
 
 ### Upravljanje podacima
 
-Dok radite s podacima, možete otkriti da neke od njih treba očistiti koristeći neke od tehnika pokrivenih u lekciji o [pripremi podataka](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/08-data-preparation) kako biste izgradili točne modele. Kada stignu novi podaci, bit će potrebne iste primjene kako bi se održala dosljednost u kvaliteti. Neki projekti uključuju korištenje automatiziranog alata za čišćenje, agregaciju i kompresiju prije nego što se podaci premjeste na svoje konačno mjesto. Azure Data Factory je primjer jednog od tih alata.
+Dok radite s podacima, možete otkriti da neke od njih treba očistiti koristeći neke od tehnika pokrivenih u lekciji o [pripremi podataka](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/2-Working-With-Data/08-data-preparation) kako biste izgradili točne modele. Kada stignu novi podaci, bit će potrebne iste primjene za održavanje dosljednosti u kvaliteti. Neki projekti uključuju korištenje automatiziranog alata za čišćenje, agregaciju i kompresiju prije nego što se podaci premjeste na svoje konačno mjesto. Azure Data Factory je primjer jednog od tih alata.
 
 ### Osiguravanje podataka
 
-Jedan od glavnih ciljeva osiguravanja podataka je osigurati da oni koji rade s podacima kontroliraju što se prikuplja i u kojem kontekstu se koristi. Održavanje sigurnosti podataka uključuje ograničavanje pristupa samo onima koji ga trebaju, pridržavanje lokalnih zakona i propisa, kao i održavanje etičkih standarda, kao što je pokriveno u [lekciji o etici](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/1-Introduction/02-ethics).
+Jedan od glavnih ciljeva osiguravanja podataka je osigurati da oni koji rade s podacima kontroliraju što se prikuplja i u kojem kontekstu se koristi. Održavanje sigurnosti podataka uključuje ograničavanje pristupa samo onima kojima je potreban, pridržavanje lokalnih zakona i propisa, kao i održavanje etičkih standarda, kao što je pokriveno u [lekciji o etici](https://github.com/microsoft/Data-Science-For-Beginners/tree/main/1-Introduction/02-ethics).
 
 Evo nekih stvari koje tim može učiniti s obzirom na sigurnost:
 - Potvrditi da su svi podaci šifrirani
@@ -101,17 +101,17 @@ Istražite [Team Data Science Process lifecycle](https://docs.microsoft.com/en-u
 
 |Team Data Science Process (TDSP)|Cross-industry standard process for data mining (CRISP-DM)|
 |--|--|
-|![Team Data Science Lifecycle](../../../../translated_images/tdsp-lifecycle2.e19029d598e2e73d5ef8a4b98837d688ec6044fe332c905d4dbb69eb6d5c1d96.hr.png) | ![Data Science Process Alliance Image](../../../../translated_images/CRISP-DM.8bad2b4c66e62aa75278009e38e3e99902c73b0a6f63fd605a67c687a536698c.hr.png) |
+|![Team Data Science Lifecycle](../../../../4-Data-Science-Lifecycle/14-Introduction/images/tdsp-lifecycle2.png) | ![Data Science Process Alliance Image](../../../../4-Data-Science-Lifecycle/14-Introduction/images/CRISP-DM.png) |
 | Slika od [Microsoft](https://docs.microsoft.comazure/architecture/data-science-process/lifecycle) | Slika od [Data Science Process Alliance](https://www.datascience-pm.com/crisp-dm-2/) |
 
-## [Post-Lekcija Kviz](https://red-water-0103e7a0f.azurestaticapps.net/quiz/27)
+## [Post-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/27)
 
 ## Pregled i samostalno učenje
 
 Primjena životnog ciklusa podatkovne znanosti uključuje više uloga i zadataka, gdje se neki mogu fokusirati na određene dijelove svake faze. Team Data Science Process pruža nekoliko resursa koji objašnjavaju vrste uloga i zadataka koje netko može imati u projektu.
 
-* [Team Data Science Process uloge i zadaci](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/roles-tasks)  
-* [Izvršavanje zadataka podatkovne znanosti: istraživanje, modeliranje i implementacija](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/execute-data-science-tasks)
+* [Team Data Science Process roles and tasks](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/roles-tasks)  
+* [Execute data science tasks: exploration, modeling, and deployment](https://docs.microsoft.com/en-us/azure/architecture/data-science-process/execute-data-science-tasks)
 
 ## Zadatak
 
@@ -120,4 +120,4 @@ Primjena životnog ciklusa podatkovne znanosti uključuje više uloga i zadataka
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

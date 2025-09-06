@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "af6a12015c6e250e500b570a9fa42593",
-  "translation_date": "2025-08-30T18:58:21+00:00",
+  "original_hash": "42119bcc97bee88254e381156d770f3c",
+  "translation_date": "2025-09-05T19:39:22+00:00",
   "source_file": "3-Data-Visualization/11-visualization-proportions/README.md",
   "language_code": "sl"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 |Vizualizacija deležev - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-V tej lekciji boste uporabili naravoslovno usmerjen nabor podatkov za vizualizacijo deležev, na primer koliko različnih vrst gliv je prisotnih v danem naboru podatkov o gobah. Raziskali bomo te fascinantne glive z naborom podatkov, pridobljenim iz Audubona, ki vsebuje podrobnosti o 23 vrstah gob z lističi iz družin Agaricus in Lepiota. Eksperimentirali boste z okusnimi vizualizacijami, kot so:
+V tej lekciji boste uporabili naravno usmerjen nabor podatkov za vizualizacijo deležev, na primer koliko različnih vrst gliv je v določenem naboru podatkov o gobah. Raziskali bomo te fascinantne glive z uporabo nabora podatkov, pridobljenega iz Audubona, ki vsebuje podrobnosti o 23 vrstah gob z lističi iz družin Agaricus in Lepiota. Eksperimentirali boste z okusnimi vizualizacijami, kot so:
 
-- Torte 🥧
-- Krofi 🍩
-- Vaflji 🧇
+- Tabelni diagrami 🥧
+- Krožni diagrami 🍩
+- Waffle diagrami 🧇
 
-> 💡 Zelo zanimiv projekt [Charticulator](https://charticulator.com) Microsoft Researcha ponuja brezplačen vmesnik za vizualizacijo podatkov z metodo povleci in spusti. V enem od njihovih vaj uporabljajo tudi ta nabor podatkov o gobah! Tako lahko raziskujete podatke in hkrati spoznate knjižnico: [Charticulator tutorial](https://charticulator.com/tutorials/tutorial4.html).
+> 💡 Zelo zanimiv projekt z imenom [Charticulator](https://charticulator.com) od Microsoft Research ponuja brezplačen vmesnik za vizualizacijo podatkov z metodo povleci in spusti. V enem od njihovih vaj uporabljajo tudi ta nabor podatkov o gobah! Tako lahko raziskujete podatke in hkrati spoznate knjižnico: [Charticulator tutorial](https://charticulator.com/tutorials/tutorial4.html).
 
-## [Predlekcijski kviz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/20)
+## [Predlekcijski kviz](https://ff-quizzes.netlify.app/en/ds/quiz/20)
 
 ## Spoznajte svoje gobe 🍄
 
@@ -36,14 +36,14 @@ mushrooms.head()
 Izpiše se tabela z odličnimi podatki za analizo:
 
 
-| razred    | oblika klobuka | površina klobuka | barva klobuka | modrice | vonj     | pritrditev lističev | razmik lističev | velikost lističev | barva lističev | oblika bet | korenina bet | površina nad obročem | površina pod obročem | barva nad obročem | barva pod obročem | tip zastora | barva zastora | število obročev | tip obroča | barva trosnega prahu | populacija | habitat |
-| --------- | -------------- | ---------------- | ------------- | ------- | -------- | ------------------- | ---------------- | ----------------- | -------------- | ---------- | ------------ | ------------------- | ------------------- | ---------------- | ---------------- | ---------- | ------------- | -------------- | ---------- | -------------------- | ---------- | ------- |
-| Strupena  | Konveksna      | Gladka           | Rjava         | Modrice | Ostri    | Prosta              | Tesna            | Ozka              | Črna           | Povečana   | Enaka        | Gladka              | Gladka              | Bela             | Bela             | Delna      | Bela          | Ena            | Viseča     | Črna                | Razpršena  | Urbana  |
-| Užitna    | Konveksna      | Gladka           | Rumena        | Modrice | Mandelj  | Prosta              | Tesna            | Široka            | Črna           | Povečana   | Klub         | Gladka              | Gladka              | Bela             | Bela             | Delna      | Bela          | Ena            | Viseča     | Rjava               | Številna   | Trava   |
-| Užitna    | Zvono          | Gladka           | Bela          | Modrice | Janež    | Prosta              | Tesna            | Široka            | Rjava          | Povečana   | Klub         | Gladka              | Gladka              | Bela             | Bela             | Delna      | Bela          | Ena            | Viseča     | Rjava               | Številna   | Travniki |
-| Strupena  | Konveksna      | Luskasta         | Bela          | Modrice | Ostri    | Prosta              | Tesna            | Ozka              | Rjava          | Povečana   | Enaka        | Gladka              | Gladka              | Bela             | Bela             | Delna      | Bela          | Ena            | Viseča     | Črna                | Razpršena  | Urbana  |
+| class     | cap-shape | cap-surface | cap-color | bruises | odor    | gill-attachment | gill-spacing | gill-size | gill-color | stalk-shape | stalk-root | stalk-surface-above-ring | stalk-surface-below-ring | stalk-color-above-ring | stalk-color-below-ring | veil-type | veil-color | ring-number | ring-type | spore-print-color | population | habitat |
+| --------- | --------- | ----------- | --------- | ------- | ------- | --------------- | ------------ | --------- | ---------- | ----------- | ---------- | ------------------------ | ------------------------ | ---------------------- | ---------------------- | --------- | ---------- | ----------- | --------- | ----------------- | ---------- | ------- |
+| Strupena  | Konveksna | Gladka      | Rjava     | Modrice | Ostra   | Prosta          | Tesna        | Ozka      | Črna       | Širša       | Enaka      | Gladka                   | Gladka                   | Bela                   | Bela                   | Delna     | Bela       | Ena         | Viseča    | Črna              | Razpršena  | Urbana  |
+| Užitna    | Konveksna | Gladka      | Rumena    | Modrice | Mandelj | Prosta          | Tesna        | Široka    | Črna       | Širša       | Klub       | Gladka                   | Gladka                   | Bela                   | Bela                   | Delna     | Bela       | Ena         | Viseča    | Rjava             | Številna   | Trava   |
+| Užitna    | Zvonec    | Gladka      | Bela      | Modrice | Janež   | Prosta          | Tesna        | Široka    | Rjava      | Širša       | Klub       | Gladka                   | Gladka                   | Bela                   | Bela                   | Delna     | Bela       | Ena         | Viseča    | Rjava             | Številna   | Travniki |
+| Strupena  | Konveksna | Luskasta    | Bela      | Modrice | Ostra   | Prosta          | Tesna        | Ozka      | Rjava      | Širša       | Enaka      | Gladka                   | Gladka                   | Bela                   | Bela                   | Delna     | Bela       | Ena         | Viseča    | Črna              | Razpršena  | Urbana  |
 
-Takoj opazite, da so vsi podatki besedilni. Te podatke boste morali pretvoriti, da jih boste lahko uporabili v grafu. Večina podatkov je dejansko predstavljena kot objekt:
+Takoj opazite, da so vsi podatki besedilni. Te podatke boste morali pretvoriti, da jih boste lahko uporabili v diagramu. Večina podatkov je dejansko predstavljena kot objekt:
 
 ```python
 print(mushrooms.select_dtypes(["object"]).columns)
@@ -60,7 +60,7 @@ Index(['class', 'cap-shape', 'cap-surface', 'cap-color', 'bruises', 'odor',
        'ring-type', 'spore-print-color', 'population', 'habitat'],
       dtype='object')
 ```
-Vzemite te podatke in pretvorite stolpec 'razred' v kategorijo:
+Pretvorite podatke in stolpec 'class' spremenite v kategorijo:
 
 ```python
 cols = mushrooms.select_dtypes(["object"]).columns
@@ -72,18 +72,18 @@ edibleclass=mushrooms.groupby(['class']).count()
 edibleclass
 ```
 
-Zdaj, če izpišete podatke o gobah, lahko vidite, da so razvrščeni v kategorije glede na razred strupenosti/užitnosti:
+Če zdaj izpišete podatke o gobah, lahko vidite, da so razvrščeni v kategorije glede na razred strupenosti/užitnosti:
 
 
-|           | oblika klobuka | površina klobuka | barva klobuka | modrice | vonj | pritrditev lističev | razmik lističev | velikost lističev | barva lističev | oblika bet | ... | površina pod obročem | barva nad obročem | barva pod obročem | tip zastora | barva zastora | število obročev | tip obroča | barva trosnega prahu | populacija | habitat |
-| --------- | -------------- | ---------------- | ------------- | ------- | ---- | ------------------- | ---------------- | ----------------- | -------------- | ---------- | --- | ------------------- | ---------------- | ---------------- | ---------- | ------------- | -------------- | ---------- | -------------------- | ---------- | ------- |
-| razred    |                |                  |               |         |      |                     |                  |                   |                |            |     |                     |                  |                  |            |               |                |            |                    |            |         |
-| Užitna    | 4208           | 4208             | 4208          | 4208    | 4208 | 4208                | 4208             | 4208              | 4208           | 4208       | ... | 4208               | 4208             | 4208             | 4208       | 4208          | 4208           | 4208       | 4208               | 4208       | 4208    |
-| Strupena  | 3916           | 3916             | 3916          | 3916    | 3916 | 3916                | 3916             | 3916              | 3916           | 3916       | ... | 3916               | 3916             | 3916             | 3916       | 3916          | 3916           | 3916       | 3916               | 3916       | 3916    |
+|           | cap-shape | cap-surface | cap-color | bruises | odor | gill-attachment | gill-spacing | gill-size | gill-color | stalk-shape | ... | stalk-surface-below-ring | stalk-color-above-ring | stalk-color-below-ring | veil-type | veil-color | ring-number | ring-type | spore-print-color | population | habitat |
+| --------- | --------- | ----------- | --------- | ------- | ---- | --------------- | ------------ | --------- | ---------- | ----------- | --- | ------------------------ | ---------------------- | ---------------------- | --------- | ---------- | ----------- | --------- | ----------------- | ---------- | ------- |
+| class     |           |             |           |         |      |                 |              |           |            |             |     |                          |                        |                        |           |            |             |           |                   |            |         |
+| Užitna    | 4208      | 4208        | 4208      | 4208    | 4208 | 4208            | 4208         | 4208      | 4208       | 4208        | ... | 4208                     | 4208                   | 4208                   | 4208      | 4208       | 4208        | 4208      | 4208              | 4208       | 4208    |
+| Strupena  | 3916      | 3916        | 3916      | 3916    | 3916 | 3916            | 3916         | 3916      | 3916       | 3916        | ... | 3916                     | 3916                   | 3916                   | 3916      | 3916       | 3916        | 3916      | 3916              | 3916       | 3916    |
 
-Če sledite vrstnemu redu, predstavljenemu v tej tabeli, da ustvarite oznake kategorij razreda, lahko ustvarite tortni graf:
+Če sledite vrstnemu redu, predstavljenemu v tej tabeli, da ustvarite oznake kategorij razreda, lahko ustvarite tabelni diagram:
 
-## Torta!
+## Tabela!
 
 ```python
 labels=['Edible','Poisonous']
@@ -91,13 +91,13 @@ plt.pie(edibleclass['population'],labels=labels,autopct='%.1f %%')
 plt.title('Edible?')
 plt.show()
 ```
-Voila, tortni graf, ki prikazuje deleže teh podatkov glede na dva razreda gob. Zelo pomembno je, da pravilno določite vrstni red oznak, še posebej tukaj, zato preverite vrstni red, s katerim je zgrajeno polje oznak!
+Voila, tabelni diagram, ki prikazuje deleže teh podatkov glede na dva razreda gob. Zelo pomembno je, da je vrstni red oznak pravilen, še posebej tukaj, zato preverite vrstni red, s katerim je ustvarjen niz oznak!
 
-![tortni graf](../../../../translated_images/pie1-wb.e201f2fcc335413143ce37650fb7f5f0bb21358e7823a327ed8644dfb84be9db.sl.png)
+![tabelni diagram](../../../../3-Data-Visualization/11-visualization-proportions/images/pie1-wb.png)
 
-## Krofi!
+## Krogi!
 
-Vizualno nekoliko bolj zanimiv tortni graf je krofni graf, ki je tortni graf z luknjo v sredini. Poglejmo naše podatke s to metodo.
+Malce bolj vizualno zanimiv tabelni diagram je krožni diagram, ki je tabelni diagram z luknjo na sredini. Poglejmo naše podatke s to metodo.
 
 Oglejte si različna življenjska okolja, kjer rastejo gobe:
 
@@ -105,7 +105,7 @@ Oglejte si različna življenjska okolja, kjer rastejo gobe:
 habitat=mushrooms.groupby(['habitat']).count()
 habitat
 ```
-Tukaj razvrščate podatke glede na habitat. Naštetih je 7, zato jih uporabite kot oznake za krofni graf:
+Tukaj razvrščate podatke glede na življenjsko okolje. Naštetih je 7, zato jih uporabite kot oznake za krožni diagram:
 
 ```python
 labels=['Grasses','Leaves','Meadows','Paths','Urban','Waste','Wood']
@@ -123,16 +123,16 @@ plt.title('Mushroom Habitats')
 plt.show()
 ```
 
-![krofni graf](../../../../translated_images/donut-wb.be3c12a22712302b5d10c40014d5389d4a1ae4412fe1655b3cf4af57b64f799a.sl.png)
+![krožni diagram](../../../../3-Data-Visualization/11-visualization-proportions/images/donut-wb.png)
 
-Ta koda nariše graf in osrednji krog, nato pa doda ta osrednji krog v graf. Širino osrednjega kroga lahko uredite tako, da spremenite `0.40` v drugo vrednost.
+Ta koda nariše diagram in osrednji krog, nato pa ta osrednji krog doda v diagram. Širino osrednjega kroga lahko spremenite tako, da spremenite `0.40` v drugo vrednost.
 
-Krofni grafi se lahko prilagodijo na več načinov, da spremenite oznake. Oznake lahko zlasti poudarite za boljšo berljivost. Več o tem si preberite v [dokumentaciji](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_and_donut_labels.html?highlight=donut).
+Krožni diagrami se lahko prilagodijo na več načinov, da spremenijo oznake. Oznake je mogoče posebej poudariti za boljšo berljivost. Več o tem si preberite v [dokumentaciji](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_and_donut_labels.html?highlight=donut).
 
-Zdaj, ko veste, kako razvrstiti podatke in jih nato prikazati kot torto ali krof, lahko raziščete druge vrste grafov. Poskusite vafeljni graf, ki je le drugačen način raziskovanja količine.
-## Vaflji!
+Zdaj, ko veste, kako razvrstiti podatke in jih nato prikazati kot tabelo ali krog, lahko raziščete druge vrste diagramov. Poskusite waffle diagram, ki je le drugačen način raziskovanja količine.
+## Waffle!
 
-Graf tipa 'vafelj' je drugačen način vizualizacije količin kot 2D matrika kvadratov. Poskusite vizualizirati različne količine barv klobukov gob v tem naboru podatkov. Za to morate namestiti pomožno knjižnico [PyWaffle](https://pypi.org/project/pywaffle/) in uporabiti Matplotlib:
+Diagram tipa 'waffle' je drugačen način vizualizacije količin kot 2D matrika kvadratov. Poskusite vizualizirati različne količine barv gobjih klobukov v tem naboru podatkov. Za to morate namestiti pomožno knjižnico z imenom [PyWaffle](https://pypi.org/project/pywaffle/) in uporabiti Matplotlib:
 
 ```python
 pip install pywaffle
@@ -145,7 +145,7 @@ capcolor=mushrooms.groupby(['cap-color']).count()
 capcolor
 ```
 
-Ustvarite vafeljni graf z ustvarjanjem oznak in nato razvrščanjem podatkov:
+Ustvarite waffle diagram tako, da ustvarite oznake in nato razvrstite svoje podatke:
 
 ```python
 import pandas as pd
@@ -168,22 +168,22 @@ fig = plt.figure(
 )
 ```
 
-Z uporabo vafeljnega grafa lahko jasno vidite deleže barv klobukov v tem naboru podatkov o gobah. Zanimivo je, da je veliko gob z zelenimi klobuki!
+Z uporabo waffle diagrama lahko jasno vidite deleže barv klobukov v tem naboru podatkov o gobah. Zanimivo je, da je veliko gob z zelenimi klobuki!
 
-![vafeljni graf](../../../../translated_images/waffle.5455dbae4ccf17d53bb40ff0a657ecef7b8aa967e27a19cc96325bd81598f65e.sl.png)
+![waffle diagram](../../../../3-Data-Visualization/11-visualization-proportions/images/waffle.png)
 
-✅ Pywaffle podpira ikone znotraj grafov, ki uporabljajo katero koli ikono, ki je na voljo v [Font Awesome](https://fontawesome.com/). Naredite nekaj eksperimentov, da ustvarite še bolj zanimiv vafeljni graf z uporabo ikon namesto kvadratov.
+✅ Pywaffle podpira ikone znotraj diagramov, ki uporabljajo katero koli ikono, ki je na voljo v [Font Awesome](https://fontawesome.com/). Eksperimentirajte in ustvarite še bolj zanimiv waffle diagram z uporabo ikon namesto kvadratov.
 
-V tej lekciji ste spoznali tri načine vizualizacije deležev. Najprej morate razvrstiti podatke v kategorije in nato odločiti, kateri način prikaza podatkov je najboljši - torta, krof ali vafelj. Vsi so okusni in uporabniku takoj ponudijo vpogled v nabor podatkov.
+V tej lekciji ste se naučili treh načinov vizualizacije deležev. Najprej morate razvrstiti podatke v kategorije in nato odločiti, kateri je najboljši način za prikaz podatkov - tabela, krog ali waffle. Vsi so okusni in uporabniku takoj ponudijo vpogled v nabor podatkov.
 
 ## 🚀 Izziv
 
-Poskusite poustvariti te okusne grafe v [Charticulator](https://charticulator.com).
-## [Po-lekcijski kviz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/21)
+Poskusite ponovno ustvariti te okusne diagrame v [Charticulator](https://charticulator.com).
+## [Po-lekcijski kviz](https://ff-quizzes.netlify.app/en/ds/quiz/21)
 
-## Pregled & Samostojno učenje
+## Pregled in samostojno učenje
 
-Včasih ni očitno, kdaj uporabiti tortni, krofni ali vafeljni graf. Tukaj je nekaj člankov za branje na to temo:
+Včasih ni očitno, kdaj uporabiti tabelo, krog ali waffle diagram. Tukaj je nekaj člankov za branje na to temo:
 
 https://www.beautiful.ai/blog/battle-of-the-charts-pie-chart-vs-donut-chart
 
@@ -193,7 +193,7 @@ https://www.mit.edu/~mbarker/formula1/f1help/11-ch-c6.htm
 
 https://medium.datadriveninvestor.com/data-visualization-done-the-right-way-with-tableau-waffle-chart-fdf2a19be402
 
-Raziskujte, da najdete več informacij o tej težki odločitvi.
+Raziskujte in poiščite več informacij o tej težki odločitvi.
 ## Naloga
 
 [Poskusite v Excelu](assignment.md)

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "116c5d361fbe812e59a73f37ce721d36",
-  "translation_date": "2025-08-28T10:48:14+00:00",
+  "original_hash": "7bfec050f4717dcc2dfd028aca9d21f3",
+  "translation_date": "2025-09-06T15:40:37+00:00",
   "source_file": "2-Working-With-Data/07-python/README.md",
   "language_code": "it"
 }
@@ -15,33 +15,33 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![Video Introduttivo](../../../../translated_images/video-ds-python.245247dc811db8e4d5ac420246de8a118c63fd28f6a56578d08b630ae549f260.it.png)](https://youtu.be/dZjWOGbsN4Y)
 
-Sebbene i database offrano modi molto efficienti per memorizzare e interrogare i dati utilizzando linguaggi di query, il modo più flessibile per elaborare i dati è scrivere un proprio programma per manipolarli. In molti casi, eseguire una query su un database sarebbe un metodo più efficace. Tuttavia, in alcuni casi in cui è necessaria un'elaborazione più complessa dei dati, non è facile farlo utilizzando SQL.  
+Sebbene i database offrano modi molto efficienti per memorizzare i dati e interrogarli utilizzando linguaggi di query, il modo più flessibile per elaborare i dati è scrivere un proprio programma per manipolarli. In molti casi, eseguire una query su un database sarebbe un metodo più efficace. Tuttavia, in alcuni casi in cui è necessaria un'elaborazione dei dati più complessa, non è facilmente realizzabile utilizzando SQL.  
 L'elaborazione dei dati può essere programmata in qualsiasi linguaggio di programmazione, ma ci sono alcuni linguaggi che sono più adatti per lavorare con i dati. Gli scienziati dei dati di solito preferiscono uno dei seguenti linguaggi:
 
-* **[Python](https://www.python.org/)**, un linguaggio di programmazione generico, spesso considerato una delle migliori opzioni per i principianti grazie alla sua semplicità. Python dispone di molte librerie aggiuntive che possono aiutarti a risolvere molti problemi pratici, come estrarre dati da un archivio ZIP o convertire un'immagine in scala di grigi. Oltre alla scienza dei dati, Python è spesso utilizzato anche per lo sviluppo web.  
-* **[R](https://www.r-project.org/)** è uno strumento tradizionale sviluppato con l'elaborazione statistica dei dati in mente. Contiene anche un ampio repository di librerie (CRAN), rendendolo una buona scelta per l'elaborazione dei dati. Tuttavia, R non è un linguaggio di programmazione generico e viene raramente utilizzato al di fuori del dominio della scienza dei dati.  
+* **[Python](https://www.python.org/)**, un linguaggio di programmazione generico, spesso considerato una delle migliori opzioni per i principianti grazie alla sua semplicità. Python dispone di molte librerie aggiuntive che possono aiutarti a risolvere numerosi problemi pratici, come estrarre dati da un archivio ZIP o convertire un'immagine in scala di grigi. Oltre alla scienza dei dati, Python è spesso utilizzato anche per lo sviluppo web.  
+* **[R](https://www.r-project.org/)** è uno strumento tradizionale sviluppato con l'elaborazione statistica dei dati in mente. Contiene anche un ampio repository di librerie (CRAN), rendendolo una buona scelta per l'elaborazione dei dati. Tuttavia, R non è un linguaggio di programmazione generico ed è raramente utilizzato al di fuori del dominio della scienza dei dati.  
 * **[Julia](https://julialang.org/)** è un altro linguaggio sviluppato specificamente per la scienza dei dati. È progettato per offrire prestazioni migliori rispetto a Python, rendendolo uno strumento eccellente per esperimenti scientifici.
 
 In questa lezione, ci concentreremo sull'utilizzo di Python per semplici elaborazioni dei dati. Daremo per scontata una conoscenza di base del linguaggio. Se desideri un'introduzione più approfondita a Python, puoi fare riferimento a una delle seguenti risorse:
 
 * [Impara Python in modo divertente con Turtle Graphics e Frattali](https://github.com/shwars/pycourse) - Corso introduttivo rapido su GitHub per la programmazione in Python  
-* [Muovi i tuoi primi passi con Python](https://docs.microsoft.com/en-us/learn/paths/python-first-steps/?WT.mc_id=academic-77958-bethanycheum) Percorso di apprendimento su [Microsoft Learn](http://learn.microsoft.com/?WT.mc_id=academic-77958-bethanycheum)
+* [Muovi i tuoi primi passi con Python](https://docs.microsoft.com/en-us/learn/paths/python-first-steps/?WT.mc_id=academic-77958-bethanycheum) - Percorso di apprendimento su [Microsoft Learn](http://learn.microsoft.com/?WT.mc_id=academic-77958-bethanycheum)
 
 I dati possono presentarsi in molte forme. In questa lezione, considereremo tre forme di dati: **dati tabellari**, **testo** e **immagini**.
 
 Ci concentreremo su alcuni esempi di elaborazione dei dati, invece di fornire una panoramica completa di tutte le librerie correlate. Questo ti permetterà di comprendere le possibilità principali e di sapere dove trovare soluzioni ai tuoi problemi quando ne avrai bisogno.
 
-> **Il consiglio più utile**. Quando hai bisogno di eseguire un'operazione sui dati che non sai come fare, prova a cercarla su internet. [Stackoverflow](https://stackoverflow.com/) contiene spesso molti esempi di codice utili in Python per molti compiti tipici.
+> **Il consiglio più utile**. Quando hai bisogno di eseguire un'operazione sui dati che non sai come fare, prova a cercarla su internet. [Stackoverflow](https://stackoverflow.com/) contiene spesso molti esempi di codice utili in Python per numerosi compiti tipici.
 
-## [Quiz pre-lezione](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/12)
+## [Quiz pre-lezione](https://ff-quizzes.netlify.app/en/ds/quiz/12)
 
 ## Dati Tabellari e Dataframe
 
-Hai già incontrato i dati tabellari quando abbiamo parlato di database relazionali. Quando hai molti dati contenuti in diverse tabelle collegate, ha sicuramente senso utilizzare SQL per lavorarci. Tuttavia, ci sono molti casi in cui abbiamo una tabella di dati e dobbiamo ottenere una **comprensione** o **intuizioni** su questi dati, come la distribuzione, la correlazione tra i valori, ecc. Nella scienza dei dati, ci sono molti casi in cui dobbiamo eseguire alcune trasformazioni dei dati originali, seguite da una visualizzazione. Entrambi questi passaggi possono essere facilmente eseguiti utilizzando Python.
+Hai già incontrato i dati tabellari quando abbiamo parlato di database relazionali. Quando hai molti dati contenuti in diverse tabelle collegate, ha sicuramente senso utilizzare SQL per lavorarci. Tuttavia, ci sono molti casi in cui abbiamo una tabella di dati e dobbiamo ottenere una **comprensione** o **intuizioni** su questi dati, come la distribuzione, la correlazione tra i valori, ecc. Nella scienza dei dati, ci sono molti casi in cui dobbiamo eseguire alcune trasformazioni sui dati originali, seguite da una visualizzazione. Entrambi questi passaggi possono essere facilmente eseguiti utilizzando Python.
 
 Ci sono due librerie più utili in Python che possono aiutarti a gestire i dati tabellari:
 * **[Pandas](https://pandas.pydata.org/)** ti consente di manipolare i cosiddetti **Dataframe**, che sono analoghi alle tabelle relazionali. Puoi avere colonne con nomi e eseguire diverse operazioni su righe, colonne e dataframe in generale.  
-* **[Numpy](https://numpy.org/)** è una libreria per lavorare con **tensori**, ovvero **array** multidimensionali. Gli array hanno valori dello stesso tipo sottostante, sono più semplici dei dataframe, ma offrono più operazioni matematiche e creano meno sovraccarico.
+* **[Numpy](https://numpy.org/)** è una libreria per lavorare con **tensori**, ovvero **array** multidimensionali. Gli array contengono valori dello stesso tipo sottostante, sono più semplici dei dataframe, ma offrono più operazioni matematiche e creano meno sovraccarico.
 
 Ci sono anche un paio di altre librerie che dovresti conoscere:
 * **[Matplotlib](https://matplotlib.org/)** è una libreria utilizzata per la visualizzazione dei dati e la creazione di grafici  
@@ -86,7 +86,7 @@ total_items.plot()
 ```  
 ![Grafico Serie Temporale](../../../../translated_images/timeseries-2.aae51d575c55181ceda81ade8c546a2fc2024f9136934386d57b8a189d7570ff.it.png)
 
-> **Nota** che non stiamo usando la sintassi semplice `total_items+additional_items`. Se lo facessimo, otterremmo molti valori `NaN` (*Not a Number*) nella serie risultante. Questo perché ci sono valori mancanti per alcuni punti dell'indice nella serie `additional_items`, e sommare `NaN` a qualsiasi cosa restituisce `NaN`. Pertanto, dobbiamo specificare il parametro `fill_value` durante l'addizione.
+> **Nota** che non stiamo usando la sintassi semplice `total_items+additional_items`. Se lo facessimo, otterremmo molti valori `NaN` (*Not a Number*) nella serie risultante. Questo perché ci sono valori mancanti per alcuni punti dell'indice nella serie `additional_items`, e sommare `NaN` a qualsiasi cosa risulta in `NaN`. Pertanto, dobbiamo specificare il parametro `fill_value` durante l'addizione.
 
 Con le serie temporali, possiamo anche **ricampionare** la serie con intervalli di tempo diversi. Ad esempio, supponiamo di voler calcolare il volume medio di vendite mensile. Possiamo usare il seguente codice:  
 ```python
@@ -109,7 +109,7 @@ Questo creerà una tabella orizzontale come questa:
 | 0   | 1   | 2    | 3   | 4   | 5      | 6   | 7      | 8    | 9    |
 | 1   | I   | like | to  | use | Python | and | Pandas | very | much |
 
-Possiamo anche usare le Serie come colonne e specificare i nomi delle colonne usando un dizionario:  
+Possiamo anche usare le Serie come colonne e specificare i nomi delle colonne utilizzando un dizionario:  
 ```python
 df = pd.DataFrame({ 'A' : a, 'B' : b })
 ```  
@@ -131,21 +131,21 @@ Questo ci darà una tabella come questa:
 ```python
 df = pd.DataFrame([a,b]).T..rename(columns={ 0 : 'A', 1 : 'B' })
 ```  
-Qui `.T` indica l'operazione di trasposizione del DataFrame, ovvero lo scambio di righe e colonne, e l'operazione `rename` ci consente di rinominare le colonne per corrispondere all'esempio precedente.
+Qui `.T` indica l'operazione di trasposizione del DataFrame, ovvero il cambio di righe e colonne, e l'operazione `rename` ci consente di rinominare le colonne per corrispondere all'esempio precedente.
 
 Ecco alcune delle operazioni più importanti che possiamo eseguire sui DataFrame:
 
 **Selezione delle colonne**. Possiamo selezionare colonne individuali scrivendo `df['A']` - questa operazione restituisce una Serie. Possiamo anche selezionare un sottoinsieme di colonne in un altro DataFrame scrivendo `df[['B','A']]` - questo restituisce un altro DataFrame.
 
-**Filtrare** solo alcune righe in base a criteri. Ad esempio, per mantenere solo le righe con la colonna `A` maggiore di 5, possiamo scrivere `df[df['A']>5]`.
+**Filtraggio** di determinate righe in base a criteri. Ad esempio, per mantenere solo le righe con la colonna `A` maggiore di 5, possiamo scrivere `df[df['A']>5]`.
 
-> **Nota**: Il modo in cui funziona il filtraggio è il seguente. L'espressione `df['A']<5` restituisce una serie booleana, che indica se l'espressione è `True` o `False` per ciascun elemento della serie originale `df['A']`. Quando la serie booleana viene utilizzata come indice, restituisce un sottoinsieme di righe nel DataFrame. Pertanto, non è possibile utilizzare un'espressione booleana arbitraria di Python, ad esempio, scrivere `df[df['A']>5 and df['A']<7]` sarebbe sbagliato. Invece, dovresti usare l'operatore speciale `&` sulle serie booleane, scrivendo `df[(df['A']>5) & (df['A']<7)]` (*le parentesi sono importanti qui*).
+> **Nota**: Il modo in cui funziona il filtraggio è il seguente. L'espressione `df['A']<5` restituisce una serie booleana, che indica se l'espressione è `True` o `False` per ciascun elemento della serie originale `df['A']`. Quando una serie booleana viene utilizzata come indice, restituisce un sottoinsieme di righe nel DataFrame. Pertanto, non è possibile utilizzare un'espressione booleana Python arbitraria, ad esempio, scrivere `df[df['A']>5 and df['A']<7]` sarebbe sbagliato. Invece, dovresti usare l'operatore speciale `&` sulle serie booleane, scrivendo `df[(df['A']>5) & (df['A']<7)]` (*le parentesi sono importanti qui*).
 
-**Creare nuove colonne calcolabili**. Possiamo facilmente creare nuove colonne calcolabili per il nostro DataFrame utilizzando un'espressione intuitiva come questa:  
+**Creazione di nuove colonne calcolabili**. Possiamo facilmente creare nuove colonne calcolabili per il nostro DataFrame utilizzando un'espressione intuitiva come questa:  
 ```python
 df['DivA'] = df['A']-df['A'].mean() 
 ```  
-Questo esempio calcola la divergenza di A dal suo valore medio. Quello che succede in realtà è che stiamo calcolando una serie e poi assegnando questa serie al lato sinistro, creando un'altra colonna. Pertanto, non possiamo usare operazioni che non sono compatibili con le serie, ad esempio, il codice seguente è sbagliato:  
+Questo esempio calcola la divergenza di A dal suo valore medio. Quello che succede realmente qui è che stiamo calcolando una serie e poi assegnando questa serie al lato sinistro, creando un'altra colonna. Pertanto, non possiamo usare operazioni non compatibili con le serie, ad esempio, il codice seguente è sbagliato:  
 ```python
 # Wrong code -> df['ADescr'] = "Low" if df['A'] < 5 else "Hi"
 df['LenB'] = len(df['B']) # <- Wrong result
@@ -173,16 +173,16 @@ Dopo le operazioni sopra, otterremo il seguente DataFrame:
 | 7   | 8   | very   | 3.0  | 4    |
 | 8   | 9   | much   | 4.0  | 4    |
 
-**Selezionare righe in base ai numeri** può essere fatto usando la struttura `iloc`. Ad esempio, per selezionare le prime 5 righe del DataFrame:  
+**Selezione delle righe in base ai numeri** può essere fatta usando la struttura `iloc`. Ad esempio, per selezionare le prime 5 righe del DataFrame:  
 ```python
 df.iloc[:5]
 ```
 
 **Raggruppamento** è spesso utilizzato per ottenere un risultato simile alle *tabelle pivot* in Excel. Supponiamo di voler calcolare il valore medio della colonna `A` per ciascun numero dato di `LenB`. Possiamo quindi raggruppare il nostro DataFrame per `LenB` e chiamare `mean`:  
 ```python
-df.groupby(by='LenB').mean()
+df.groupby(by='LenB')[['A','DivA']].mean()
 ```  
-Se dobbiamo calcolare la media e il numero di elementi nel gruppo, possiamo usare la funzione più complessa `aggregate`:  
+Se dobbiamo calcolare la media e il numero di elementi nel gruppo, possiamo usare la funzione `aggregate` più complessa:  
 ```python
 df.groupby(by='LenB') \
  .aggregate({ 'DivA' : len, 'A' : lambda x: x.mean() }) \
@@ -227,13 +227,13 @@ Poiché vogliamo dimostrare come gestire i dati, ti invitiamo ad aprire [`notebo
 
 Sebbene i dati spesso si presentino in forma tabellare, in alcuni casi dobbiamo gestire dati meno strutturati, ad esempio testo o immagini. In questo caso, per applicare le tecniche di elaborazione dei dati che abbiamo visto sopra, dobbiamo in qualche modo **estrarre** dati strutturati. Ecco alcuni esempi:
 
-* Estrarre parole chiave da un testo e vedere quanto spesso appaiono
-* Utilizzare reti neurali per estrarre informazioni sugli oggetti in un'immagine
-* Ottenere informazioni sulle emozioni delle persone da un feed video della telecamera
+* Estrarre parole chiave da un testo e vedere con quale frequenza compaiono
+* Utilizzare reti neurali per estrarre informazioni sugli oggetti presenti in un'immagine
+* Ottenere informazioni sulle emozioni delle persone da un feed video di una telecamera
 
-## 🚀 Sfida 2: Analizzare gli Articoli sul COVID
+## 🚀 Sfida 2: Analizzare Articoli sul COVID
 
-In questa sfida, continueremo con il tema della pandemia di COVID, concentrandoci sull'elaborazione degli articoli scientifici sull'argomento. Esiste il [Dataset CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) con più di 7000 (al momento della scrittura) articoli sul COVID, disponibile con metadati e abstract (e per circa metà di essi è fornito anche il testo completo).
+In questa sfida, continueremo con il tema della pandemia di COVID, concentrandoci sull'elaborazione di articoli scientifici sull'argomento. Esiste il [Dataset CORD-19](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) con più di 7000 (al momento della scrittura) articoli sul COVID, disponibile con metadati e abstract (e per circa metà di essi è fornito anche il testo completo).
 
 Un esempio completo di analisi di questo dataset utilizzando il servizio cognitivo [Text Analytics for Health](https://docs.microsoft.com/azure/cognitive-services/text-analytics/how-tos/text-analytics-for-health/?WT.mc_id=academic-77958-bethanycheum) è descritto [in questo post sul blog](https://soshnikov.com/science/analyzing-medical-papers-with-azure-and-text-analytics-for-health/). Discuteremo una versione semplificata di questa analisi.
 
@@ -249,19 +249,19 @@ Recentemente, sono stati sviluppati modelli di intelligenza artificiale molto po
 
 * **Classificazione delle Immagini**, che può aiutarti a categorizzare un'immagine in una delle classi predefinite. Puoi facilmente addestrare i tuoi classificatori di immagini utilizzando servizi come [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum)
 * **Rilevamento degli Oggetti** per rilevare diversi oggetti nell'immagine. Servizi come [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum) possono rilevare un numero di oggetti comuni, e puoi addestrare un modello [Custom Vision](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/?WT.mc_id=academic-77958-bethanycheum) per rilevare alcuni oggetti specifici di interesse.
-* **Rilevamento del Volto**, inclusi età, genere e rilevamento delle emozioni. Questo può essere fatto tramite [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum).
+* **Rilevamento del Volto**, inclusa l'età, il genere e la rilevazione delle emozioni. Questo può essere fatto tramite [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum).
 
-Tutti questi servizi cloud possono essere chiamati utilizzando [Python SDKs](https://docs.microsoft.com/samples/azure-samples/cognitive-services-python-sdk-samples/cognitive-services-python-sdk-samples/?WT.mc_id=academic-77958-bethanycheum), e quindi possono essere facilmente incorporati nel tuo workflow di esplorazione dei dati.
+Tutti questi servizi cloud possono essere chiamati utilizzando [Python SDKs](https://docs.microsoft.com/samples/azure-samples/cognitive-services-python-sdk-samples/cognitive-services-python-sdk-samples/?WT.mc_id=academic-77958-bethanycheum), e quindi possono essere facilmente incorporati nel tuo flusso di lavoro di esplorazione dei dati.
 
 Ecco alcuni esempi di esplorazione dei dati da fonti di dati immagine:
 * Nel post sul blog [Come Imparare Data Science senza Codice](https://soshnikov.com/azure/how-to-learn-data-science-without-coding/) esploriamo le foto di Instagram, cercando di capire cosa spinge le persone a mettere più "mi piace" a una foto. Prima estraiamo quante più informazioni possibili dalle immagini utilizzando [computer vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/?WT.mc_id=academic-77958-bethanycheum), e poi utilizziamo [Azure Machine Learning AutoML](https://docs.microsoft.com/azure/machine-learning/concept-automated-ml/?WT.mc_id=academic-77958-bethanycheum) per costruire un modello interpretabile.
-* Nel [Workshop Studi Facciali](https://github.com/CloudAdvocacy/FaceStudies) utilizziamo [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum) per estrarre emozioni delle persone nelle fotografie di eventi, al fine di cercare di capire cosa rende felici le persone.
+* Nel [Workshop Studi Facciali](https://github.com/CloudAdvocacy/FaceStudies) utilizziamo [Face API](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-77958-bethanycheum) per estrarre emozioni dalle persone presenti nelle fotografie di eventi, al fine di cercare di capire cosa rende felici le persone.
 
 ## Conclusione
 
 Che tu abbia già dati strutturati o non strutturati, utilizzando Python puoi eseguire tutti i passaggi relativi all'elaborazione e alla comprensione dei dati. È probabilmente il modo più flessibile per elaborare i dati, ed è per questo che la maggior parte dei data scientist utilizza Python come strumento principale. Imparare Python in profondità è probabilmente una buona idea se sei serio riguardo al tuo percorso nella data science!
 
-## [Quiz post-lezione](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/13)
+## [Quiz post-lezione](https://ff-quizzes.netlify.app/en/ds/quiz/13)
 
 ## Revisione e Studio Autonomo
 
@@ -278,7 +278,7 @@ Che tu abbia già dati strutturati o non strutturati, utilizzando Python puoi es
 
 ## Compito
 
-[Effettua uno studio più dettagliato dei dati per le sfide sopra](assignment.md)
+[Effettua uno studio più dettagliato sui dati per le sfide sopra](assignment.md)
 
 ## Crediti
 
@@ -286,5 +286,5 @@ Questa lezione è stata scritta con ♥️ da [Dmitry Soshnikov](http://soshniko
 
 ---
 
-**Disclaimer (Avvertenza)**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale eseguita da un traduttore umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.

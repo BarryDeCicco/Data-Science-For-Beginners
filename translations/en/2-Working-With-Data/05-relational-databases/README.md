@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "870a0086adbc313a8eea5489bdcb2522",
-  "translation_date": "2025-08-31T10:58:39+00:00",
+  "original_hash": "9399d7b4767e75068f95ce5c660b285c",
+  "translation_date": "2025-09-06T10:06:30+00:00",
   "source_file": "2-Working-With-Data/05-relational-databases/README.md",
   "language_code": "en"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Working With Data: Relational Databases - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-You’ve probably used a spreadsheet before to store information. It consists of rows and columns, where the rows hold the data and the columns describe the data (sometimes referred to as metadata). A relational database builds on this concept of rows and columns in tables, enabling you to spread information across multiple tables. This approach allows you to work with more complex data, reduce duplication, and gain flexibility in how you analyze the data. Let’s dive into the basics of relational databases.
+Chances are you’ve used a spreadsheet before to store information. You had rows and columns, where the rows contained the data, and the columns described the data (sometimes called metadata). A relational database is based on this same principle of rows and columns in tables, but it allows you to spread information across multiple tables. This makes it possible to work with more complex data, avoid duplication, and have more flexibility in exploring the data. Let’s dive into the concepts of relational databases.
 
-## [Pre-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## [Pre-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/8)
 
 ## It all starts with tables
 
-At the heart of a relational database are tables. Similar to a spreadsheet, a table is a collection of rows and columns. Rows contain the data you want to work with, such as the name of a city or the amount of rainfall, while columns describe the type of data stored.
+At the heart of a relational database are tables. Just like a spreadsheet, a table is a collection of rows and columns. The rows contain the data you want to work with, such as the name of a city or the amount of rainfall. The columns describe the type of data stored.
 
-Let’s start by creating a table to store information about cities. For example, we might want to store their name and country. This could look like the following table:
+Let’s start by creating a table to store information about cities. We might begin with their name and country. You could store this in a table like this:
 
 | City     | Country       |
 | -------- | ------------- |
@@ -29,11 +29,11 @@ Let’s start by creating a table to store information about cities. For example
 | Atlanta  | United States |
 | Auckland | New Zealand   |
 
-Notice how the column names **city**, **country**, and **population** describe the data being stored, and each row contains information about a specific city.
+Notice that the column names **city**, **country**, and **population** describe the data being stored, and each row contains information about one city.
 
 ## The shortcomings of a single table approach
 
-The table above might look familiar to you. Now, let’s add more data to our growing database—annual rainfall (in millimeters) for the years 2018, 2019, and 2020. If we were to add this data for Tokyo, it might look like this:
+The table above probably looks familiar to you. Now let’s add more data to our growing database—annual rainfall (in millimeters). We’ll focus on the years 2018, 2019, and 2020. If we were to add this for Tokyo, it might look like this:
 
 | City  | Country | Year | Amount |
 | ----- | ------- | ---- | ------ |
@@ -41,9 +41,9 @@ The table above might look familiar to you. Now, let’s add more data to our gr
 | Tokyo | Japan   | 2019 | 1874   |
 | Tokyo | Japan   | 2018 | 1445   |
 
-What do you notice about this table? You might see that we’re repeating the name and country of the city multiple times. This repetition can take up unnecessary storage space. After all, Tokyo only has one name and one country.
+What do you notice about this table? You might see that we’re repeating the name and country of the city multiple times. This could take up a lot of storage and is unnecessary since Tokyo only has one name and country.
 
-Let’s try a different approach by adding new columns for each year:
+Let’s try another approach. Let’s add new columns for each year:
 
 | City     | Country       | 2018 | 2019 | 2020 |
 | -------- | ------------- | ---- | ---- | ---- |
@@ -51,13 +51,13 @@ Let’s try a different approach by adding new columns for each year:
 | Atlanta  | United States | 1779 | 1111 | 1683 |
 | Auckland | New Zealand   | 1386 | 942  | 1176 |
 
-While this eliminates row duplication, it introduces other challenges. For instance, we’d need to modify the table structure every time a new year is added. Additionally, as the dataset grows, having years as columns makes it harder to retrieve and calculate values.
+While this avoids repeating rows, it introduces other challenges. We’d need to change the structure of the table every time a new year is added. Additionally, as the data grows, having years as columns would make it harder to retrieve and calculate values.
 
-This is why relational databases use multiple tables and relationships. By breaking data into separate tables, we can avoid duplication and gain more flexibility in how we work with the data.
+This is why we need multiple tables and relationships. By splitting the data into separate tables, we can avoid duplication and gain more flexibility in working with the data.
 
 ## The concepts of relationships
 
-Let’s revisit our data and decide how to split it into multiple tables. We know we want to store the name and country of each city, so this information can go into one table:
+Let’s revisit our data and decide how to split it up. We know we want to store the name and country of each city, so this will work best in one table.
 
 | City     | Country       |
 | -------- | ------------- |
@@ -65,7 +65,7 @@ Let’s revisit our data and decide how to split it into multiple tables. We kno
 | Atlanta  | United States |
 | Auckland | New Zealand   |
 
-Before creating the next table, we need a way to reference each city. This requires an identifier, often called an ID or, in database terminology, a primary key. A primary key is a unique value used to identify a specific row in a table. While we could use the city name as the identifier, it’s better to use a number or another unique value that won’t change. Most primary keys are auto-generated numbers.
+Before creating the next table, we need a way to reference each city. We need an identifier, ID, or (in database terms) a primary key. A primary key is a value used to uniquely identify a specific row in a table. While this could be based on an existing value (like the city name), it’s better to use a number or other identifier that won’t change. If the ID changes, it would break the relationship. In most cases, the primary key or ID is an auto-generated number.
 
 > ✅ Primary key is often abbreviated as PK
 
@@ -77,9 +77,9 @@ Before creating the next table, we need a way to reference each city. This requi
 | 2       | Atlanta  | United States |
 | 3       | Auckland | New Zealand   |
 
-> ✅ Throughout this lesson, you’ll notice we use the terms "id" and "primary key" interchangeably. These concepts also apply to DataFrames, which you’ll explore later. While DataFrames don’t use the term "primary key," they function similarly.
+> ✅ You’ll notice we use the terms "id" and "primary key" interchangeably in this lesson. These concepts also apply to DataFrames, which you’ll explore later. While DataFrames don’t use the term "primary key," they behave similarly.
 
-With our cities table created, let’s store the rainfall data. Instead of duplicating city information, we can use the city ID. The new table should also have its own ID or primary key.
+With our cities table created, let’s store the rainfall data. Instead of repeating the full city information, we can use the ID. The new table should also have an *id* column, as all tables should have an ID or primary key.
 
 ### rainfall
 
@@ -95,15 +95,15 @@ With our cities table created, let’s store the rainfall data. Instead of dupli
 | 8           | 3       | 2019 | 942    |
 | 9           | 3       | 2020 | 1176   |
 
-Notice the **city_id** column in the **rainfall** table. This column contains values that reference the IDs in the **cities** table. In relational database terms, this is called a **foreign key**—a primary key from another table. You can think of it as a reference or pointer. For example, **city_id** 1 refers to Tokyo.
+Notice the **city_id** column in the **rainfall** table. This column contains values that reference the IDs in the **cities** table. In relational database terms, this is called a **foreign key**—a primary key from another table. You can think of it as a reference or pointer. **city_id** 1 refers to Tokyo.
 
 > [!NOTE] Foreign key is often abbreviated as FK
 
 ## Retrieving the data
 
-With our data split into two tables, you might wonder how to retrieve it. Relational databases like MySQL, SQL Server, or Oracle use a language called Structured Query Language (SQL) for this purpose. SQL (sometimes pronounced "sequel") is a standard language for retrieving and modifying data in relational databases.
+With our data split into two tables, you might wonder how to retrieve it. If you’re using a relational database like MySQL, SQL Server, or Oracle, you can use a language called Structured Query Language (SQL). SQL (sometimes pronounced "sequel") is a standard language for retrieving and modifying data in relational databases.
 
-To retrieve data, you use the `SELECT` command. Essentially, you **select** the columns you want to view **from** the table they belong to. For example, to display just the names of the cities, you could use the following:
+To retrieve data, you use the `SELECT` command. At its core, you **select** the columns you want to see **from** the table they’re in. For example, to display just the names of the cities, you could use:
 
 ```sql
 SELECT city
@@ -115,11 +115,11 @@ FROM cities;
 -- Auckland
 ```
 
-`SELECT` specifies the columns, and `FROM` specifies the table.
+`SELECT` lists the columns, and `FROM` specifies the table.
 
-> [NOTE] SQL syntax is case-insensitive, meaning `select` and `SELECT` are treated the same. However, depending on the database, column and table names might be case-sensitive. As a best practice, always treat everything in programming as case-sensitive. In SQL, it’s common to write keywords in uppercase.
+> [NOTE] SQL syntax is case-insensitive, meaning `select` and `SELECT` are the same. However, depending on the database, column and table names might be case-sensitive. It’s a best practice to treat everything in programming as case-sensitive. In SQL, it’s common to write keywords in all uppercase.
 
-The query above will display all cities. If you only want to display cities in New Zealand, you can use a filter. The SQL keyword for filtering is `WHERE`, which specifies conditions.
+The query above will display all cities. If you only want to display cities in New Zealand, you need a filter. The SQL keyword for this is `WHERE`, which specifies a condition.
 
 ```sql
 SELECT city
@@ -132,13 +132,13 @@ WHERE country = 'New Zealand';
 
 ## Joining data
 
-So far, we’ve retrieved data from a single table. Now, let’s combine data from both **cities** and **rainfall**. This is done by *joining* the tables. Essentially, you create a connection between the two tables by matching values in specific columns.
+So far, we’ve retrieved data from a single table. Now we want to combine data from both **cities** and **rainfall**. This is done by *joining* the tables. You create a connection between the two tables by matching values in a column from each table.
 
-In our example, we’ll match the **city_id** column in **rainfall** with the **city_id** column in **cities**. This will link rainfall data to its corresponding city. The type of join we’ll use is called an *inner* join, which only displays rows that have matching values in both tables. Since every city has rainfall data, all rows will be displayed.
+In our example, we’ll match the **city_id** column in **rainfall** with the **city_id** column in **cities**. This will link the rainfall data to its respective city. The type of join we’ll use is called an *inner* join, which means rows that don’t match won’t be displayed. In our case, every city has rainfall data, so all rows will be displayed.
 
 Let’s retrieve the rainfall data for 2019 for all cities.
 
-We’ll do this step by step. First, join the tables by specifying the columns to connect—**city_id** in both tables.
+We’ll do this step by step. First, join the tables by specifying the columns to connect—**city_id**.
 
 ```sql
 SELECT cities.city
@@ -147,7 +147,7 @@ FROM cities
     INNER JOIN rainfall ON cities.city_id = rainfall.city_id
 ```
 
-We’ve highlighted the columns to join and specified the connection using **city_id**. Now, we can add a `WHERE` clause to filter for the year 2019.
+We’ve highlighted the columns we want and specified that we’re joining the tables by **city_id**. Now we can add the `WHERE` clause to filter for the year 2019.
 
 ```sql
 SELECT cities.city
@@ -167,15 +167,15 @@ WHERE rainfall.year = 2019
 
 ## Summary
 
-Relational databases are designed to divide information across multiple tables, which can then be combined for analysis and display. This approach offers flexibility for calculations and data manipulation. You’ve learned the core concepts of relational databases and how to join data from two tables.
+Relational databases are built around dividing data into multiple tables, which can then be combined for display and analysis. This approach provides flexibility for calculations and data manipulation. You’ve learned the core concepts of relational databases and how to join two tables.
 
 ## 🚀 Challenge
 
-There are many relational databases available online. Use the skills you’ve learned to explore and analyze data.
+There are many relational databases available online. Use the skills you’ve learned to explore the data.
 
 ## Post-Lecture Quiz
 
-## [Post-lecture quiz](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
+## [Post-lecture quiz](https://ff-quizzes.netlify.app/en/ds/quiz/9)
 
 ## Review & Self Study
 
@@ -192,4 +192,4 @@ Microsoft Learn offers several resources to deepen your understanding of SQL and
 ---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

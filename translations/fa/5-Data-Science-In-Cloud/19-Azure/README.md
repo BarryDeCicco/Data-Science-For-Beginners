@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-24T22:08:29+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T14:09:05+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "fa"
 }
@@ -16,7 +16,7 @@ CO_OP_TRANSLATOR_METADATA:
 فهرست مطالب:
 
 - [علم داده در فضای ابری: روش "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [پرسش‌های پیش از درس](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [پیش‌ آزمون](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. مقدمه](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 Azure ML SDK چیست؟](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.2 معرفی پروژه پیش‌بینی نارسایی قلبی و مجموعه داده](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -27,17 +27,17 @@ CO_OP_TRANSLATOR_METADATA:
     - [2.4 ایجاد نوت‌بوک‌ها](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.5 آموزش مدل](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.1 تنظیم فضای کاری، آزمایش، خوشه محاسباتی و مجموعه داده](../../../../5-Data-Science-In-Cloud/19-Azure)
-      - [2.5.2 پیکربندی AutoML و آموزش](../../../../5-Data-Science-In-Cloud/19-Azure)
+      - [2.5.2 تنظیمات AutoML و آموزش](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [3. استقرار مدل و مصرف نقطه پایانی با Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.1 ذخیره بهترین مدل](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.2 استقرار مدل](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.3 مصرف نقطه پایانی](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [🚀 چالش](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [پرسش‌های پس از درس](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [مرور و مطالعه خودآموز](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [پس‌آزمون](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [مرور و مطالعه شخصی](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [تکلیف](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [پرسش‌های پیش از درس](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [پیش‌ آزمون](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. مقدمه
 
@@ -50,14 +50,14 @@ CO_OP_TRANSLATOR_METADATA:
 - بررسی، آماده‌سازی و مدیریت چرخه عمر مجموعه داده‌هایی که در آزمایش‌های یادگیری ماشین استفاده می‌شوند.
 - مدیریت منابع ابری برای نظارت، ثبت و سازماندهی آزمایش‌های یادگیری ماشین.
 - آموزش مدل‌ها به صورت محلی یا با استفاده از منابع ابری، از جمله آموزش مدل‌های شتاب‌یافته با GPU.
-- استفاده از یادگیری ماشین خودکار که پارامترهای پیکربندی و داده‌های آموزشی را می‌پذیرد و به طور خودکار الگوریتم‌ها و تنظیمات هایپرپارامترها را بررسی می‌کند تا بهترین مدل برای پیش‌بینی‌ها را پیدا کند.
+- استفاده از یادگیری ماشین خودکار که پارامترهای پیکربندی و داده‌های آموزشی را می‌پذیرد و به طور خودکار الگوریتم‌ها و تنظیمات هایپرپارامترها را برای یافتن بهترین مدل برای پیش‌بینی اجرا می‌کند.
 - استقرار خدمات وب برای تبدیل مدل‌های آموزش‌دیده به خدمات RESTful که می‌توانند در هر برنامه‌ای مصرف شوند.
 
 [اطلاعات بیشتر درباره Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-در [درس قبلی](../18-Low-Code/README.md)، دیدیم که چگونه می‌توان یک مدل را به صورت کم‌کد/بدون‌کد آموزش داد، استقرار داد و مصرف کرد. ما از مجموعه داده نارسایی قلبی برای ایجاد مدل پیش‌بینی نارسایی قلبی استفاده کردیم. در این درس، قصد داریم دقیقاً همین کار را انجام دهیم اما با استفاده از Azure Machine Learning SDK.
+در [درس قبلی](../18-Low-Code/README.md)، دیدیم که چگونه می‌توان یک مدل را به صورت کم‌کد/بدون‌کد آموزش داد، مستقر کرد و مصرف کرد. ما از مجموعه داده نارسایی قلبی برای ایجاد مدل پیش‌بینی نارسایی قلبی استفاده کردیم. در این درس، قصد داریم دقیقاً همین کار را انجام دهیم اما با استفاده از Azure Machine Learning SDK.
 
-![project-schema](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.fa.png)
+![project-schema](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 معرفی پروژه پیش‌بینی نارسایی قلبی و مجموعه داده
 
@@ -66,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## 2. آموزش مدل با Azure ML SDK
 ### 2.1 ایجاد یک فضای کاری Azure ML
 
-برای سادگی، ما قصد داریم در یک نوت‌بوک Jupyter کار کنیم. این به این معناست که شما قبلاً یک فضای کاری و یک نمونه محاسباتی دارید. اگر قبلاً فضای کاری دارید، می‌توانید مستقیماً به بخش 2.3 ایجاد نوت‌بوک بروید.
+برای سادگی، ما در یک نوت‌بوک Jupyter کار خواهیم کرد. این به این معناست که شما قبلاً یک فضای کاری و یک نمونه محاسباتی دارید. اگر قبلاً فضای کاری دارید، می‌توانید مستقیماً به بخش 2.3 ایجاد نوت‌بوک بروید.
 
 اگر ندارید، لطفاً دستورالعمل‌های بخش **2.1 ایجاد یک فضای کاری Azure ML** در [درس قبلی](../18-Low-Code/README.md) را دنبال کنید تا یک فضای کاری ایجاد کنید.
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در [فضای کاری Azure ML](https://ml.azure.com/) که قبلاً ایجاد کردیم، به منوی محاسبات بروید و منابع محاسباتی مختلف موجود را مشاهده خواهید کرد.
 
-![compute-instance-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.fa.png)
+![compute-instance-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 بیایید یک نمونه محاسباتی برای فراهم کردن یک نوت‌بوک Jupyter ایجاد کنیم.
 1. روی دکمه + New کلیک کنید.
@@ -93,16 +93,16 @@ CO_OP_TRANSLATOR_METADATA:
 
 نوت‌بوک‌ها بخش بسیار مهمی از فرآیند علم داده هستند. آن‌ها می‌توانند برای انجام تحلیل داده‌های اکتشافی (EDA)، فراخوانی به خوشه محاسباتی برای آموزش مدل، یا فراخوانی به خوشه استنتاج برای استقرار نقطه پایانی استفاده شوند.
 
-برای ایجاد یک نوت‌بوک، به یک گره محاسباتی نیاز داریم که نمونه نوت‌بوک Jupyter را ارائه دهد. به [فضای کاری Azure ML](https://ml.azure.com/) بازگردید و روی نمونه‌های محاسباتی کلیک کنید. در لیست نمونه‌های محاسباتی باید [نمونه محاسباتی که قبلاً ایجاد کردیم](../../../../5-Data-Science-In-Cloud/19-Azure) را مشاهده کنید.
+برای ایجاد یک نوت‌بوک، به یک گره محاسباتی نیاز داریم که نمونه نوت‌بوک Jupyter را ارائه دهد. به [فضای کاری Azure ML](https://ml.azure.com/) بازگردید و روی نمونه‌های محاسباتی کلیک کنید. در لیست نمونه‌های محاسباتی باید [نمونه محاسباتی که قبلاً ایجاد کردیم](../../../../5-Data-Science-In-Cloud/19-Azure) را ببینید.
 
 1. در بخش Applications، روی گزینه Jupyter کلیک کنید.
 2. کادر "بله، من متوجه هستم" را علامت بزنید و روی دکمه Continue کلیک کنید.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.fa.png)
-3. این باید یک تب جدید در مرورگر شما باز کند که نمونه نوت‌بوک Jupyter شما را نشان می‌دهد. روی دکمه "New" کلیک کنید تا یک نوت‌بوک ایجاد کنید.
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
+3. این باید یک تب جدید مرورگر با نمونه نوت‌بوک Jupyter شما باز کند. روی دکمه "New" کلیک کنید تا یک نوت‌بوک ایجاد شود.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.fa.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
-حالا که یک نوت‌بوک داریم، می‌توانیم آموزش مدل با Azure ML SDK را شروع کنیم.
+اکنون که یک نوت‌بوک داریم، می‌توانیم آموزش مدل را با Azure ML SDK شروع کنیم.
 
 ### 2.5 آموزش مدل
 
@@ -117,16 +117,16 @@ from azureml.core import Workspace
 ws = Workspace.from_config()
 ```
 
-این یک شیء از نوع `Workspace` بازمی‌گرداند که نمایانگر فضای کاری است. سپس باید یک `experiment` ایجاد کنید با استفاده از کد زیر:
+این یک شیء از نوع `Workspace` برمی‌گرداند که نمایانگر فضای کاری است. سپس باید یک `experiment` ایجاد کنید با استفاده از کد زیر:
 
 ```python
 from azureml.core import Experiment
 experiment_name = 'aml-experiment'
 experiment = Experiment(ws, experiment_name)
 ```
-برای دریافت یا ایجاد یک آزمایش از فضای کاری، شما آزمایش را با استفاده از نام آزمایش درخواست می‌کنید. نام آزمایش باید بین 3 تا 36 کاراکتر باشد، با حرف یا عدد شروع شود و فقط شامل حروف، اعداد، زیرخط و خط تیره باشد. اگر آزمایش در فضای کاری پیدا نشود، یک آزمایش جدید ایجاد می‌شود.
+برای دریافت یا ایجاد یک آزمایش از فضای کاری، شما آزمایش را با استفاده از نام آزمایش درخواست می‌کنید. نام آزمایش باید بین 3 تا 36 کاراکتر باشد، با یک حرف یا عدد شروع شود و فقط شامل حروف، اعداد، زیرخط و خط تیره باشد. اگر آزمایش در فضای کاری یافت نشود، یک آزمایش جدید ایجاد می‌شود.
 
-حالا باید یک خوشه محاسباتی برای آموزش ایجاد کنید با استفاده از کد زیر. توجه داشته باشید که این مرحله ممکن است چند دقیقه طول بکشد.
+اکنون باید یک خوشه محاسباتی برای آموزش ایجاد کنید با استفاده از کد زیر. توجه داشته باشید که این مرحله ممکن است چند دقیقه طول بکشد.
 
 ```python
 from azureml.core.compute import AmlCompute
@@ -145,21 +145,21 @@ cts = ws.compute_targets
 compute_target = cts[aml_name]
 ```
 
-شما می‌توانید مجموعه داده را از فضای کاری با استفاده از نام مجموعه داده به روش زیر دریافت کنید:
+شما می‌توانید مجموعه داده را از فضای کاری با استفاده از نام مجموعه داده به صورت زیر دریافت کنید:
 
 ```python
 dataset = ws.datasets['heart-failure-records']
 df = dataset.to_pandas_dataframe()
 df.describe()
 ```
-#### 2.5.2 پیکربندی AutoML و آموزش
+#### 2.5.2 تنظیمات AutoML و آموزش
 
 برای تنظیم پیکربندی AutoML، از کلاس [AutoMLConfig](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig(class)?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) استفاده کنید.
 
 همان‌طور که در مستندات توضیح داده شده است، پارامترهای زیادی وجود دارد که می‌توانید با آن‌ها بازی کنید. برای این پروژه، ما از پارامترهای زیر استفاده خواهیم کرد:
 
 - `experiment_timeout_minutes`: حداکثر زمان (به دقیقه) که آزمایش اجازه دارد اجرا شود قبل از اینکه به طور خودکار متوقف شود و نتایج به طور خودکار در دسترس قرار گیرد.
-- `max_concurrent_iterations`: حداکثر تعداد تکرارهای آموزشی همزمان که برای آزمایش مجاز است.
+- `max_concurrent_iterations`: حداکثر تعداد تکرارهای آموزشی همزمان مجاز برای آزمایش.
 - `primary_metric`: معیار اصلی که برای تعیین وضعیت آزمایش استفاده می‌شود.
 - `compute_target`: هدف محاسباتی Azure Machine Learning برای اجرای آزمایش یادگیری ماشین خودکار.
 - `task`: نوع وظیفه‌ای که باید اجرا شود. مقادیر می‌توانند 'classification'، 'regression' یا 'forecasting' باشند بسته به نوع مسئله یادگیری ماشین خودکار.
@@ -167,7 +167,7 @@ df.describe()
 - `label_column_name`: نام ستون برچسب.
 - `path`: مسیر کامل به پوشه پروژه Azure Machine Learning.
 - `enable_early_stopping`: آیا توقف زودهنگام در صورت عدم بهبود امتیاز در کوتاه‌مدت فعال شود یا خیر.
-- `featurization`: نشانگر اینکه آیا مرحله ویژگی‌سازی باید به طور خودکار انجام شود یا خیر، یا اینکه آیا باید از ویژگی‌سازی سفارشی استفاده شود.
+- `featurization`: نشانگر اینکه آیا مرحله ویژگی‌سازی باید به طور خودکار انجام شود یا خیر، یا اینکه آیا ویژگی‌سازی سفارشی باید استفاده شود.
 - `debug_log`: فایل لاگ برای نوشتن اطلاعات اشکال‌زدایی.
 
 ```python
@@ -192,7 +192,7 @@ automl_config = AutoMLConfig(compute_target=compute_target,
                              **automl_settings
                             )
 ```
-حالا که پیکربندی شما تنظیم شده است، می‌توانید مدل را با استفاده از کد زیر آموزش دهید. این مرحله ممکن است تا یک ساعت بسته به اندازه خوشه شما طول بکشد.
+اکنون که پیکربندی خود را تنظیم کرده‌اید، می‌توانید مدل را با استفاده از کد زیر آموزش دهید. این مرحله ممکن است تا یک ساعت طول بکشد بسته به اندازه خوشه شما.
 
 ```python
 remote_run = experiment.submit(automl_config)
@@ -206,7 +206,7 @@ RunDetails(remote_run).show()
 
 ### 3.1 ذخیره بهترین مدل
 
-شیء `remote_run` از نوع [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) است. این شیء شامل متد `get_output()` است که بهترین اجرا و مدل مناسب مربوطه را بازمی‌گرداند.
+شیء `remote_run` از نوع [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) است. این شیء شامل متد `get_output()` است که بهترین اجرا و مدل مناسب مربوطه را برمی‌گرداند.
 
 ```python
 best_run, fitted_model = remote_run.get_output()
@@ -217,7 +217,7 @@ best_run, fitted_model = remote_run.get_output()
 best_run.get_properties()
 ```
 
-حالا مدل را با استفاده از متد [register_model](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?view=azure-ml-py#register-model-model-name-none--description-none--tags-none--iteration-none--metric-none-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) ثبت کنید.
+اکنون مدل را با استفاده از متد [register_model](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?view=azure-ml-py#register-model-model-name-none--description-none--tags-none--iteration-none--metric-none-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) ثبت کنید.
 ```python
 model_name = best_run.properties['model_name']
 script_file_name = 'inference/score.py'
@@ -230,7 +230,7 @@ model = best_run.register_model(model_name = model_name,
 ```
 ### 3.2 استقرار مدل
 
-پس از ذخیره بهترین مدل، می‌توانیم آن را با کلاس [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109) مستقر کنیم. InferenceConfig نمایانگر تنظیمات پیکربندی برای محیط سفارشی استفاده‌شده برای استقرار است. کلاس [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) نمایانگر یک مدل یادگیری ماشین مستقرشده به عنوان نقطه پایانی سرویس وب در Azure Container Instances است. یک سرویس مستقرشده از یک مدل، اسکریپت و فایل‌های مرتبط ایجاد می‌شود. سرویس وب حاصل یک نقطه پایانی HTTP متعادل‌شده با REST API است. شما می‌توانید داده‌ها را به این API ارسال کنید و پیش‌بینی بازگشتی توسط مدل را دریافت کنید.
+پس از ذخیره بهترین مدل، می‌توانیم آن را با استفاده از کلاس [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109) مستقر کنیم. InferenceConfig نمایانگر تنظیمات پیکربندی برای محیط سفارشی استفاده‌شده برای استقرار است. کلاس [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) نمایانگر یک مدل یادگیری ماشین مستقرشده به عنوان نقطه پایانی سرویس وب در Azure Container Instances است. یک سرویس مستقرشده از یک مدل، اسکریپت و فایل‌های مرتبط ایجاد می‌شود. سرویس وب حاصل یک نقطه پایانی HTTP متعادل‌شده با REST API است. شما می‌توانید داده‌ها را به این API ارسال کنید و پیش‌بینی بازگشتی توسط مدل را دریافت کنید.
 
 مدل با استفاده از متد [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) مستقر می‌شود.
 
@@ -279,32 +279,34 @@ data = {
 
 test_sample = str.encode(json.dumps(data))
 ```
-و سپس می‌توانید این ورودی را به مدل خود برای پیش‌بینی ارسال کنید:
+سپس می‌توانید این ورودی را به مدل خود ارسال کنید تا پیش‌بینی دریافت کنید:
 ```python
 response = aci_service.run(input_data=test_sample)
 response
 ```  
-این باید خروجی `'{"result": [false]}'` را تولید کند. این به این معناست که ورودی بیمار که به نقطه پایانی ارسال کردیم، پیش‌بینی `false` را تولید کرده است، یعنی این فرد احتمالاً دچار حمله قلبی نخواهد شد.
+این باید خروجی `'{"result": [false]}'` را تولید کند. این به این معناست که ورودی بیمار که به نقطه پایانی ارسال کردیم، پیش‌بینی `false` را ایجاد کرده است، یعنی این فرد احتمالاً دچار حمله قلبی نخواهد شد.
 
-تبریک می‌گوییم! شما مدل مستقر و آموزش‌دیده در Azure ML را با استفاده از Azure ML SDK مصرف کردید!
+تبریک! شما مدل مستقر و آموزش‌دیده در Azure ML را با استفاده از Azure ML SDK مصرف کردید!
 
 > **_NOTE:_** پس از اتمام پروژه، فراموش نکنید که تمام منابع را حذف کنید.
 
 ## 🚀 چالش  
 
-کارهای زیادی وجود دارد که می‌توانید از طریق SDK انجام دهید، اما متأسفانه نمی‌توانیم همه آن‌ها را در این درس بررسی کنیم. خبر خوب این است که یادگیری نحوه مرور مستندات SDK می‌تواند شما را در مسیر طولانی به جلو ببرد. به مستندات Azure ML SDK نگاهی بیندازید و کلاس `Pipeline` را پیدا کنید که به شما امکان ایجاد پایپ‌لاین‌ها را می‌دهد. پایپ‌لاین مجموعه‌ای از مراحل است که می‌توانند به عنوان یک جریان کاری اجرا شوند.
+کارهای زیادی وجود دارد که می‌توانید از طریق SDK انجام دهید، اما متأسفانه نمی‌توانیم همه آن‌ها را در این درس بررسی کنیم. خبر خوب این است که یادگیری نحوه مرور مستندات SDK می‌تواند شما را در مسیر خود بسیار جلو ببرد. به مستندات Azure ML SDK نگاهی بیندازید و کلاس `Pipeline` را پیدا کنید که به شما امکان ایجاد پایپ‌لاین‌ها را می‌دهد. پایپ‌لاین مجموعه‌ای از مراحل است که می‌توانند به عنوان یک جریان کاری اجرا شوند.
 
 **راهنما:** به [مستندات SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) بروید و کلمات کلیدی مانند "Pipeline" را در نوار جستجو تایپ کنید. باید کلاس `azureml.pipeline.core.Pipeline` را در نتایج جستجو مشاهده کنید.
 
-## [آزمون پس از درس](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [آزمون پس از درس](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
 ## مرور و مطالعه شخصی  
 
-در این درس، یاد گرفتید که چگونه یک مدل را برای پیش‌بینی خطر نارسایی قلبی با Azure ML SDK در فضای ابری آموزش دهید، مستقر کنید و مصرف کنید. این [مستندات](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) را برای اطلاعات بیشتر درباره Azure ML SDK بررسی کنید. سعی کنید مدل خود را با Azure ML SDK ایجاد کنید.
+در این درس، شما یاد گرفتید که چگونه یک مدل را برای پیش‌بینی خطر نارسایی قلبی با Azure ML SDK در فضای ابری آموزش دهید، مستقر کنید و مصرف کنید. برای اطلاعات بیشتر درباره Azure ML SDK، این [مستندات](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) را بررسی کنید. سعی کنید مدل خود را با Azure ML SDK ایجاد کنید.
 
 ## تکلیف  
 
 [پروژه علم داده با استفاده از Azure ML SDK](assignment.md)  
+
+---
 
 **سلب مسئولیت**:  
 این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه حرفه‌ای انسانی استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.

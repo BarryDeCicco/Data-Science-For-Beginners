@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-28T15:11:22+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T23:12:19+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "he"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [שאלון לפני השיעור](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. מבוא](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 מהו Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [1.2 פרויקט חיזוי אי-ספיקת לב והיכרות עם מערך הנתונים](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [1.2 פרויקט חיזוי כשל לבבי והיכרות עם מערך הנתונים](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [2. אימון מודל עם Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.1 יצירת סביבת עבודה של Azure ML](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.2 יצירת מופע מחשוב](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -35,9 +35,9 @@ CO_OP_TRANSLATOR_METADATA:
   - [🚀 אתגר](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [שאלון לאחר השיעור](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [סקירה ולימוד עצמי](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [משימה](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [מטלה](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [שאלון לפני השיעור](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [שאלון לפני השיעור](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. מבוא
 
@@ -50,34 +50,34 @@ CO_OP_TRANSLATOR_METADATA:
 - חקר, הכנה וניהול מחזור החיים של מערכי הנתונים המשמשים בניסויי למידת מכונה.
 - ניהול משאבי ענן לצורך ניטור, רישום וארגון ניסויי למידת מכונה.
 - אימון מודלים באופן מקומי או באמצעות משאבי ענן, כולל אימון מודלים מואץ על ידי GPU.
-- שימוש בלמידת מכונה אוטומטית, שמקבלת פרמטרי תצורה ונתוני אימון. היא מבצעת באופן אוטומטי איטרציות על אלגוריתמים והגדרות היפר-פרמטרים כדי למצוא את המודל הטוב ביותר לחיזוי.
+- שימוש בלמידת מכונה אוטומטית, שמקבלת פרמטרי תצורה ונתוני אימון. היא מבצעת באופן אוטומטי ניסויים באלגוריתמים והגדרות היפר-פרמטרים כדי למצוא את המודל הטוב ביותר לחיזוי.
 - פריסת שירותי אינטרנט כדי להפוך את המודלים המאומנים לשירותי RESTful שניתן לצרוך בכל אפליקציה.
 
 [למידע נוסף על Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-בשיעור הקודם [כאן](../18-Low-Code/README.md), ראינו כיצד לאמן, לפרוס ולצרוך מודל בצורה של קוד מועט/ללא קוד. השתמשנו במערך הנתונים של אי-ספיקת לב כדי ליצור מודל חיזוי. בשיעור זה, נעשה את אותו הדבר אך באמצעות Azure Machine Learning SDK.
+בשיעור הקודם [כאן](../18-Low-Code/README.md), ראינו כיצד לאמן, לפרוס ולצרוך מודל בצורה של קוד מועט/ללא קוד. השתמשנו במערך הנתונים של כשל לבבי כדי ליצור מודל חיזוי. בשיעור זה, נעשה את אותו הדבר אך באמצעות Azure Machine Learning SDK.
 
-![סכמת הפרויקט](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.he.png)
+![תוכנית הפרויקט](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
-### 1.2 פרויקט חיזוי אי-ספיקת לב והיכרות עם מערך הנתונים
+### 1.2 פרויקט חיזוי כשל לבבי והיכרות עם מערך הנתונים
 
-בדקו [כאן](../18-Low-Code/README.md) את ההיכרות עם פרויקט חיזוי אי-ספיקת לב ומערך הנתונים.
+עיינו [כאן](../18-Low-Code/README.md) בהיכרות עם פרויקט חיזוי כשל לבבי ומערך הנתונים.
 
 ## 2. אימון מודל עם Azure ML SDK
 ### 2.1 יצירת סביבת עבודה של Azure ML
 
-לשם פשטות, נעבוד על מחברת Jupyter. זה אומר שכבר יש לכם סביבת עבודה ומופע מחשוב. אם כבר יש לכם סביבת עבודה, תוכלו לדלג ישירות לסעיף 2.3 יצירת מחברת.
+לשם פשטות, נעבוד במחברת Jupyter. זה אומר שכבר יש לכם סביבת עבודה ומופע מחשוב. אם כבר יש לכם סביבת עבודה, תוכלו לדלג ישירות לסעיף 2.3 יצירת מחברת.
 
 אם לא, אנא עקבו אחר ההוראות בסעיף **2.1 יצירת סביבת עבודה של Azure ML** בשיעור הקודם [כאן](../18-Low-Code/README.md) כדי ליצור סביבת עבודה.
 
 ### 2.2 יצירת מופע מחשוב
 
-בסביבת העבודה של [Azure ML](https://ml.azure.com/) שיצרנו קודם, עברו לתפריט המחשוב ותראו את המשאבים השונים הזמינים.
+בסביבת העבודה של [Azure ML](https://ml.azure.com/) שיצרנו קודם, עברו לתפריט המחשוב ותראו את משאבי המחשוב השונים הזמינים.
 
-![מופע מחשוב 1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.he.png)
+![מופע מחשוב 1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 בואו ניצור מופע מחשוב כדי להפעיל מחברת Jupyter. 
-1. לחצו על הכפתור + חדש. 
+1. לחצו על כפתור + חדש. 
 2. תנו שם למופע המחשוב שלכם.
 3. בחרו את האפשרויות שלכם: CPU או GPU, גודל VM ומספר ליבות.
 4. לחצו על כפתור יצירה.
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 2.4 יצירת מחברות
 
-> **_הערה:_** לשלב הבא תוכלו ליצור מחברת חדשה מאפס, או להעלות את [המחברת שיצרנו](notebook.ipynb) ל-Azure ML Studio שלכם. כדי להעלות אותה, פשוט לחצו על תפריט "מחברת" והעלו את המחברת.
+> **_הערה:_** לשלב הבא תוכלו ליצור מחברת חדשה מאפס, או להעלות את [המחברת שיצרנו](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) ל-Azure ML Studio שלכם. כדי להעלות אותה, פשוט לחצו על תפריט "מחברת" והעלו את המחברת.
 
 מחברות הן חלק חשוב מאוד בתהליך מדע הנתונים. ניתן להשתמש בהן לביצוע ניתוח נתונים חקרני (EDA), לקרוא לאשכול מחשוב כדי לאמן מודל, לקרוא לאשכול הסקה כדי לפרוס נקודת קצה.
 
@@ -97,10 +97,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. בסעיף האפליקציות, לחצו על האפשרות Jupyter. 
 2. סמנו את התיבה "כן, אני מבין" ולחצו על כפתור המשך.
-![מחברת 1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.he.png)
-3. זה אמור לפתוח לשונית דפדפן חדשה עם מופע מחברת Jupyter שלכם כפי שמוצג. לחצו על הכפתור "חדש" כדי ליצור מחברת.
+![מחברת 1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
+3. זה אמור לפתוח לשונית דפדפן חדשה עם מופע מחברת Jupyter שלכם כפי שמוצג. לחצו על כפתור "חדש" כדי ליצור מחברת.
 
-![מחברת 2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.he.png)
+![מחברת 2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 עכשיו שיש לנו מחברת, נוכל להתחיל לאמן את המודל עם Azure ML SDK.
 
@@ -110,14 +110,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### 2.5.1 הגדרת סביבת עבודה, ניסוי, אשכול מחשוב ומערך נתונים
 
-עליכם לטעון את `workspace` מקובץ התצורה באמצעות הקוד הבא:
+יש לטעון את `workspace` מקובץ התצורה באמצעות הקוד הבא:
 
 ```python
 from azureml.core import Workspace
 ws = Workspace.from_config()
 ```
 
-זה מחזיר אובייקט מסוג `Workspace` שמייצג את סביבת העבודה. לאחר מכן עליכם ליצור `experiment` באמצעות הקוד הבא:
+זה מחזיר אובייקט מסוג `Workspace` שמייצג את סביבת העבודה. לאחר מכן יש ליצור `experiment` באמצעות הקוד הבא:
 
 ```python
 from azureml.core import Experiment
@@ -126,7 +126,7 @@ experiment = Experiment(ws, experiment_name)
 ```
 כדי לקבל או ליצור ניסוי מסביבת עבודה, מבקשים את הניסוי באמצעות שם הניסוי. שם הניסוי חייב להיות באורך של 3-36 תווים, להתחיל באות או מספר, ויכול להכיל רק אותיות, מספרים, קווים תחתונים ומקפים. אם הניסוי לא נמצא בסביבת העבודה, נוצר ניסוי חדש.
 
-כעת עליכם ליצור אשכול מחשוב לאימון באמצעות הקוד הבא. שימו לב ששלב זה עשוי לקחת מספר דקות. 
+כעת יש ליצור אשכול מחשוב לאימון באמצעות הקוד הבא. שימו לב ששלב זה עשוי לקחת מספר דקות.
 
 ```python
 from azureml.core.compute import AmlCompute
@@ -158,17 +158,17 @@ df.describe()
 
 כפי שמתואר בתיעוד, ישנם פרמטרים רבים שניתן לשחק איתם. עבור פרויקט זה, נשתמש בפרמטרים הבאים:
 
-- `experiment_timeout_minutes`: הזמן המרבי (בדקות) שבו הניסוי יכול לפעול לפני שהוא נעצר אוטומטית והתוצאות נעשות זמינות.
+- `experiment_timeout_minutes`: הזמן המרבי (בדקות) שבו הניסוי יכול לפעול לפני שהוא נעצר אוטומטית והתוצאות הופכות לזמינות.
 - `max_concurrent_iterations`: מספר האיטרציות המרבי של אימון מקביל המותר לניסוי.
 - `primary_metric`: המדד הראשי המשמש לקביעת מצב הניסוי.
-- `compute_target`: יעד המחשוב של Azure Machine Learning שבו יפעל ניסוי למידת המכונה האוטומטי.
-- `task`: סוג המשימה שיש להפעיל. ערכים יכולים להיות 'classification', 'regression', או 'forecasting' בהתאם לסוג בעיית ה-ML האוטומטית שיש לפתור.
+- `compute_target`: יעד המחשוב של Azure Machine Learning שבו יופעל ניסוי למידת המכונה האוטומטי.
+- `task`: סוג המשימה להפעלה. ערכים יכולים להיות 'classification', 'regression', או 'forecasting' בהתאם לסוג הבעיה של למידת המכונה האוטומטית שיש לפתור.
 - `training_data`: נתוני האימון שישמשו בתוך הניסוי. עליו להכיל גם תכונות אימון וגם עמודת תווית (אופציונלית עמודת משקל דגימה).
 - `label_column_name`: שם עמודת התווית.
 - `path`: הנתיב המלא לתיקיית פרויקט Azure Machine Learning.
 - `enable_early_stopping`: האם לאפשר סיום מוקדם אם הציון לא משתפר בטווח הקצר.
-- `featurization`: אינדיקטור האם יש לבצע שלב פיצ'ור באופן אוטומטי או לא, או האם יש להשתמש בפיצ'ור מותאם אישית.
-- `debug_log`: קובץ היומן לכתיבת מידע דיבוג.
+- `featurization`: אינדיקטור האם יש לבצע שלב יצירת תכונות באופן אוטומטי או לא, או האם יש להשתמש ביצירת תכונות מותאמת אישית.
+- `debug_log`: קובץ היומן שבו ייכתב מידע דיבוג.
 
 ```python
 from azureml.train.automl import AutoMLConfig
@@ -206,12 +206,12 @@ RunDetails(remote_run).show()
 
 ### 3.1 שמירת המודל הטוב ביותר
 
-ה-`remote_run` הוא אובייקט מסוג [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). אובייקט זה מכיל את השיטה `get_output()` שמחזירה את הריצה הטובה ביותר ואת המודל המתאים.
+האובייקט `remote_run` הוא מסוג [AutoMLRun](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.run.automlrun?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). אובייקט זה מכיל את השיטה `get_output()` שמחזירה את הריצה הטובה ביותר ואת המודל המתאים.
 
 ```python
 best_run, fitted_model = remote_run.get_output()
 ```
-ניתן לראות את הפרמטרים ששימשו למודל הטוב ביותר על ידי פשוט להדפיס את ה-fitted_model ולראות את המאפיינים של המודל הטוב ביותר באמצעות השיטה [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
+ניתן לראות את הפרמטרים ששימשו למודל הטוב ביותר פשוט על ידי הדפסת המודל המתאים ולראות את המאפיינים של המודל הטוב ביותר באמצעות השיטה [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
 ```python
 best_run.get_properties()
@@ -230,7 +230,7 @@ model = best_run.register_model(model_name = model_name,
 ```
 ### 3.2 פריסת מודל
 
-לאחר שמירת המודל הטוב ביותר, ניתן לפרוס אותו באמצעות המחלקה [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig מייצגת את הגדרות התצורה לסביבה מותאמת אישית המשמשת לפריסה. המחלקה [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) מייצגת מודל למידת מכונה שפורס כנקודת קצה שירות אינטרנט על Azure Container Instances. שירות האינטרנט המתקבל הוא נקודת קצה HTTP מאוזנת עומסים עם API REST. ניתן לשלוח נתונים ל-API זה ולקבל את החיזוי שהמודל מחזיר.
+לאחר שמירת המודל הטוב ביותר, ניתן לפרוס אותו באמצעות המחלקה [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig מייצגת את הגדרות התצורה לסביבה מותאמת אישית המשמשת לפריסה. המחלקה [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) מייצגת מודל למידת מכונה שפורס כנקודת קצה של שירות אינטרנט על Azure Container Instances. שירות האינטרנט המתקבל הוא נקודת קצה HTTP מאוזנת עומסים עם ממשק API של REST. ניתן לשלוח נתונים ל-API זה ולקבל את התחזית שהמודל מחזיר.
 
 המודל נפרס באמצעות השיטה [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
@@ -279,12 +279,12 @@ data = {
 
 test_sample = str.encode(json.dumps(data))
 ```
-ולאחר מכן לשלוח קלט זה למודל שלכם לצורך חיזוי:
+ולאחר מכן לשלוח קלט זה למודל שלכם לצורך תחזית:
 ```python
 response = aci_service.run(input_data=test_sample)
 response
 ```  
-זה אמור להחזיר `'{"result": [false]}'`. המשמעות היא שהקלט של המטופל ששלחנו לנקודת הקצה יצר את התחזית `false`, כלומר, לא סביר שאדם זה יסבול מהתקף לב.
+זה אמור להחזיר `'{"result": [false]}'`. המשמעות היא שהנתונים שהעברנו לנקודת הקצה יצרו את התחזית `false`, כלומר, לא סביר שאדם זה יסבול מהתקף לב.
 
 מזל טוב! הרגע השתמשת במודל שפורסם ואומן ב-Azure ML באמצעות Azure ML SDK!
 
@@ -292,21 +292,21 @@ response
 
 ## 🚀 אתגר
 
-יש עוד הרבה דברים שניתן לעשות באמצעות ה-SDK, אך לצערנו, לא נוכל לעבור על כולם בשיעור הזה. החדשות הטובות הן שלמידה כיצד לעיין בתיעוד של ה-SDK יכולה לקחת אותך רחוק מאוד בעצמך. עיין בתיעוד של Azure ML SDK ומצא את המחלקה `Pipeline`, שמאפשרת לך ליצור צינורות עבודה. צינור עבודה הוא אוסף של שלבים שניתן להריץ כתהליך עבודה.
+יש עוד הרבה דברים שניתן לעשות באמצעות ה-SDK, אך לצערנו לא נוכל לעבור על כולם בשיעור זה. החדשות הטובות הן שלמידה כיצד לעיין בתיעוד של ה-SDK יכולה לקחת אותך רחוק מאוד. עיין בתיעוד של Azure ML SDK ומצא את המחלקה `Pipeline`, שמאפשרת לך ליצור צינורות עבודה. צינור עבודה הוא אוסף של שלבים שניתן להריץ כזרימת עבודה.
 
 **רמז:** עבור אל [תיעוד ה-SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) והקלד מילות מפתח כמו "Pipeline" בשורת החיפוש. עליך למצוא את המחלקה `azureml.pipeline.core.Pipeline` בתוצאות החיפוש.
 
-## [שאלון לאחר השיעור](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [שאלון לאחר השיעור](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
 ## סקירה ולמידה עצמית
 
-בשיעור זה למדת כיצד לאמן, לפרסם ולהשתמש במודל לחיזוי סיכון לאי ספיקת לב באמצעות Azure ML SDK בענן. עיין ב-[תיעוד הזה](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) למידע נוסף על Azure ML SDK. נסה ליצור מודל משלך באמצעות Azure ML SDK.
+בשיעור זה למדת כיצד לאמן, לפרסם ולהשתמש במודל לחיזוי סיכון לאי ספיקת לב באמצעות Azure ML SDK בענן. עיין ב-[תיעוד זה](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) למידע נוסף על Azure ML SDK. נסה ליצור מודל משלך באמצעות Azure ML SDK.
 
 ## משימה
 
-[פרויקט מדעי נתונים באמצעות Azure ML SDK](assignment.md)
+[פרויקט מדעי נתונים באמצעות Azure ML SDK](assignment.md)  
 
 ---
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו נושאים באחריות לאי-הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.  

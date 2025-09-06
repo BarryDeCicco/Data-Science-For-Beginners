@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "870a0086adbc313a8eea5489bdcb2522",
-  "translation_date": "2025-08-26T20:49:34+00:00",
+  "original_hash": "9399d7b4767e75068f95ce5c660b285c",
+  "translation_date": "2025-09-05T21:58:57+00:00",
   "source_file": "2-Working-With-Data/05-relational-databases/README.md",
   "language_code": "da"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Arbejde med data: Relationelle databaser - _Sketchnote af [@nitya](https://twitter.com/nitya)_ |
 
-Du har sandsynligvis brugt et regneark før til at gemme information. Du havde et sæt rækker og kolonner, hvor rækkerne indeholdt informationen (eller dataene), og kolonnerne beskrev informationen (nogle gange kaldet metadata). En relationel database er bygget på dette grundprincip med kolonner og rækker i tabeller, hvilket giver dig mulighed for at have information spredt over flere tabeller. Dette gør det muligt at arbejde med mere komplekse data, undgå duplikering og have fleksibilitet i måden, du udforsker dataene på. Lad os udforske begreberne i en relationel database.
+Du har sandsynligvis brugt et regneark før til at gemme information. Du havde et sæt rækker og kolonner, hvor rækkerne indeholdt informationen (eller dataene), og kolonnerne beskrev informationen (nogle gange kaldet metadata). En relationel database er bygget på dette grundprincip med kolonner og rækker i tabeller, hvilket giver dig mulighed for at sprede information over flere tabeller. Dette gør det muligt at arbejde med mere komplekse data, undgå duplikering og have fleksibilitet i måden, du udforsker dataene på. Lad os udforske begreberne i en relationel database.
 
-## [Quiz før lektionen](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## [Quiz før forelæsning](https://ff-quizzes.netlify.app/en/ds/quiz/8)
 
 ## Det hele starter med tabeller
 
 En relationel database har tabeller som sin kerne. Ligesom med et regneark er en tabel en samling af kolonner og rækker. Rækkerne indeholder de data eller den information, vi ønsker at arbejde med, såsom navnet på en by eller mængden af nedbør. Kolonnerne beskriver de data, de gemmer.
 
-Lad os begynde vores udforskning ved at oprette en tabel til at gemme information om byer. Vi kunne starte med deres navn og land. Dette kunne gemmes i en tabel som følger:
+Lad os begynde vores udforskning ved at oprette en tabel til at gemme information om byer. Vi kunne starte med deres navn og land. Du kunne gemme dette i en tabel som følger:
 
 | By       | Land          |
 | -------- | ------------- |
@@ -33,15 +33,15 @@ Bemærk, at kolonnenavnene **by**, **land** og **befolkning** beskriver de data,
 
 ## Begrænsninger ved en enkelt tabel
 
-Sandsynligvis virker tabellen ovenfor ret velkendt for dig. Lad os begynde at tilføje nogle yderligere data til vores voksende database - årlig nedbør (i millimeter). Vi fokuserer på årene 2018, 2019 og 2020. Hvis vi skulle tilføje det for Tokyo, kunne det se sådan ud:
+Sandsynligvis virker tabellen ovenfor ret velkendt for dig. Lad os begynde at tilføje nogle yderligere data til vores spirende database - årlig nedbør (i millimeter). Vi fokuserer på årene 2018, 2019 og 2020. Hvis vi skulle tilføje det for Tokyo, kunne det se sådan ud:
 
-| By    | Land  | År   | Mængde |
-| ----- | ----- | ---- | ------ |
-| Tokyo | Japan | 2020 | 1690   |
-| Tokyo | Japan | 2019 | 1874   |
-| Tokyo | Japan | 2018 | 1445   |
+| By    | Land   | År   | Mængde |
+| ----- | ------ | ---- | ------ |
+| Tokyo | Japan  | 2020 | 1690   |
+| Tokyo | Japan  | 2019 | 1874   |
+| Tokyo | Japan  | 2018 | 1445   |
 
-Hvad bemærker du ved vores tabel? Du bemærker måske, at vi gentager byens navn og land igen og igen. Det kunne optage en hel del lagerplads og er stort set unødvendigt at have flere kopier af. Når alt kommer til alt, har Tokyo kun ét navn, vi er interesseret i.
+Hvad bemærker du ved vores tabel? Du bemærker måske, at vi gentager byens navn og land igen og igen. Det kunne optage en hel del lagerplads og er stort set unødvendigt at have flere kopier af. Når alt kommer til alt, har Tokyo kun ét navn, vi er interesserede i.
 
 OK, lad os prøve noget andet. Lad os tilføje nye kolonner for hvert år:
 
@@ -57,7 +57,7 @@ Dette er grunden til, at vi har brug for flere tabeller og relationer. Ved at op
 
 ## Begrebet relationer
 
-Lad os vende tilbage til vores data og bestemme, hvordan vi vil opdele dem. Vi ved, at vi vil gemme navn og land for vores byer, så dette vil sandsynligvis fungere bedst i én tabel.
+Lad os vende tilbage til vores data og finde ud af, hvordan vi vil opdele dem. Vi ved, at vi vil gemme navn og land for vores byer, så dette fungerer sandsynligvis bedst i én tabel.
 
 | By       | Land          |
 | -------- | ------------- |
@@ -99,11 +99,11 @@ Bemærk kolonnen **by_id** i den nyoprettede **nedbør**-tabel. Denne kolonne in
 
 > [!NOTE] Fremmed nøgle forkortes ofte som FK
 
-## Hentning af data
+## Hente data
 
 Med vores data opdelt i to tabeller undrer du dig måske over, hvordan vi henter dem. Hvis vi bruger en relationel database som MySQL, SQL Server eller Oracle, kan vi bruge et sprog kaldet Structured Query Language eller SQL. SQL (nogle gange udtalt "sequel") er et standardiseret sprog, der bruges til at hente og ændre data i en relationel database.
 
-For at hente data bruger du kommandoen `SELECT`. Grundlæggende **vælger** du de kolonner, du vil se, **fra** den tabel, de er indeholdt i. Hvis du kun ville vise navnene på byerne, kunne du bruge følgende:
+For at hente data bruger du kommandoen `SELECT`. I sin kerne **vælger** du de kolonner, du vil se, **fra** den tabel, de er indeholdt i. Hvis du kun ville vise navnene på byerne, kunne du bruge følgende:
 
 ```sql
 SELECT city
@@ -117,7 +117,7 @@ FROM cities;
 
 `SELECT` er, hvor du angiver kolonnerne, og `FROM` er, hvor du angiver tabellerne.
 
-> [NOTE] SQL-syntaks er ikke skelnen mellem store og små bogstaver, hvilket betyder, at `select` og `SELECT` betyder det samme. Dog kan kolonner og tabeller være skelnen mellem store og små bogstaver afhængigt af typen af database, du bruger. Derfor er det en god praksis altid at behandle alt i programmering, som om det er skelnen mellem store og små bogstaver. Når du skriver SQL-forespørgsler, er det almindelig konvention at skrive nøgleordene med store bogstaver.
+> [NOTE] SQL-syntaks er ikke skelnen mellem store og små bogstaver, hvilket betyder, at `select` og `SELECT` betyder det samme. Dog kan kolonner og tabeller afhængigt af typen af database være skelnen mellem store og små bogstaver. Derfor er det en god praksis altid at behandle alt i programmering, som om det er skelnen mellem store og små bogstaver. Når du skriver SQL-forespørgsler, er det almindelig konvention at skrive nøgleordene med store bogstaver.
 
 Forespørgslen ovenfor vil vise alle byer. Lad os forestille os, at vi kun ville vise byer i New Zealand. Vi har brug for en form for filter. SQL-nøgleordet for dette er `WHERE`, eller "hvor noget er sandt".
 
@@ -167,15 +167,15 @@ WHERE rainfall.year = 2019
 
 ## Opsummering
 
-Relationelle databaser er centreret omkring at opdele information mellem flere tabeller, som derefter samles igen til visning og analyse. Dette giver en høj grad af fleksibilitet til at udføre beregninger og på anden måde manipulere data. Du har set de grundlæggende begreber i en relationel database, og hvordan man udfører en sammenkædning mellem to tabeller.
+Relationelle databaser er centreret omkring at opdele information mellem flere tabeller, som derefter samles igen til visning og analyse. Dette giver en høj grad af fleksibilitet til at udføre beregninger og på anden måde manipulere data. Du har set de grundlæggende begreber i en relationel database og hvordan man udfører en sammenkædning mellem to tabeller.
 
 ## 🚀 Udfordring
 
 Der findes adskillige relationelle databaser på internettet. Du kan udforske dataene ved at bruge de færdigheder, du har lært ovenfor.
 
-## Quiz efter lektionen
+## Quiz efter forelæsning
 
-## [Quiz efter lektionen](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
+## [Quiz efter forelæsning](https://ff-quizzes.netlify.app/en/ds/quiz/9)
 
 ## Gennemgang & Selvstudie
 
@@ -192,4 +192,4 @@ Der er flere ressourcer tilgængelige på [Microsoft Learn](https://docs.microso
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at sikre nøjagtighed, skal det bemærkes, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

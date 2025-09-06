@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2583a9894af7123b2fcae3376b14c035",
-  "translation_date": "2025-08-26T21:30:53+00:00",
+  "original_hash": "a76ab694b1534fa57981311975660bfe",
+  "translation_date": "2025-09-06T12:21:17+00:00",
   "source_file": "1-Introduction/01-defining-data-science/README.md",
   "language_code": "sv"
 }
@@ -15,7 +15,7 @@ Som vi redan har nämnt, finns data överallt. Vi behöver bara fånga den på r
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
 | Lista över personer med deras telefonnummer                                 | Wikipedia-sidor med länkar                                                                     | Text från Encyclopedia Britannica      |
 | Temperatur i alla rum i en byggnad varje minut under de senaste 20 åren     | Samling av vetenskapliga artiklar i JSON-format med författare, publiceringsdatum och abstrakt | Filarkiv med företagsdokument          |
-| Data om ålder och kön för alla som går in i byggnaden                       | Internetsidor                                                                                  | Rå videoström från övervakningskamera  |
+| Data om ålder och kön för alla personer som går in i byggnaden              | Internetsidor                                                                                  | Rå videoström från övervakningskamera  |
 
 ## Var man kan få tag på data
 
@@ -41,15 +41,15 @@ Inom datavetenskap fokuserar vi på följande steg i datans resa:
 
 ## Digitalisering och digital transformation
 
-Under det senaste decenniet har många företag börjat förstå vikten av data vid beslutsfattande. För att tillämpa datavetenskapliga principer på att driva ett företag måste man först samla in data, det vill säga översätta affärsprocesser till digital form. Detta kallas **digitalisering**. Att använda datavetenskapliga tekniker på denna data för att vägleda beslut kan leda till betydande produktivitetsökningar (eller till och med en affärsomvandling), vilket kallas **digital transformation**.
+Under det senaste decenniet har många företag börjat förstå vikten av data vid beslutsfattande. För att tillämpa datavetenskapliga principer på att driva ett företag måste man först samla in data, det vill säga översätta affärsprocesser till digital form. Detta kallas **digitalisering**. Att tillämpa datavetenskapliga tekniker på denna data för att vägleda beslut kan leda till betydande produktivitetsökningar (eller till och med en affärsomvandling), vilket kallas **digital transformation**.
 
 Låt oss överväga ett exempel. Anta att vi har en datavetenskapskurs (som denna) som vi levererar online till studenter, och vi vill använda datavetenskap för att förbättra den. Hur kan vi göra det?
 
 Vi kan börja med att fråga "Vad kan digitaliseras?" Det enklaste sättet skulle vara att mäta tiden det tar för varje student att slutföra varje modul och att mäta den förvärvade kunskapen genom att ge ett flervalsprov i slutet av varje modul. Genom att beräkna genomsnittlig tid för att slutföra modulerna över alla studenter kan vi ta reda på vilka moduler som orsakar mest svårigheter för studenterna och arbeta på att förenkla dem.
-Du kanske hävdar att denna metod inte är optimal, eftersom moduler kan ha olika längder. Det är förmodligen mer rättvist att dela tiden med modulens längd (i antal tecken) och jämföra dessa värden istället.
-När vi börjar analysera resultaten från flervalsprov kan vi försöka identifiera vilka koncept som elever har svårt att förstå, och använda den informationen för att förbättra innehållet. För att göra detta behöver vi utforma prov på ett sätt där varje fråga kopplas till ett visst koncept eller kunskapsområde.
+> Du kanske hävdar att denna metod inte är optimal, eftersom moduler kan ha olika längder. Det är förmodligen mer rättvist att dela tiden med modulens längd (i antal tecken) och jämföra dessa värden istället.
+När vi börjar analysera resultaten från flervalsfrågor kan vi försöka identifiera vilka koncept som elever har svårt att förstå, och använda den informationen för att förbättra innehållet. För att göra detta behöver vi utforma tester på ett sätt där varje fråga kopplas till ett visst koncept eller kunskapsområde.
 
-Om vi vill göra det ännu mer avancerat kan vi plotta den tid som krävs för varje modul mot studenternas ålderskategori. Vi kanske upptäcker att det för vissa ålderskategorier tar oproportionerligt lång tid att slutföra modulen, eller att studenter hoppar av innan de är klara. Detta kan hjälpa oss att ge åldersrekommendationer för modulen och minimera missnöje från felaktiga förväntningar.
+Om vi vill göra det ännu mer avancerat kan vi plotta den tid som krävs för varje modul mot studenternas ålderskategori. Vi kanske upptäcker att det för vissa ålderskategorier tar orimligt lång tid att slutföra modulen, eller att studenter hoppar av innan de är klara. Detta kan hjälpa oss att ge åldersrekommendationer för modulen och minimera missnöje från felaktiga förväntningar.
 
 ## 🚀 Utmaning
 
@@ -57,11 +57,11 @@ I denna utmaning ska vi försöka hitta koncept som är relevanta för området 
 
 ![Ordmoln för Data Science](../../../../translated_images/ds_wordcloud.664a7c07dca57de017c22bf0498cb40f898d48aa85b3c36a80620fea12fadd42.sv.png)
 
-Besök [`notebook.ipynb`](../../../../../../../../../1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') för att läsa igenom koden. Du kan också köra koden och se hur den utför alla datatransformationer i realtid.
+Besök [`notebook.ipynb`](../../../../1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') för att läsa igenom koden. Du kan också köra koden och se hur den utför alla datatransformationer i realtid.
 
 > Om du inte vet hur man kör kod i en Jupyter Notebook, ta en titt på [denna artikel](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
-## [Quiz efter föreläsningen](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
+## [Quiz efter föreläsningen](https://ff-quizzes.netlify.app/en/ds/quiz/1)
 
 ## Uppgifter
 
@@ -75,4 +75,4 @@ Denna lektion har skapats med ♥️ av [Dmitry Soshnikov](http://soshnikov.com)
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

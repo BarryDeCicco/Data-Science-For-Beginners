@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-26T22:14:44+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T21:56:51+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "da"
 }
 -->
-# Data Science i skyen: Den "Azure ML SDK" tilgang
+# Data Science i skyen: Den "Azure ML SDK" måde
 
 |![ Sketchnote af [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/19-DataScience-Cloud.png)|
 |:---:|
@@ -15,100 +15,100 @@ CO_OP_TRANSLATOR_METADATA:
 
 Indholdsfortegnelse:
 
-- [Data Science i skyen: Den "Azure ML SDK" tilgang](../../../../5-Data-Science-In-Cloud/19-Azure)
+- [Data Science i skyen: Den "Azure ML SDK" måde](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Quiz før lektionen](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. Introduktion](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 Hvad er Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [1.2 Projekt om hjertesvigtforudsigelse og introduktion til datasæt](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [1.2 Projekt om hjertesvigt og introduktion til datasæt](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [2. Træning af en model med Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [2.1 Opret et Azure ML workspace](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [2.2 Opret en compute-instans](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [2.1 Opret et Azure ML-arbejdsområde](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [2.2 Opret en beregningsinstans](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.3 Indlæsning af datasæt](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.4 Oprettelse af notebooks](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [2.5 Træning af en model](../../../../5-Data-Science-In-Cloud/19-Azure)
-      - [2.5.1 Opsætning af workspace, eksperiment, compute-cluster og datasæt](../../../../5-Data-Science-In-Cloud/19-Azure)
+      - [2.5.1 Opsætning af arbejdsområde, eksperiment, beregningsklynge og datasæt](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.2 AutoML-konfiguration og træning](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [3. Modeludrulning og endpoint-forbrug med Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [3. Modeludrulning og forbrug af endpoints med Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.1 Gem den bedste model](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.2 Modeludrulning](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [3.3 Endpoint-forbrug](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [3.3 Forbrug af endpoints](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [🚀 Udfordring](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Quiz efter lektionen](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Gennemgang & Selvstudie](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Opgave](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Quiz før lektionen](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Quiz før lektionen](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Introduktion
 
 ### 1.1 Hvad er Azure ML SDK?
 
-Dataforskere og AI-udviklere bruger Azure Machine Learning SDK til at bygge og køre machine learning-workflows med Azure Machine Learning-tjenesten. Du kan interagere med tjenesten i ethvert Python-miljø, herunder Jupyter Notebooks, Visual Studio Code eller din foretrukne Python IDE.
+Dataforskere og AI-udviklere bruger Azure Machine Learning SDK til at opbygge og køre machine learning-arbejdsgange med Azure Machine Learning-tjenesten. Du kan interagere med tjenesten i ethvert Python-miljø, herunder Jupyter Notebooks, Visual Studio Code eller din foretrukne Python IDE.
 
 Nøgleområder i SDK inkluderer:
 
 - Udforsk, forbered og administrer livscyklussen for dine datasæt, der bruges i machine learning-eksperimenter.
-- Administrer cloud-ressourcer til overvågning, logning og organisering af dine machine learning-eksperimenter.
-- Træn modeller enten lokalt eller ved hjælp af cloud-ressourcer, inklusive GPU-accelereret modeltræning.
+- Administrer cloudressourcer til overvågning, logning og organisering af dine machine learning-eksperimenter.
+- Træn modeller enten lokalt eller ved hjælp af cloudressourcer, inklusive GPU-accelereret modeltræning.
 - Brug automatiseret machine learning, som accepterer konfigurationsparametre og træningsdata. Det itererer automatisk gennem algoritmer og hyperparameterindstillinger for at finde den bedste model til at køre forudsigelser.
 - Udrul webtjenester for at konvertere dine trænede modeller til RESTful-tjenester, der kan forbruges i enhver applikation.
 
 [Læs mere om Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-I [den forrige lektion](../18-Low-Code/README.md) så vi, hvordan man træner, udruller og forbruger en model på en Low code/No code-måde. Vi brugte hjertesvigt-datasættet til at generere en hjertesvigtforudsigelsesmodel. I denne lektion vil vi gøre præcis det samme, men ved hjælp af Azure Machine Learning SDK.
+I [den forrige lektion](../18-Low-Code/README.md) så vi, hvordan man træner, udruller og forbruger en model på en Low code/No code-måde. Vi brugte datasættet om hjertesvigt til at generere en model til forudsigelse af hjertesvigt. I denne lektion vil vi gøre præcis det samme, men ved hjælp af Azure Machine Learning SDK.
 
-![projekt-skema](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.da.png)
+![projekt-skema](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
-### 1.2 Projekt om hjertesvigtforudsigelse og introduktion til datasæt
+### 1.2 Projekt om hjertesvigt og introduktion til datasæt
 
-Se [her](../18-Low-Code/README.md) for introduktion til projektet om hjertesvigtforudsigelse og datasæt.
+Se [her](../18-Low-Code/README.md) for introduktion til projektet om hjertesvigt og datasættet.
 
 ## 2. Træning af en model med Azure ML SDK
-### 2.1 Opret et Azure ML workspace
+### 2.1 Opret et Azure ML-arbejdsområde
 
-For nemheds skyld vil vi arbejde i en Jupyter Notebook. Dette indebærer, at du allerede har et workspace og en compute-instans. Hvis du allerede har et workspace, kan du direkte springe til sektionen 2.3 Notebook-oprettelse.
+For nemheds skyld vil vi arbejde i en Jupyter Notebook. Dette indebærer, at du allerede har et arbejdsområde og en beregningsinstans. Hvis du allerede har et arbejdsområde, kan du gå direkte til afsnittet 2.3 Oprettelse af notebooks.
 
-Hvis ikke, følg venligst instruktionerne i sektionen **2.1 Opret et Azure ML workspace** i [den forrige lektion](../18-Low-Code/README.md) for at oprette et workspace.
+Hvis ikke, skal du følge instruktionerne i afsnittet **2.1 Opret et Azure ML-arbejdsområde** i [den forrige lektion](../18-Low-Code/README.md) for at oprette et arbejdsområde.
 
-### 2.2 Opret en compute-instans
+### 2.2 Opret en beregningsinstans
 
-I [Azure ML workspace](https://ml.azure.com/), som vi oprettede tidligere, gå til compute-menuen, og du vil se de forskellige compute-ressourcer, der er tilgængelige.
+I [Azure ML-arbejdsområdet](https://ml.azure.com/), som vi oprettede tidligere, skal du gå til computermenuen, hvor du vil se de forskellige beregningsressourcer, der er tilgængelige.
 
-![compute-instans-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.da.png)
+![beregningsinstans-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
-Lad os oprette en compute-instans for at provisionere en Jupyter Notebook. 
+Lad os oprette en beregningsinstans for at klargøre en Jupyter Notebook. 
 1. Klik på knappen + Ny. 
-2. Giv din compute-instans et navn.
+2. Giv din beregningsinstans et navn.
 3. Vælg dine muligheder: CPU eller GPU, VM-størrelse og antal kerner.
 4. Klik på knappen Opret.
 
-Tillykke, du har lige oprettet en compute-instans! Vi vil bruge denne compute-instans til at oprette en Notebook i sektionen [Oprettelse af notebooks](../../../../5-Data-Science-In-Cloud/19-Azure).
+Tillykke, du har lige oprettet en beregningsinstans! Vi vil bruge denne beregningsinstans til at oprette en notebook i afsnittet [Oprettelse af notebooks](../../../../5-Data-Science-In-Cloud/19-Azure).
 
 ### 2.3 Indlæsning af datasæt
-Se sektionen **2.3 Indlæsning af datasæt** i [den forrige lektion](../18-Low-Code/README.md), hvis du endnu ikke har uploadet datasættet.
+Se afsnittet **2.3 Indlæsning af datasæt** i [den forrige lektion](../18-Low-Code/README.md), hvis du endnu ikke har uploadet datasættet.
 
 ### 2.4 Oprettelse af notebooks
 
-> **_NOTE:_** Til det næste trin kan du enten oprette en ny notebook fra bunden eller uploade den [notebook, vi oprettede](notebook.ipynb) i din Azure ML Studio. For at uploade den skal du blot klikke på "Notebook"-menuen og uploade notebooken.
+> **_NOTE:_** Til det næste trin kan du enten oprette en ny notebook fra bunden eller uploade den [notebook, vi oprettede](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) i din Azure ML Studio. For at uploade den skal du blot klikke på "Notebook"-menuen og uploade notebooken.
 
-Notebooks er en virkelig vigtig del af data science-processen. De kan bruges til at udføre Exploratory Data Analysis (EDA), kalde en compute-cluster for at træne en model, eller kalde en inference-cluster for at udrulle et endpoint. 
+Notebooks er en virkelig vigtig del af data science-processen. De kan bruges til at udføre Exploratory Data Analysis (EDA), kalde en beregningsklynge for at træne en model, eller kalde en inferensklynge for at udrulle et endpoint. 
 
-For at oprette en Notebook har vi brug for en compute-node, der serverer Jupyter Notebook-instansen. Gå tilbage til [Azure ML workspace](https://ml.azure.com/) og klik på Compute-instanser. I listen over compute-instanser bør du se [compute-instansen, vi oprettede tidligere](../../../../5-Data-Science-In-Cloud/19-Azure). 
+For at oprette en notebook har vi brug for en beregningsnode, der leverer Jupyter Notebook-instansen. Gå tilbage til [Azure ML-arbejdsområdet](https://ml.azure.com/) og klik på Beregningsinstanser. I listen over beregningsinstanser bør du se [den beregningsinstans, vi oprettede tidligere](../../../../5-Data-Science-In-Cloud/19-Azure). 
 
-1. I sektionen Applikationer skal du klikke på Jupyter-indstillingen. 
+1. I sektionen Applikationer skal du klikke på Jupyter-muligheden. 
 2. Marker boksen "Ja, jeg forstår" og klik på knappen Fortsæt.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.da.png)
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
 3. Dette skulle åbne en ny browserfane med din Jupyter Notebook-instans som vist. Klik på knappen "Ny" for at oprette en notebook.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.da.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
-Nu hvor vi har en Notebook, kan vi begynde at træne modellen med Azure ML SDK.
+Nu hvor vi har en notebook, kan vi begynde at træne modellen med Azure ML SDK.
 
 ### 2.5 Træning af en model
 
 Først og fremmest, hvis du nogensinde er i tvivl, henvis til [Azure ML SDK-dokumentationen](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109). Den indeholder alle nødvendige oplysninger for at forstå de moduler, vi skal se i denne lektion.
 
-#### 2.5.1 Opsætning af workspace, eksperiment, compute-cluster og datasæt
+#### 2.5.1 Opsætning af arbejdsområde, eksperiment, beregningsklynge og datasæt
 
 Du skal indlæse `workspace` fra konfigurationsfilen ved hjælp af følgende kode:
 
@@ -117,16 +117,16 @@ from azureml.core import Workspace
 ws = Workspace.from_config()
 ```
 
-Dette returnerer et objekt af typen `Workspace`, der repræsenterer workspace. Derefter skal du oprette et `eksperiment` ved hjælp af følgende kode:
+Dette returnerer et objekt af typen `Workspace`, der repræsenterer arbejdsområdet. Derefter skal du oprette et `experiment` ved hjælp af følgende kode:
 
 ```python
 from azureml.core import Experiment
 experiment_name = 'aml-experiment'
 experiment = Experiment(ws, experiment_name)
 ```
-For at få eller oprette et eksperiment fra et workspace anmoder du om eksperimentet ved hjælp af eksperimentnavnet. Eksperimentnavnet skal være 3-36 tegn, starte med et bogstav eller et tal og kan kun indeholde bogstaver, tal, understregninger og bindestreger. Hvis eksperimentet ikke findes i workspace, oprettes et nyt eksperiment.
+For at få eller oprette et eksperiment fra et arbejdsområde anmoder du om eksperimentet ved hjælp af eksperimentets navn. Eksperimentnavnet skal være 3-36 tegn, starte med et bogstav eller et tal og kan kun indeholde bogstaver, tal, understregninger og bindestreger. Hvis eksperimentet ikke findes i arbejdsområdet, oprettes et nyt eksperiment.
 
-Nu skal du oprette en compute-cluster til træningen ved hjælp af følgende kode. Bemærk, at dette trin kan tage et par minutter. 
+Nu skal du oprette en beregningsklynge til træningen ved hjælp af følgende kode. Bemærk, at dette trin kan tage et par minutter. 
 
 ```python
 from azureml.core.compute import AmlCompute
@@ -145,7 +145,7 @@ cts = ws.compute_targets
 compute_target = cts[aml_name]
 ```
 
-Du kan få datasættet fra workspace ved hjælp af datasætnavnet på følgende måde:
+Du kan hente datasættet fra arbejdsområdet ved hjælp af datasætnavnet på følgende måde:
 
 ```python
 dataset = ws.datasets['heart-failure-records']
@@ -154,14 +154,14 @@ df.describe()
 ```
 #### 2.5.2 AutoML-konfiguration og træning
 
-For at indstille AutoML-konfigurationen skal du bruge [AutoMLConfig-klassen](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig(class)?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
+For at konfigurere AutoML skal du bruge [AutoMLConfig-klassen](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig(class)?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
-Som beskrevet i dokumentationen er der mange parametre, du kan lege med. For dette projekt vil vi bruge følgende parametre:
+Som beskrevet i dokumentationen er der mange parametre, du kan lege med. Til dette projekt vil vi bruge følgende parametre:
 
 - `experiment_timeout_minutes`: Den maksimale tid (i minutter), som eksperimentet må køre, før det automatisk stoppes, og resultaterne automatisk gøres tilgængelige.
 - `max_concurrent_iterations`: Det maksimale antal samtidige træningsiterationer, der er tilladt for eksperimentet.
 - `primary_metric`: Den primære metrik, der bruges til at bestemme eksperimentets status.
-- `compute_target`: Azure Machine Learning compute-målet, som det automatiserede machine learning-eksperiment skal køre på.
+- `compute_target`: Azure Machine Learning-beregningsmålet, som det automatiserede machine learning-eksperiment skal køre på.
 - `task`: Typen af opgave, der skal køres. Værdier kan være 'classification', 'regression' eller 'forecasting' afhængigt af typen af automatiseret ML-problem, der skal løses.
 - `training_data`: Træningsdataene, der skal bruges i eksperimentet. Det skal indeholde både træningsfunktioner og en label-kolonne (valgfrit en sample weights-kolonne).
 - `label_column_name`: Navnet på label-kolonnen.
@@ -192,7 +192,7 @@ automl_config = AutoMLConfig(compute_target=compute_target,
                              **automl_settings
                             )
 ```
-Nu hvor du har din konfiguration indstillet, kan du træne modellen ved hjælp af følgende kode. Dette trin kan tage op til en time afhængigt af din cluster-størrelse.
+Nu hvor du har din konfiguration på plads, kan du træne modellen ved hjælp af følgende kode. Dette trin kan tage op til en time afhængigt af din klyngestørrelse.
 
 ```python
 remote_run = experiment.submit(automl_config)
@@ -202,7 +202,7 @@ Du kan køre RunDetails-widgeten for at vise de forskellige eksperimenter.
 from azureml.widgets import RunDetails
 RunDetails(remote_run).show()
 ```
-## 3. Modeludrulning og endpoint-forbrug med Azure ML SDK
+## 3. Modeludrulning og forbrug af endpoints med Azure ML SDK
 
 ### 3.1 Gem den bedste model
 
@@ -230,7 +230,7 @@ model = best_run.register_model(model_name = model_name,
 ```
 ### 3.2 Modeludrulning
 
-Når den bedste model er gemt, kan vi udrulle den med klassen [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig repræsenterer konfigurationsindstillingerne for et tilpasset miljø, der bruges til udrulning. Klassen [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) repræsenterer en machine learning-model, der er udrullet som en webtjeneste-endpoint på Azure Container Instances. En udrullet tjeneste oprettes fra en model, script og tilhørende filer. Den resulterende webtjeneste er et load-balanceret HTTP-endpoint med en REST API. Du kan sende data til denne API og modtage forudsigelsen returneret af modellen.
+Når den bedste model er gemt, kan vi udrulle den med klassen [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig repræsenterer konfigurationsindstillingerne for et tilpasset miljø, der bruges til udrulning. Klassen [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) repræsenterer en machine learning-model, der er udrullet som et webtjeneste-endpoint på Azure Container Instances. En udrullet tjeneste oprettes fra en model, et script og tilhørende filer. Den resulterende webtjeneste er et load-balanceret HTTP-endpoint med en REST API. Du kan sende data til denne API og modtage forudsigelsen returneret af modellen.
 
 Modellen udrulles ved hjælp af metoden [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
@@ -252,7 +252,7 @@ print(aci_service.state)
 ```
 Dette trin bør tage et par minutter.
 
-### 3.3 Endpoint-forbrug
+### 3.3 Forbrug af endpoints
 
 Du forbruger dit endpoint ved at oprette en prøveinput:
 
@@ -284,24 +284,24 @@ Og derefter kan du sende dette input til din model for at få en forudsigelse:
 response = aci_service.run(input_data=test_sample)
 response
 ```
-Dette bør give outputtet `'{"result": [false]}'`. Det betyder, at patientdataene, vi sendte til endpointet, genererede forudsigelsen `false`, hvilket betyder, at denne person sandsynligvis ikke vil få et hjerteanfald.
+Dette bør give outputtet `'{"result": [false]}'`. Det betyder, at de patientdata, vi sendte til endpointet, genererede forudsigelsen `false`, hvilket betyder, at denne person sandsynligvis ikke vil få et hjerteanfald.
 
-Tillykke! Du har netop brugt modellen, der er implementeret og trænet på Azure ML med Azure ML SDK!
+Tillykke! Du har lige brugt modellen, der er deployeret og trænet på Azure ML med Azure ML SDK!
 
 
-> **_NOTE:_** Når du er færdig med projektet, må du ikke glemme at slette alle ressourcer.
+> **_NOTE:_** Når du er færdig med projektet, så husk at slette alle ressourcer.
 
 ## 🚀 Udfordring
 
-Der er mange andre ting, du kan gøre med SDK'en, men desværre kan vi ikke gennemgå dem alle i denne lektion. Men gode nyheder: Hvis du lærer at navigere i SDK-dokumentationen, kan du komme langt på egen hånd. Tag et kig på Azure ML SDK-dokumentationen og find klassen `Pipeline`, som giver dig mulighed for at oprette pipelines. En pipeline er en samling af trin, der kan udføres som en arbejdsgang.
+Der er mange andre ting, du kan gøre med SDK'en, men desværre kan vi ikke gennemgå dem alle i denne lektion. Men gode nyheder: Hvis du lærer at navigere i SDK-dokumentationen, kan du komme langt på egen hånd. Tag et kig på Azure ML SDK-dokumentationen og find `Pipeline`-klassen, som giver dig mulighed for at oprette pipelines. En pipeline er en samling af trin, der kan udføres som en arbejdsgang.
 
-**TIP:** Gå til [SDK-dokumentationen](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) og skriv nøgleord i søgefeltet som "Pipeline". Du bør finde klassen `azureml.pipeline.core.Pipeline` i søgeresultaterne.
+**TIP:** Gå til [SDK-dokumentationen](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) og skriv nøgleord i søgefeltet som "Pipeline". Du bør finde `azureml.pipeline.core.Pipeline`-klassen i søgeresultaterne.
 
-## [Quiz efter lektionen](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Quiz efter lektionen](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
 ## Gennemgang & Selvstudie
 
-I denne lektion lærte du, hvordan man træner, implementerer og bruger en model til at forudsige risikoen for hjertesvigt med Azure ML SDK i skyen. Se denne [dokumentation](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) for yderligere information om Azure ML SDK. Prøv at oprette din egen model med Azure ML SDK.
+I denne lektion lærte du, hvordan man træner, deployerer og bruger en model til at forudsige risikoen for hjertesvigt med Azure ML SDK i skyen. Tjek denne [dokumentation](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) for yderligere information om Azure ML SDK. Prøv at oprette din egen model med Azure ML SDK.
 
 ## Opgave
 
@@ -310,4 +310,4 @@ I denne lektion lærte du, hvordan man træner, implementerer og bruger en model
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.

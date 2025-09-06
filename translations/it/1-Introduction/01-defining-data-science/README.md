@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2583a9894af7123b2fcae3376b14c035",
-  "translation_date": "2025-08-28T11:22:48+00:00",
+  "original_hash": "a76ab694b1534fa57981311975660bfe",
+  "translation_date": "2025-09-06T12:16:21+00:00",
   "source_file": "1-Introduction/01-defining-data-science/README.md",
   "language_code": "it"
 }
@@ -13,9 +13,9 @@ Come abbiamo già accennato, i dati sono ovunque. Basta catturarli nel modo gius
 
 | Strutturati                                                                | Semi-strutturati                                                                                 | Non strutturati                        |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------- |
-| Elenco di persone con i loro numeri di telefono                            | Pagine di Wikipedia con collegamenti                                                             | Testo dell'Enciclopedia Britannica     |
-| Temperatura in tutte le stanze di un edificio ogni minuto negli ultimi 20 anni | Raccolta di articoli scientifici in formato JSON con autori, data di pubblicazione e abstract     | Condivisione di file con documenti aziendali |
-| Dati sull'età e il genere di tutte le persone che entrano nell'edificio    | Pagine Internet                                                                                  | Flusso video grezzo da una telecamera di sorveglianza |
+| Elenco di persone con i loro numeri di telefono                            | Pagine di Wikipedia con collegamenti                                                            | Testo dell'Enciclopedia Britannica     |
+| Temperatura in tutte le stanze di un edificio ogni minuto negli ultimi 20 anni | Raccolta di articoli scientifici in formato JSON con autori, data di pubblicazione e abstract    | Condivisione di file con documenti aziendali |
+| Dati sull'età e il genere di tutte le persone che entrano nell'edificio    | Pagine Internet                                                                                 | Flusso video grezzo da una telecamera di sorveglianza |
 
 ## Dove trovare i Dati
 
@@ -27,7 +27,7 @@ Esistono molte possibili fonti di dati, ed è impossibile elencarle tutte! Tutta
   - **Analisi del comportamento** può, ad esempio, aiutarci a capire quanto profondamente un utente esplora un sito e qual è il motivo tipico per cui lo abbandona.
 * **Non strutturati**
   - **Testi** possono essere una ricca fonte di informazioni, come un punteggio complessivo di **sentiment**, o l'estrazione di parole chiave e significati semantici.
-  - **Immagini** o **Video**. Un video da una telecamera di sorveglianza può essere utilizzato per stimare il traffico sulla strada e informare le persone su potenziali ingorghi.
+  - **Immagini** o **Video**. Un video da una telecamera di sorveglianza può essere utilizzato per stimare il traffico su una strada e informare le persone su potenziali ingorghi.
   - **Log** dei server web possono essere utilizzati per capire quali pagine del nostro sito sono visitate più frequentemente e per quanto tempo.
 * **Semi-strutturati**
   - I grafi delle **reti sociali** possono essere ottime fonti di dati sulla personalità degli utenti e sull'efficacia potenziale nella diffusione di informazioni.
@@ -45,11 +45,11 @@ Nell'ultimo decennio, molte aziende hanno iniziato a comprendere l'importanza de
 
 Consideriamo un esempio. Supponiamo di avere un corso di data science (come questo) che offriamo online agli studenti e vogliamo utilizzare la data science per migliorarlo. Come possiamo farlo?
 
-Possiamo iniziare chiedendoci "Cosa può essere digitalizzato?" Il modo più semplice sarebbe misurare il tempo che ogni studente impiega per completare ogni modulo e valutare le conoscenze acquisite somministrando un test a scelta multipla alla fine di ogni modulo. Calcolando la media del tempo di completamento tra tutti gli studenti, possiamo scoprire quali moduli causano maggiori difficoltà e lavorare per semplificarli.
-> Potresti obiettare che questo approccio non sia ideale, poiché i moduli possono avere lunghezze diverse. Probabilmente sarebbe più equo dividere il tempo per la lunghezza del modulo (in numero di caratteri) e confrontare invece quei valori.
-Quando iniziamo ad analizzare i risultati dei test a scelta multipla, possiamo cercare di determinare quali concetti gli studenti trovano difficili da comprendere e utilizzare queste informazioni per migliorare il contenuto. Per farlo, dobbiamo progettare i test in modo che ogni domanda sia collegata a un determinato concetto o blocco di conoscenza.
+Possiamo iniziare chiedendoci "Cosa può essere digitalizzato?" Il modo più semplice sarebbe misurare il tempo impiegato da ogni studente per completare ogni modulo e valutare le conoscenze acquisite somministrando un test a scelta multipla alla fine di ogni modulo. Calcolando la media del tempo di completamento tra tutti gli studenti, possiamo individuare quali moduli causano maggiori difficoltà e lavorare per semplificarli.
+Potresti sostenere che questo approccio non sia ideale, perché i moduli possono avere lunghezze diverse. Probabilmente sarebbe più equo dividere il tempo per la lunghezza del modulo (in numero di caratteri) e confrontare quei valori invece.
+Quando iniziamo ad analizzare i risultati di test a scelta multipla, possiamo cercare di determinare quali concetti gli studenti trovano difficili da comprendere e utilizzare queste informazioni per migliorare i contenuti. Per farlo, dobbiamo progettare i test in modo che ogni domanda corrisponda a un determinato concetto o blocco di conoscenza.
 
-Se vogliamo complicare ulteriormente l'analisi, possiamo tracciare il tempo impiegato per ogni modulo rispetto alla categoria di età degli studenti. Potremmo scoprire che per alcune categorie di età il completamento del modulo richiede un tempo eccessivamente lungo, oppure che gli studenti abbandonano prima di completarlo. Questo può aiutarci a fornire raccomandazioni di età per il modulo e a ridurre l'insoddisfazione derivante da aspettative errate.
+Se vogliamo rendere l'analisi ancora più complessa, possiamo tracciare il tempo impiegato per ogni modulo rispetto alla categoria di età degli studenti. Potremmo scoprire che per alcune categorie di età il completamento del modulo richiede un tempo eccessivamente lungo, oppure che gli studenti abbandonano prima di completarlo. Questo può aiutarci a fornire raccomandazioni sull'età per il modulo e a ridurre l'insoddisfazione delle persone derivante da aspettative errate.
 
 ## 🚀 Sfida
 
@@ -57,16 +57,16 @@ In questa sfida, cercheremo di individuare concetti rilevanti per il campo della
 
 ![Word Cloud per Data Science](../../../../translated_images/ds_wordcloud.664a7c07dca57de017c22bf0498cb40f898d48aa85b3c36a80620fea12fadd42.it.png)
 
-Visita [`notebook.ipynb`](../../../../../../../../../1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') per leggere il codice. Puoi anche eseguire il codice e vedere come effettua tutte le trasformazioni dei dati in tempo reale.
+Visita [`notebook.ipynb`](../../../../1-Introduction/01-defining-data-science/notebook.ipynb ':ignore') per leggere il codice. Puoi anche eseguire il codice e vedere come vengono effettuate tutte le trasformazioni dei dati in tempo reale.
 
 > Se non sai come eseguire il codice in un Jupyter Notebook, dai un'occhiata a [questo articolo](https://soshnikov.com/education/how-to-execute-notebooks-from-github/).
 
-## [Quiz post-lezione](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/1)
+## [Quiz post-lezione](https://ff-quizzes.netlify.app/en/ds/quiz/1)
 
 ## Compiti
 
-* **Compito 1**: Modifica il codice sopra per individuare concetti correlati ai campi di **Big Data** e **Machine Learning**
-* **Compito 2**: [Rifletti sugli scenari della Data Science](assignment.md)
+* **Task 1**: Modifica il codice sopra per individuare concetti correlati ai campi di **Big Data** e **Machine Learning**  
+* **Task 2**: [Rifletti sugli scenari della Data Science](assignment.md)
 
 ## Crediti
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-28T15:10:32+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T22:55:08+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "nl"
 }
@@ -28,16 +28,16 @@ Inhoudsopgave:
     - [2.5 Een model trainen](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.1 Werkruimte, experiment, compute-cluster en dataset instellen](../../../../5-Data-Science-In-Cloud/19-Azure)
       - [2.5.2 AutoML-configuratie en training](../../../../5-Data-Science-In-Cloud/19-Azure)
-  - [3. Modelimplementatie en gebruik van endpoints met de Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
+  - [3. Modelimplementatie en endpointgebruik met de Azure ML SDK](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.1 Het beste model opslaan](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [3.2 Modelimplementatie](../../../../5-Data-Science-In-Cloud/19-Azure)
-    - [3.3 Gebruik van endpoints](../../../../5-Data-Science-In-Cloud/19-Azure)
+    - [3.3 Endpointgebruik](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [🚀 Uitdaging](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Quiz na de les](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Review & Zelfstudie](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Opdracht](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Quiz voorafgaand aan de les](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Introductie
 
@@ -55,9 +55,9 @@ Belangrijke functies van de SDK zijn:
 
 [Meer informatie over de Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-In de [vorige les](../18-Low-Code/README.md) hebben we gezien hoe je een model kunt trainen, implementeren en gebruiken op een Low code/No code-manier. We gebruikten de dataset voor hartfalen om een voorspellingsmodel voor hartfalen te genereren. In deze les gaan we precies hetzelfde doen, maar dan met behulp van de Azure Machine Learning SDK.
+In de [vorige les](../18-Low-Code/README.md) hebben we gezien hoe je een model kunt trainen, implementeren en gebruiken op een Low code/No code-manier. We gebruikten de dataset voor hartfalen om een voorspellingsmodel te genereren. In deze les gaan we precies hetzelfde doen, maar dan met behulp van de Azure Machine Learning SDK.
 
-![project-schema](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.nl.png)
+![project-schema](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 Introductie van het project en dataset voor hartfalenvoorspelling
 
@@ -66,15 +66,15 @@ Bekijk [hier](../18-Low-Code/README.md) de introductie van het project en de dat
 ## 2. Een model trainen met de Azure ML SDK
 ### 2.1 Een Azure ML-werkruimte maken
 
-Voor de eenvoud gaan we werken in een Jupyter Notebook. Dit betekent dat je al een werkruimte en een compute-instantie hebt. Als je al een werkruimte hebt, kun je direct doorgaan naar sectie 2.3 Notebook maken.
+Voor eenvoud gaan we werken in een Jupyter Notebook. Dit betekent dat je al een werkruimte en een compute-instantie hebt. Als je al een werkruimte hebt, kun je direct doorgaan naar sectie 2.3 Notebook maken.
 
 Zo niet, volg dan de instructies in de sectie **2.1 Een Azure ML-werkruimte maken** in de [vorige les](../18-Low-Code/README.md) om een werkruimte te maken.
 
 ### 2.2 Een compute-instantie maken
 
-Ga in de [Azure ML-werkruimte](https://ml.azure.com/) die we eerder hebben gemaakt naar het compute-menu en je ziet de verschillende beschikbare compute-resources.
+Ga in de [Azure ML-werkruimte](https://ml.azure.com/) die we eerder hebben gemaakt naar het computermenu en je ziet de verschillende beschikbare computerresources.
 
-![compute-instance-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.nl.png)
+![compute-instance-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 Laten we een compute-instantie maken om een Jupyter Notebook te voorzien. 
 1. Klik op de knop + Nieuw. 
@@ -89,18 +89,18 @@ Raadpleeg de [vorige les](../18-Low-Code/README.md) in de sectie **2.3 De datase
 
 ### 2.4 Notebooks maken
 
-> **_OPMERKING:_** Voor de volgende stap kun je een nieuw notebook helemaal opnieuw maken, of je kunt het [notebook dat we hebben gemaakt](notebook.ipynb) uploaden in je Azure ML Studio. Om het te uploaden, klik je gewoon op het "Notebook"-menu en upload je het notebook.
+> **_OPMERKING:_** Voor de volgende stap kun je een nieuw notebook helemaal opnieuw maken, of je kunt het [notebook dat we hebben gemaakt](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) uploaden in je Azure ML Studio. Om het te uploaden, klik je gewoon op het menu "Notebook" en upload je het notebook.
 
 Notebooks zijn een heel belangrijk onderdeel van het datawetenschapsproces. Ze kunnen worden gebruikt om Exploratory Data Analysis (EDA) uit te voeren, een computercluster aan te roepen om een model te trainen, of een inferentiecluster aan te roepen om een endpoint te implementeren. 
 
-Om een Notebook te maken, hebben we een compute-node nodig die de Jupyter Notebook-instantie uitvoert. Ga terug naar de [Azure ML-werkruimte](https://ml.azure.com/) en klik op Compute-instanties. In de lijst met compute-instanties zou je de [compute-instantie die we eerder hebben gemaakt](../../../../5-Data-Science-In-Cloud/19-Azure) moeten zien. 
+Om een Notebook te maken, hebben we een computernode nodig die de Jupyter Notebook-instantie uitvoert. Ga terug naar de [Azure ML-werkruimte](https://ml.azure.com/) en klik op Compute-instanties. In de lijst met compute-instanties zou je de [compute-instantie die we eerder hebben gemaakt](../../../../5-Data-Science-In-Cloud/19-Azure) moeten zien. 
 
 1. Klik in de sectie Toepassingen op de optie Jupyter. 
 2. Vink het vakje "Ja, ik begrijp het" aan en klik op de knop Doorgaan.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.nl.png)
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
 3. Dit zou een nieuw browsertabblad moeten openen met je Jupyter Notebook-instantie zoals hieronder. Klik op de knop "Nieuw" om een notebook te maken.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.nl.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 Nu we een Notebook hebben, kunnen we beginnen met het trainen van het model met Azure ML SDK.
 
@@ -110,7 +110,7 @@ Allereerst, als je ooit twijfelt, raadpleeg dan de [Azure ML SDK-documentatie](h
 
 #### 2.5.1 Werkruimte, experiment, compute-cluster en dataset instellen
 
-Je moet de `werkruimte` laden vanuit het configuratiebestand met de volgende code:
+Je moet de `werkruimte` laden vanuit het configuratiebestand met behulp van de volgende code:
 
 ```python
 from azureml.core import Workspace
@@ -156,9 +156,9 @@ df.describe()
 
 Om de AutoML-configuratie in te stellen, gebruik je de [AutoMLConfig-klasse](https://docs.microsoft.com/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig(class)?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
-Zoals beschreven in de documentatie zijn er veel parameters waarmee je kunt spelen. Voor dit project zullen we de volgende parameters gebruiken:
+Zoals beschreven in de documentatie zijn er veel parameters waarmee je kunt spelen. Voor dit project gebruiken we de volgende parameters:
 
-- `experiment_timeout_minutes`: De maximale tijdsduur (in minuten) die het experiment mag duren voordat het automatisch wordt gestopt en de resultaten automatisch beschikbaar worden gemaakt.
+- `experiment_timeout_minutes`: De maximale tijd (in minuten) die het experiment mag duren voordat het automatisch wordt gestopt en de resultaten automatisch beschikbaar worden gemaakt.
 - `max_concurrent_iterations`: Het maximale aantal gelijktijdige trainingsiteraties dat is toegestaan voor het experiment.
 - `primary_metric`: De primaire metriek die wordt gebruikt om de status van het experiment te bepalen.
 - `compute_target`: Het Azure Machine Learning compute-doel waarop het geautomatiseerde machine learning-experiment wordt uitgevoerd.
@@ -202,7 +202,7 @@ Je kunt de RunDetails-widget uitvoeren om de verschillende experimenten te tonen
 from azureml.widgets import RunDetails
 RunDetails(remote_run).show()
 ```
-## 3. Modelimplementatie en gebruik van endpoints met de Azure ML SDK
+## 3. Modelimplementatie en endpointgebruik met de Azure ML SDK
 
 ### 3.1 Het beste model opslaan
 
@@ -211,7 +211,7 @@ De `remote_run` is een object van het type [AutoMLRun](https://docs.microsoft.co
 ```python
 best_run, fitted_model = remote_run.get_output()
 ```
-Je kunt de parameters die voor het beste model zijn gebruikt bekijken door gewoon het fitted_model af te drukken en de eigenschappen van het beste model te zien met de [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)-methode.
+Je kunt de parameters die voor het beste model zijn gebruikt bekijken door gewoon het fitted_model af te drukken en de eigenschappen van het beste model te zien met behulp van de [get_properties()](https://docs.microsoft.com/python/api/azureml-core/azureml.core.run(class)?view=azure-ml-py#azureml_core_Run_get_properties?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)-methode.
 
 ```python
 best_run.get_properties()
@@ -232,7 +232,7 @@ model = best_run.register_model(model_name = model_name,
 
 Zodra het beste model is opgeslagen, kunnen we het implementeren met de [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109)-klasse. InferenceConfig vertegenwoordigt de configuratie-instellingen voor een aangepaste omgeving die wordt gebruikt voor implementatie. De [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py)-klasse vertegenwoordigt een machine learning-model dat is geïmplementeerd als een webservice-endpoint op Azure Container Instances. Een geïmplementeerde service wordt gemaakt van een model, script en bijbehorende bestanden. De resulterende webservice is een load-balanced HTTP-endpoint met een REST API. Je kunt gegevens naar deze API sturen en de voorspelling ontvangen die door het model wordt geretourneerd.
 
-Het model wordt geïmplementeerd met de [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)-methode.
+Het model wordt geïmplementeerd met behulp van de [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)-methode.
 
 ```python
 from azureml.core.model import InferenceConfig, Model
@@ -252,7 +252,7 @@ print(aci_service.state)
 ```
 Deze stap kan enkele minuten duren.
 
-### 3.3 Gebruik van endpoints
+### 3.3 Endpointgebruik
 
 Je gebruikt je endpoint door een voorbeeldinvoer te maken:
 
@@ -284,7 +284,7 @@ En vervolgens kun je deze invoer naar je model sturen voor voorspelling:
 response = aci_service.run(input_data=test_sample)
 response
 ```
-Dit zou `'{"result": [false]}'` moeten opleveren. Dit betekent dat de patiëntgegevens die we naar de endpoint hebben gestuurd de voorspelling `false` hebben gegenereerd, wat betekent dat deze persoon waarschijnlijk geen hartaanval zal krijgen.
+Dit zou `'{"result": [false]}'` moeten opleveren. Dit betekent dat de patiëntgegevens die we naar de endpoint hebben gestuurd, de voorspelling `false` hebben gegenereerd, wat inhoudt dat deze persoon waarschijnlijk geen hartaanval zal krijgen.
 
 Gefeliciteerd! Je hebt zojuist het model gebruikt dat is gedeployed en getraind op Azure ML met de Azure ML SDK!
 
@@ -293,15 +293,15 @@ Gefeliciteerd! Je hebt zojuist het model gebruikt dat is gedeployed en getraind 
 
 ## 🚀 Uitdaging
 
-Er zijn veel andere dingen die je kunt doen met de SDK, helaas kunnen we ze niet allemaal in deze les behandelen. Maar goed nieuws, leren hoe je door de SDK-documentatie kunt navigeren kan je een heel eind op weg helpen. Bekijk de Azure ML SDK-documentatie en zoek de `Pipeline`-klasse waarmee je pipelines kunt maken. Een Pipeline is een verzameling stappen die als een workflow kunnen worden uitgevoerd.
+Er zijn veel andere dingen die je kunt doen met de SDK, maar helaas kunnen we niet alles in deze les behandelen. Goed nieuws: leren hoe je snel door de SDK-documentatie kunt navigeren, kan je al een heel eind op weg helpen. Bekijk de Azure ML SDK-documentatie en zoek de `Pipeline`-klasse die je in staat stelt om pipelines te maken. Een Pipeline is een verzameling stappen die als een workflow kunnen worden uitgevoerd.
 
 **TIP:** Ga naar de [SDK-documentatie](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) en typ trefwoorden zoals "Pipeline" in de zoekbalk. Je zou de `azureml.pipeline.core.Pipeline`-klasse in de zoekresultaten moeten vinden.
 
-## [Quiz na de les](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Quiz na de les](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
-## Review & Zelfstudie
+## Herhaling & Zelfstudie
 
-In deze les heb je geleerd hoe je een model kunt trainen, deployen en gebruiken om het risico op hartfalen te voorspellen met de Azure ML SDK in de cloud. Bekijk deze [documentatie](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) voor meer informatie over de Azure ML SDK. Probeer je eigen model te maken met de Azure ML SDK. 
+In deze les heb je geleerd hoe je een model kunt trainen, deployen en gebruiken om het risico op hartfalen te voorspellen met de Azure ML SDK in de cloud. Raadpleeg deze [documentatie](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) voor meer informatie over de Azure ML SDK. Probeer je eigen model te maken met de Azure ML SDK.
 
 ## Opdracht
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "870a0086adbc313a8eea5489bdcb2522",
-  "translation_date": "2025-08-28T10:51:44+00:00",
+  "original_hash": "9399d7b4767e75068f95ce5c660b285c",
+  "translation_date": "2025-09-06T08:57:34+00:00",
   "source_file": "2-Working-With-Data/05-relational-databases/README.md",
   "language_code": "tr"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 |:---:|
 | Verilerle Çalışmak: İlişkisel Veritabanları - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
-Muhtemelen geçmişte bilgi depolamak için bir elektronik tablo kullanmışsınızdır. Satır ve sütunlardan oluşan bir yapınız vardı; satırlar bilgiyi (veya veriyi) içerirken, sütunlar bu bilgiyi tanımlıyordu (bazen buna meta veri denir). İlişkisel bir veritabanı, tablolardaki sütunlar ve satırlar prensibine dayanır ve bilgiyi birden fazla tabloya yaymanıza olanak tanır. Bu, daha karmaşık verilerle çalışmanıza, tekrarı önlemenize ve verileri keşfetme şeklinizde esneklik sağlamanıza olanak tanır. Haydi, ilişkisel veritabanı kavramlarını keşfedelim.
+Muhtemelen geçmişte bilgileri saklamak için bir elektronik tablo kullandınız. Satır ve sütunlardan oluşan bir düzeniniz vardı; satırlar bilgileri (veya verileri) içerirken, sütunlar bu bilgileri tanımlıyordu (bazen buna meta veri denir). İlişkisel bir veritabanı, tablolar içinde sütunlar ve satırlar temel prensibine dayanır ve bilgilerin birden fazla tabloya yayılmasına olanak tanır. Bu, daha karmaşık verilerle çalışmanıza, tekrarı önlemenize ve verileri keşfetme konusunda esneklik sağlamanıza olanak tanır. Şimdi ilişkisel veritabanı kavramlarını keşfedelim.
 
-## [Ders Öncesi Testi](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/8)
+## [Ders Öncesi Test](https://ff-quizzes.netlify.app/en/ds/quiz/8)
 
-## Her Şey Tablolarla Başlar
+## Her şey tablolarla başlar
 
-Bir ilişkisel veritabanının temelinde tablolar bulunur. Tıpkı bir elektronik tabloda olduğu gibi, bir tablo sütunlar ve satırlardan oluşan bir koleksiyondur. Satır, çalışmak istediğimiz veriyi veya bilgiyi içerir, örneğin bir şehrin adı ya da yağış miktarı. Sütunlar ise depoladıkları veriyi tanımlar.
+İlişkisel bir veritabanının temelinde tablolar bulunur. Elektronik tabloda olduğu gibi, bir tablo sütunlar ve satırlardan oluşan bir koleksiyondur. Satır, üzerinde çalışmak istediğimiz verileri veya bilgileri içerir, örneğin bir şehrin adı veya yağış miktarı. Sütunlar ise saklanan verileri tanımlar.
 
-Şehirler hakkında bilgi depolamak için bir tablo oluşturarak keşfimize başlayalım. Şehirlerin adını ve ülkesini içeren bir tablo oluşturabiliriz. Bu tablo şu şekilde görünebilir:
+Keşfimize şehirler hakkında bilgi saklamak için bir tablo oluşturarak başlayalım. Şehirlerin adını ve ülkesini saklayabiliriz. Bunu aşağıdaki gibi bir tabloda saklayabilirsiniz:
 
 | Şehir    | Ülke          |
 | -------- | ------------- |
@@ -29,11 +29,11 @@ Bir ilişkisel veritabanının temelinde tablolar bulunur. Tıpkı bir elektroni
 | Atlanta  | Amerika Birleşik Devletleri |
 | Auckland | Yeni Zelanda  |
 
-Dikkat edin, **şehir**, **ülke** ve **nüfus** sütun adları depolanan veriyi tanımlar ve her satır bir şehir hakkında bilgi içerir.
+Dikkat edin, **şehir**, **ülke** ve **nüfus** sütun adları saklanan verileri tanımlıyor ve her satır bir şehir hakkında bilgi içeriyor.
 
-## Tek Tablo Yaklaşımının Eksiklikleri
+## Tek bir tablo yaklaşımının eksiklikleri
 
-Yukarıdaki tablo size oldukça tanıdık gelebilir. Gelişmekte olan veritabanımıza yıllık yağış miktarını (milimetre cinsinden) ekleyerek biraz daha veri ekleyelim. 2018, 2019 ve 2020 yıllarına odaklanalım. Tokyo için ekleyecek olursak, tablo şu şekilde görünebilir:
+Yukarıdaki tablo size oldukça tanıdık geliyor olabilir. Gelişmekte olan veritabanımıza yıllık yağış miktarını (milimetre cinsinden) ekleyerek başlayalım. 2018, 2019 ve 2020 yıllarına odaklanacağız. Tokyo için ekleyecek olursak, tablo şu şekilde görünebilir:
 
 | Şehir  | Ülke    | Yıl  | Miktar |
 | ------ | ------- | ---- | ------ |
@@ -41,7 +41,7 @@ Yukarıdaki tablo size oldukça tanıdık gelebilir. Gelişmekte olan veritaban�
 | Tokyo  | Japonya | 2019 | 1874   |
 | Tokyo  | Japonya | 2018 | 1445   |
 
-Tablomuzda ne fark ettiniz? Şehrin adı ve ülkesini tekrar tekrar kopyaladığımızı fark etmiş olabilirsiniz. Bu, oldukça fazla depolama alanı kaplayabilir ve büyük ölçüde gereksizdir. Sonuçta, Tokyo'nun ilgilendiğimiz tek bir adı var.
+Tablomuzda ne fark ettiniz? Şehrin adı ve ülkesini tekrar tekrar çoğalttığımızı fark edebilirsiniz. Bu, oldukça fazla depolama alanı kaplayabilir ve büyük ölçüde gereksizdir. Sonuçta, Tokyo'nun ilgilendiğimiz tek bir adı var.
 
 Tamam, başka bir şey deneyelim. Her yıl için yeni sütunlar ekleyelim:
 
@@ -51,13 +51,13 @@ Tamam, başka bir şey deneyelim. Her yıl için yeni sütunlar ekleyelim:
 | Atlanta  | Amerika Birleşik Devletleri | 1779 | 1111 | 1683 |
 | Auckland | Yeni Zelanda  | 1386 | 942  | 1176 |
 
-Bu, satır tekrarını önlerken başka zorluklar ekliyor. Her yeni yıl için tablomuzun yapısını değiştirmemiz gerekecek. Ayrıca, verilerimiz büyüdükçe yılları sütun olarak tutmak, değerleri geri almak ve hesaplamak için işleri zorlaştıracaktır.
+Bu, satır çoğaltmayı önlerken başka zorluklar ekliyor. Her yeni yıl olduğunda tablomuzun yapısını değiştirmemiz gerekecek. Ayrıca, verilerimiz büyüdükçe yılları sütun olarak tutmak, değerleri almak ve hesaplamak için daha zor hale gelecektir.
 
-Bu nedenle birden fazla tabloya ve ilişkilere ihtiyacımız var. Verilerimizi bölerek tekrarı önleyebilir ve verilerle çalışma şeklimizde daha fazla esneklik sağlayabiliriz.
+Bu nedenle birden fazla tabloya ve ilişkilere ihtiyacımız var. Verilerimizi bölerek tekrarı önleyebilir ve verilerle çalışma konusunda daha fazla esneklik sağlayabiliriz.
 
-## İlişkilerin Kavramları
+## İlişkilerin kavramları
 
-Verilerimize geri dönelim ve nasıl böleceğimizi belirleyelim. Şehirlerimizin adını ve ülkesini depolamak istediğimizi biliyoruz, bu nedenle bu bilgiler muhtemelen bir tabloda en iyi şekilde saklanır.
+Verilerimize geri dönelim ve nasıl bölmek istediğimizi belirleyelim. Şehirlerimizin adı ve ülkesini saklamak istediğimizi biliyoruz, bu yüzden bu muhtemelen bir tabloda en iyi şekilde çalışır.
 
 | Şehir    | Ülke          |
 | -------- | ------------- |
@@ -65,7 +65,7 @@ Verilerimize geri dönelim ve nasıl böleceğimizi belirleyelim. Şehirlerimizi
 | Atlanta  | Amerika Birleşik Devletleri |
 | Auckland | Yeni Zelanda  |
 
-Ancak bir sonraki tabloyu oluşturmadan önce, her şehri nasıl referans alacağımızı belirlememiz gerekiyor. Bir tür tanımlayıcıya, kimliğe veya (teknik veritabanı terimleriyle) bir birincil anahtara ihtiyacımız var. Birincil anahtar, bir tablodaki belirli bir satırı tanımlamak için kullanılan bir değerdir. Bu, bir değerin kendisine dayalı olabilir (örneğin, şehrin adını kullanabiliriz), ancak neredeyse her zaman bir sayı veya başka bir tanımlayıcı olmalıdır. Kimliğin asla değişmemesini isteriz, çünkü bu ilişkiyi bozabilir. Çoğu durumda, birincil anahtar veya kimlik otomatik olarak oluşturulan bir sayı olacaktır.
+Ancak bir sonraki tabloyu oluşturmadan önce her şehri nasıl referans alacağımızı belirlememiz gerekiyor. Bir tür tanımlayıcıya, kimliğe veya (teknik veritabanı terimleriyle) birincil anahtara ihtiyacımız var. Birincil anahtar, bir tabloda belirli bir satırı tanımlamak için kullanılan bir değerdir. Bu, bir değere dayalı olabilir (örneğin, şehrin adını kullanabiliriz), ancak neredeyse her zaman bir sayı veya başka bir tanımlayıcı olmalıdır. Kimliğin asla değişmemesini isteriz, çünkü bu ilişkiyi bozabilir. Çoğu durumda birincil anahtar veya kimlik, otomatik olarak oluşturulan bir sayı olacaktır.
 
 > ✅ Birincil anahtar genellikle PK olarak kısaltılır.
 
@@ -77,9 +77,9 @@ Ancak bir sonraki tabloyu oluşturmadan önce, her şehri nasıl referans alaca�
 | 2        | Atlanta  | Amerika Birleşik Devletleri |
 | 3        | Auckland | Yeni Zelanda  |
 
-> ✅ Bu derste "id" ve "birincil anahtar" terimlerini birbirinin yerine kullandığımızı fark edeceksiniz. Buradaki kavramlar, daha sonra keşfedeceğiniz DataFrame'ler için de geçerlidir. DataFrame'ler "birincil anahtar" terminolojisini kullanmaz, ancak benzer şekilde davrandıklarını fark edeceksiniz.
+> ✅ Bu derste "kimlik" ve "birincil anahtar" terimlerini birbirinin yerine kullandığımızı fark edeceksiniz. Buradaki kavramlar, daha sonra keşfedeceğiniz DataFrame'lere de uygulanır. DataFrame'ler "birincil anahtar" terimini kullanmaz, ancak aynı şekilde davrandıklarını fark edeceksiniz.
 
-Şehirler tablomuzu oluşturduğumuza göre, yağış miktarını saklayalım. Şehirle ilgili tam bilgiyi kopyalamak yerine, kimliği kullanabiliriz. Ayrıca, yeni oluşturulan tablonun da bir *id* sütununa sahip olduğundan emin olmalıyız, çünkü tüm tabloların bir kimlik veya birincil anahtarı olmalıdır.
+Şehirler tablomuzu oluşturduktan sonra yağışları saklayalım. Şehir hakkında tam bilgiyi çoğaltmak yerine kimliği kullanabiliriz. Ayrıca, yeni oluşturulan tablonun bir *kimlik* sütununa sahip olduğundan emin olmalıyız, çünkü tüm tabloların bir kimlik veya birincil anahtarı olmalıdır.
 
 ### yağış
 
@@ -95,15 +95,15 @@ Ancak bir sonraki tabloyu oluşturmadan önce, her şehri nasıl referans alaca�
 | 8        | 3        | 2019 | 942    |
 | 9        | 3        | 2020 | 1176   |
 
-Yeni oluşturulan **yağış** tablosundaki **şehir_id** sütununa dikkat edin. Bu sütun, **şehirler** tablosundaki kimliklere referans veren değerler içerir. Teknik ilişkisel veri terimleriyle, buna **yabancı anahtar** denir; başka bir tablodan bir birincil anahtardır. Bunu bir referans veya işaretçi olarak düşünebilirsiniz. **şehir_id** 1, Tokyo'yu referans alır.
+Yeni oluşturulan **yağış** tablosundaki **şehir_id** sütununa dikkat edin. Bu sütun, **şehirler** tablosundaki kimliklere referans veren değerler içerir. Teknik ilişkisel veri terimlerinde buna **yabancı anahtar** denir; başka bir tablodan bir birincil anahtardır. Bunu bir referans veya işaretçi olarak düşünebilirsiniz. **şehir_id** 1 Tokyo'yu ifade eder.
 
 > [!NOTE] Yabancı anahtar genellikle FK olarak kısaltılır.
 
-## Veriyi Geri Getirme
+## Verileri alma
 
-Verilerimizi iki tabloya ayırdıktan sonra, bunları nasıl geri getireceğimizi merak ediyor olabilirsiniz. MySQL, SQL Server veya Oracle gibi bir ilişkisel veritabanı kullanıyorsak, Yapılandırılmış Sorgu Dili veya SQL adlı bir dil kullanabiliriz. SQL (bazen "sequel" olarak telaffuz edilir), ilişkisel bir veritabanında veri almak ve değiştirmek için kullanılan standart bir dildir.
+Verilerimizi iki tabloya ayırdıktan sonra, bunları nasıl alacağımızı merak edebilirsiniz. MySQL, SQL Server veya Oracle gibi bir ilişkisel veritabanı kullanıyorsak, Structured Query Language veya SQL adlı bir dil kullanabiliriz. SQL (bazen "sequel" olarak telaffuz edilir), ilişkisel bir veritabanında veri almak ve değiştirmek için kullanılan standart bir dildir.
 
-Veriyi almak için `SELECT` komutunu kullanırsınız. Temel olarak, görmek istediğiniz sütunları **seçer** ve bunların bulunduğu tabloyu **belirtirsiniz**. Sadece şehirlerin adlarını görüntülemek istiyorsanız, şu sorguyu kullanabilirsiniz:
+Verileri almak için `SELECT` komutunu kullanırsınız. Temelde, görmek istediğiniz sütunları **seçer** ve bunların bulunduğu tabloyu **belirtirsiniz**. Sadece şehirlerin adlarını göstermek istiyorsanız, aşağıdaki komutu kullanabilirsiniz:
 
 ```sql
 SELECT city
@@ -115,11 +115,11 @@ FROM cities;
 -- Auckland
 ```
 
-`SELECT`, listelemek istediğiniz sütunları, `FROM` ise bu sütunların bulunduğu tabloları belirtir.
+`SELECT` sütunları listelediğiniz yerdir ve `FROM` tabloları listelediğiniz yerdir.
 
-> [NOTE] SQL sözdizimi büyük/küçük harf duyarlı değildir, yani `select` ve `SELECT` aynı anlama gelir. Ancak, kullandığınız veritabanı türüne bağlı olarak sütunlar ve tablolar büyük/küçük harf duyarlı olabilir. Bu nedenle, programlamada her şeyi büyük/küçük harf duyarlıymış gibi ele almak en iyi uygulamadır. SQL sorguları yazarken, anahtar kelimeleri tamamen büyük harflerle yazmak yaygın bir konvansiyondur.
+> [NOTE] SQL sözdizimi büyük/küçük harf duyarlı değildir, yani `select` ve `SELECT` aynı anlama gelir. Ancak, kullandığınız veritabanı türüne bağlı olarak sütunlar ve tablolar büyük/küçük harf duyarlı olabilir. Bu nedenle, programlamada her şeyi büyük/küçük harf duyarlıymış gibi ele almak en iyi uygulamadır. SQL sorguları yazarken yaygın bir uygulama, anahtar kelimeleri tamamen büyük harflerle yazmaktır.
 
-Yukarıdaki sorgu tüm şehirleri görüntüler. Sadece Yeni Zelanda'daki şehirleri görüntülemek istediğimizi hayal edelim. Bir tür filtreye ihtiyacımız var. SQL'deki anahtar kelime `WHERE`, yani "bir şey doğru olduğunda"dır.
+Yukarıdaki sorgu tüm şehirleri gösterecektir. Sadece Yeni Zelanda'daki şehirleri göstermek istediğimizi hayal edelim. Bir tür filtreye ihtiyacımız var. SQL'deki anahtar kelime `WHERE`, yani "bir şey doğru olduğunda".
 
 ```sql
 SELECT city
@@ -130,13 +130,13 @@ WHERE country = 'New Zealand';
 -- Auckland
 ```
 
-## Veriyi Birleştirme
+## Verileri birleştirme
 
-Şimdiye kadar veriyi tek bir tablodan aldık. Şimdi **şehirler** ve **yağış** tablolarındaki verileri bir araya getirmek istiyoruz. Bu, onları *birleştirerek* yapılır. İki tablo arasında bir dikiş oluşturur ve her tablodan bir sütundaki değerleri eşleştirirsiniz.
+Şimdiye kadar verileri tek bir tablodan aldık. Şimdi **şehirler** ve **yağış** tablolarındaki verileri bir araya getirmek istiyoruz. Bu, onları *birleştirerek* yapılır. İki tablo arasında bir dikiş oluşturacak ve her tablodan bir sütunun değerlerini eşleştireceksiniz.
 
-Örneğimizde, **yağış** tablosundaki **şehir_id** sütununu, **şehirler** tablosundaki **şehir_id** sütunuyla eşleştireceğiz. Bu, yağış değerini ilgili şehriyle eşleştirecektir. Yapacağımız birleştirme türü, *iç birleştirme* olarak adlandırılır, yani diğer tablodan hiçbir şeyle eşleşmeyen satırlar görüntülenmez. Bizim durumumuzda her şehirde yağış verisi var, bu yüzden her şey görüntülenecek.
+Örneğimizde, **yağış** tablosundaki **şehir_id** sütununu **şehirler** tablosundaki **şehir_id** sütunuyla eşleştireceğiz. Bu, yağış değerini ilgili şehirle eşleştirecektir. Yapacağımız birleştirme türü, *iç birleştirme* olarak adlandırılır, yani diğer tablodan hiçbir şeyle eşleşmeyen satırlar görüntülenmez. Bizim durumumuzda her şehirde yağış var, bu yüzden her şey görüntülenecek.
 
-Tüm şehirler için 2019 yılı yağış miktarını alalım.
+Hadi tüm şehirler için 2019 yılı yağışlarını alalım.
 
 Bunu adım adım yapacağız. İlk adım, **şehir_id** sütunlarını belirterek verileri birleştirmektir.
 
@@ -147,7 +147,7 @@ FROM cities
     INNER JOIN rainfall ON cities.city_id = rainfall.city_id
 ```
 
-Birleştirmek istediğimiz iki sütunu ve tabloları **şehir_id** üzerinden birleştirmek istediğimizi vurguladık. Şimdi sadece 2019 yılını filtrelemek için `WHERE` ifadesini ekleyebiliriz.
+Birleştirmek istediğimiz iki sütunu ve tabloları **şehir_id** ile birleştirmek istediğimizi vurguladık. Şimdi sadece 2019 yılını filtrelemek için `WHERE` ifadesini ekleyebiliriz.
 
 ```sql
 SELECT cities.city
@@ -167,19 +167,19 @@ WHERE rainfall.year = 2019
 
 ## Özet
 
-İlişkisel veritabanları, bilgiyi birden fazla tabloya bölmek ve ardından görüntüleme ve analiz için bir araya getirmek üzerine kuruludur. Bu, hesaplamalar yapmak ve verileri manipüle etmek için yüksek bir esneklik sağlar. İlişkisel bir veritabanının temel kavramlarını ve iki tablo arasında bir birleştirme yapmayı gördünüz.
+İlişkisel veritabanları, bilgileri birden fazla tabloya bölmek ve ardından görüntüleme ve analiz için bir araya getirmek üzerine kuruludur. Bu, hesaplamalar yapmak ve verileri manipüle etmek için yüksek derecede esneklik sağlar. İlişkisel bir veritabanının temel kavramlarını ve iki tablo arasında bir birleştirme yapmayı gördünüz.
 
-## 🚀 Meydan Okuma
+## 🚀 Zorluk
 
-İnternette birçok ilişkisel veritabanı mevcuttur. Yukarıda öğrendiğiniz becerileri kullanarak verileri keşfedebilirsiniz.
+İnternette birçok ilişkisel veritabanı bulunmaktadır. Yukarıda öğrendiğiniz becerileri kullanarak verileri keşfedebilirsiniz.
 
-## Ders Sonrası Testi
+## Ders Sonrası Test
 
-## [Ders Sonrası Testi](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/9)
+## [Ders Sonrası Test](https://ff-quizzes.netlify.app/en/ds/quiz/9)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-SQL ve ilişkisel veritabanı kavramlarını keşfetmeye devam etmeniz için [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) üzerinde çeşitli kaynaklar mevcuttur:
+SQL ve ilişkisel veritabanı kavramlarını keşfetmeye devam etmeniz için [Microsoft Learn](https://docs.microsoft.com/learn?WT.mc_id=academic-77958-bethanycheum) üzerinde çeşitli kaynaklar bulunmaktadır.
 
 - [İlişkisel veri kavramlarını açıklayın](https://docs.microsoft.com//learn/modules/describe-concepts-of-relational-data?WT.mc_id=academic-77958-bethanycheum)
 - [Transact-SQL ile Sorgulamaya Başlayın](https://docs.microsoft.com//learn/paths/get-started-querying-with-transact-sql?WT.mc_id=academic-77958-bethanycheum) (Transact-SQL, SQL'in bir versiyonudur)
@@ -192,4 +192,4 @@ SQL ve ilişkisel veritabanı kavramlarını keşfetmeye devam etmeniz için [Mi
 ---
 
 **Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

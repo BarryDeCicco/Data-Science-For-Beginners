@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "af6a12015c6e250e500b570a9fa42593",
-  "translation_date": "2025-08-28T18:39:34+00:00",
+  "original_hash": "42119bcc97bee88254e381156d770f3c",
+  "translation_date": "2025-09-05T23:53:45+00:00",
   "source_file": "3-Data-Visualization/11-visualization-proportions/README.md",
   "language_code": "id"
 }
 -->
 # Memvisualisasikan Proporsi
 
-|![Sketchnote oleh [(@sketchthedocs)](https://sketchthedocs.dev)](../../sketchnotes/11-Visualizing-Proportions.png)|
+|![ Sketchnote oleh [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/11-Visualizing-Proportions.png)|
 |:---:|
 |Memvisualisasikan Proporsi - _Sketchnote oleh [@nitya](https://twitter.com/nitya)_ |
 
@@ -19,9 +19,9 @@ Dalam pelajaran ini, Anda akan menggunakan dataset bertema alam untuk memvisuali
 - Diagram donat 🍩
 - Diagram waffle 🧇
 
-> 💡 Sebuah proyek menarik bernama [Charticulator](https://charticulator.com) oleh Microsoft Research menawarkan antarmuka drag-and-drop gratis untuk visualisasi data. Dalam salah satu tutorialnya, mereka juga menggunakan dataset jamur ini! Jadi Anda bisa mengeksplorasi data sekaligus mempelajari pustaka tersebut: [Tutorial Charticulator](https://charticulator.com/tutorials/tutorial4.html).
+> 💡 Sebuah proyek menarik bernama [Charticulator](https://charticulator.com) oleh Microsoft Research menawarkan antarmuka drag and drop gratis untuk visualisasi data. Dalam salah satu tutorialnya, mereka juga menggunakan dataset jamur ini! Jadi Anda bisa mengeksplorasi data sekaligus mempelajari pustakanya: [Tutorial Charticulator](https://charticulator.com/tutorials/tutorial4.html).
 
-## [Kuis sebelum pelajaran](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/20)
+## [Kuis sebelum pelajaran](https://ff-quizzes.netlify.app/en/ds/quiz/20)
 
 ## Mengenal Jamur Anda 🍄
 
@@ -42,7 +42,7 @@ Sebuah tabel dicetak dengan beberapa data yang bagus untuk dianalisis:
 | Dapat Dimakan | Lonceng | Halus      | Putih     | Memar   | Adas Manis | Bebas         | Rapat        | Lebar     | Cokelat    | Membesar    | Klub       | Halus                   | Halus                   | Putih                  | Putih                  | Parsial   | Putih      | Satu        | Gantung   | Cokelat           | Banyak     | Padang Rumput |
 | Beracun   | Cembung   | Bersisik    | Putih     | Memar   | Menyengat | Bebas          | Rapat        | Sempit    | Cokelat    | Membesar    | Sama       | Halus                   | Halus                   | Putih                  | Putih                  | Parsial   | Putih      | Satu        | Gantung   | Hitam             | Tersebar   | Perkotaan |
 
-Langsung terlihat bahwa semua data berbentuk teks. Anda harus mengonversi data ini agar dapat digunakan dalam diagram. Sebagian besar data, pada kenyataannya, direpresentasikan sebagai objek:
+Langsung terlihat bahwa semua data berbentuk teks. Anda harus mengonversi data ini agar dapat digunakan dalam diagram. Sebagian besar data, sebenarnya, direpresentasikan sebagai objek:
 
 ```python
 print(mushrooms.select_dtypes(["object"]).columns)
@@ -89,9 +89,9 @@ plt.pie(edibleclass['population'],labels=labels,autopct='%.1f %%')
 plt.title('Edible?')
 plt.show()
 ```
-Voila, sebuah diagram lingkaran yang menunjukkan proporsi data ini berdasarkan dua kelas jamur tersebut. Sangat penting untuk memastikan urutan label benar, terutama di sini, jadi pastikan untuk memverifikasi urutan saat membangun array label!
+Voila, sebuah diagram lingkaran yang menunjukkan proporsi data ini berdasarkan dua kelas jamur. Sangat penting untuk memastikan urutan label benar, terutama di sini, jadi pastikan untuk memverifikasi urutan array label yang dibuat!
 
-![diagram lingkaran](../../../../translated_images/pie1-wb.e201f2fcc335413143ce37650fb7f5f0bb21358e7823a327ed8644dfb84be9db.id.png)
+![diagram lingkaran](../../../../3-Data-Visualization/11-visualization-proportions/images/pie1-wb.png)
 
 ## Donat!
 
@@ -103,7 +103,7 @@ Lihat berbagai habitat tempat jamur tumbuh:
 habitat=mushrooms.groupby(['habitat']).count()
 habitat
 ```
-Di sini, Anda mengelompokkan data berdasarkan habitat. Ada 7 habitat yang terdaftar, jadi gunakan itu sebagai label untuk diagram donat Anda:
+Di sini, Anda mengelompokkan data berdasarkan habitat. Ada 7 habitat yang tercantum, jadi gunakan itu sebagai label untuk diagram donat Anda:
 
 ```python
 labels=['Grasses','Leaves','Meadows','Paths','Urban','Waste','Wood']
@@ -121,17 +121,17 @@ plt.title('Mushroom Habitats')
 plt.show()
 ```
 
-![diagram donat](../../../../translated_images/donut-wb.be3c12a22712302b5d10c40014d5389d4a1ae4412fe1655b3cf4af57b64f799a.id.png)
+![diagram donat](../../../../3-Data-Visualization/11-visualization-proportions/images/donut-wb.png)
 
 Kode ini menggambar diagram dan lingkaran tengah, lalu menambahkan lingkaran tengah tersebut ke dalam diagram. Ubah lebar lingkaran tengah dengan mengubah `0.40` ke nilai lain.
 
-Diagram donat dapat disesuaikan dalam berbagai cara untuk mengubah label. Label khususnya dapat disorot untuk meningkatkan keterbacaan. Pelajari lebih lanjut di [dokumentasi](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_and_donut_labels.html?highlight=donut).
+Diagram donat dapat disesuaikan dengan berbagai cara untuk mengubah label. Label khususnya dapat disorot untuk meningkatkan keterbacaan. Pelajari lebih lanjut di [dokumentasi](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_and_donut_labels.html?highlight=donut).
 
-Sekarang setelah Anda tahu cara mengelompokkan data dan kemudian menampilkannya sebagai lingkaran atau donat, Anda dapat mengeksplorasi jenis diagram lainnya. Cobalah diagram waffle, yang hanya cara berbeda untuk mengeksplorasi kuantitas.
+Sekarang setelah Anda tahu cara mengelompokkan data dan menampilkannya sebagai lingkaran atau donat, Anda dapat mengeksplorasi jenis diagram lainnya. Cobalah diagram waffle, yang merupakan cara berbeda untuk mengeksplorasi kuantitas.
 
 ## Waffle!
 
-Diagram tipe 'waffle' adalah cara berbeda untuk memvisualisasikan kuantitas sebagai array 2D dari kotak-kotak. Cobalah memvisualisasikan berbagai jumlah warna topi jamur dalam dataset ini. Untuk melakukannya, Anda perlu menginstal pustaka pembantu bernama [PyWaffle](https://pypi.org/project/pywaffle/) dan menggunakan Matplotlib:
+Diagram tipe 'waffle' adalah cara berbeda untuk memvisualisasikan kuantitas sebagai array 2D dari kotak-kotak. Cobalah memvisualisasikan jumlah warna topi jamur yang berbeda dalam dataset ini. Untuk melakukannya, Anda perlu menginstal pustaka pembantu bernama [PyWaffle](https://pypi.org/project/pywaffle/) dan menggunakan Matplotlib:
 
 ```python
 pip install pywaffle
@@ -144,7 +144,7 @@ capcolor=mushrooms.groupby(['cap-color']).count()
 capcolor
 ```
 
-Buat diagram waffle dengan membuat label dan kemudian mengelompokkan data Anda:
+Buat diagram waffle dengan membuat label lalu mengelompokkan data Anda:
 
 ```python
 import pandas as pd
@@ -169,16 +169,16 @@ fig = plt.figure(
 
 Menggunakan diagram waffle, Anda dapat dengan jelas melihat proporsi warna topi dalam dataset jamur ini. Menariknya, ada banyak jamur dengan topi hijau!
 
-![diagram waffle](../../../../translated_images/waffle.5455dbae4ccf17d53bb40ff0a657ecef7b8aa967e27a19cc96325bd81598f65e.id.png)
+![diagram waffle](../../../../3-Data-Visualization/11-visualization-proportions/images/waffle.png)
 
 ✅ Pywaffle mendukung ikon dalam diagram yang menggunakan ikon apa pun yang tersedia di [Font Awesome](https://fontawesome.com/). Lakukan beberapa eksperimen untuk membuat diagram waffle yang lebih menarik menggunakan ikon alih-alih kotak.
 
-Dalam pelajaran ini, Anda mempelajari tiga cara untuk memvisualisasikan proporsi. Pertama, Anda perlu mengelompokkan data Anda ke dalam kategori dan kemudian memutuskan cara terbaik untuk menampilkan data tersebut - lingkaran, donat, atau waffle. Semuanya menarik dan memberikan gambaran instan tentang dataset kepada pengguna.
+Dalam pelajaran ini, Anda mempelajari tiga cara untuk memvisualisasikan proporsi. Pertama, Anda perlu mengelompokkan data Anda ke dalam kategori dan kemudian memutuskan cara terbaik untuk menampilkan data - lingkaran, donat, atau waffle. Semuanya menarik dan memberikan gambaran instan tentang dataset kepada pengguna.
 
 ## 🚀 Tantangan
 
 Cobalah membuat ulang diagram menarik ini di [Charticulator](https://charticulator.com).
-## [Kuis setelah pelajaran](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/21)
+## [Kuis setelah pelajaran](https://ff-quizzes.netlify.app/en/ds/quiz/21)
 
 ## Tinjauan & Studi Mandiri
 
@@ -201,4 +201,4 @@ Lakukan penelitian untuk menemukan lebih banyak informasi tentang keputusan yang
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

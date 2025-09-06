@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "73dead89dc2ddda4d6ec0232814a191e",
-  "translation_date": "2025-08-24T22:07:01+00:00",
+  "original_hash": "472d3fab1c5be50f387336e7a686dbe1",
+  "translation_date": "2025-09-05T13:33:55+00:00",
   "source_file": "5-Data-Science-In-Cloud/19-Azure/README.md",
   "language_code": "es"
 }
 -->
-# Ciencia de Datos en la Nube: El enfoque "Azure ML SDK"
+# Ciencia de Datos en la Nube: El camino del "Azure ML SDK"
 
 |![ Sketchnote por [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/19-DataScience-Cloud.png)|
 |:---:|
@@ -15,7 +15,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Tabla de contenidos:
 
-- [Ciencia de Datos en la Nube: El enfoque "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
+- [Ciencia de Datos en la Nube: El camino del "Azure ML SDK"](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Cuestionario previo a la clase](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [1. Introducción](../../../../5-Data-Science-In-Cloud/19-Azure)
     - [1.1 ¿Qué es Azure ML SDK?](../../../../5-Data-Science-In-Cloud/19-Azure)
@@ -37,13 +37,13 @@ Tabla de contenidos:
   - [Revisión y autoestudio](../../../../5-Data-Science-In-Cloud/19-Azure)
   - [Tarea](../../../../5-Data-Science-In-Cloud/19-Azure)
 
-## [Cuestionario previo a la clase](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/36)
+## [Cuestionario previo a la clase](https://ff-quizzes.netlify.app/en/ds/quiz/36)
 
 ## 1. Introducción
 
 ### 1.1 ¿Qué es Azure ML SDK?
 
-Los científicos de datos y desarrolladores de IA utilizan el SDK de Azure Machine Learning para construir y ejecutar flujos de trabajo de aprendizaje automático con el servicio Azure Machine Learning. Puedes interactuar con el servicio en cualquier entorno de Python, incluyendo Jupyter Notebooks, Visual Studio Code o tu IDE de Python favorito.
+Los científicos de datos y desarrolladores de IA utilizan el SDK de Azure Machine Learning para construir y ejecutar flujos de trabajo de aprendizaje automático con el servicio de Azure Machine Learning. Puedes interactuar con el servicio en cualquier entorno de Python, incluidos Jupyter Notebooks, Visual Studio Code o tu IDE de Python favorito.
 
 Áreas clave del SDK incluyen:
 
@@ -55,9 +55,9 @@ Los científicos de datos y desarrolladores de IA utilizan el SDK de Azure Machi
 
 [Aprende más sobre el SDK de Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109)
 
-En la [lección anterior](../18-Low-Code/README.md), vimos cómo entrenar, desplegar y consumir un modelo de manera Low code/No code. Usamos el conjunto de datos de insuficiencia cardíaca para generar un modelo de predicción de insuficiencia cardíaca. En esta lección, vamos a hacer exactamente lo mismo pero utilizando el SDK de Azure Machine Learning.
+En la [lección anterior](../18-Low-Code/README.md), vimos cómo entrenar, desplegar y consumir un modelo de manera Low code/No code. Utilizamos el conjunto de datos de insuficiencia cardíaca para generar un modelo de predicción de insuficiencia cardíaca. En esta lección, vamos a hacer exactamente lo mismo pero utilizando el SDK de Azure Machine Learning.
 
-![esquema-del-proyecto](../../../../translated_images/project-schema.420e56d495624541eaecf2b737f138c86fb7d8162bb1c0bf8783c350872ffc4d.es.png)
+![esquema-del-proyecto](../../../../5-Data-Science-In-Cloud/19-Azure/images/project-schema.PNG)
 
 ### 1.2 Introducción al proyecto de predicción de insuficiencia cardíaca y al conjunto de datos
 
@@ -74,12 +74,12 @@ Si no, sigue las instrucciones en la sección **2.1 Crear un espacio de trabajo 
 
 En el [espacio de trabajo de Azure ML](https://ml.azure.com/) que creamos anteriormente, ve al menú de cómputo y verás los diferentes recursos de cómputo disponibles.
 
-![instancia-de-cómputo-1](../../../../translated_images/compute-instance-1.dba347cb199ca4996b3e3d649295ed95626ba481479d3986557b9b98e76d8816.es.png)
+![instancia-de-cómputo-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/compute-instance-1.PNG)
 
 Vamos a crear una instancia de cómputo para provisionar un notebook de Jupyter. 
 1. Haz clic en el botón + Nuevo. 
 2. Asigna un nombre a tu instancia de cómputo.
-3. Elige tus opciones: CPU o GPU, tamaño de VM y número de núcleos.
+3. Elige tus opciones: CPU o GPU, tamaño de la VM y número de núcleos.
 4. Haz clic en el botón Crear.
 
 ¡Felicidades, acabas de crear una instancia de cómputo! Usaremos esta instancia de cómputo para crear un Notebook en la sección [Creación de Notebooks](../../../../5-Data-Science-In-Cloud/19-Azure).
@@ -89,7 +89,7 @@ Consulta la [lección anterior](../18-Low-Code/README.md) en la sección **2.3 C
 
 ### 2.4 Crear Notebooks
 
-> **_NOTA:_** Para el siguiente paso puedes crear un nuevo notebook desde cero, o puedes subir el [notebook que creamos](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) en tu Azure ML Studio. Para subirlo, simplemente haz clic en el menú "Notebook" y sube el archivo.
+> **_NOTA:_** Para el siguiente paso puedes crear un nuevo notebook desde cero, o puedes subir el [notebook que creamos](../../../../5-Data-Science-In-Cloud/19-Azure/notebook.ipynb) en tu Azure ML Studio. Para subirlo, simplemente haz clic en el menú "Notebook" y sube el notebook.
 
 Los notebooks son una parte realmente importante del proceso de ciencia de datos. Pueden ser utilizados para realizar análisis exploratorio de datos (EDA), llamar a un clúster de cómputo para entrenar un modelo, o llamar a un clúster de inferencia para desplegar un endpoint. 
 
@@ -97,10 +97,10 @@ Para crear un Notebook, necesitamos un nodo de cómputo que esté sirviendo la i
 
 1. En la sección de Aplicaciones, haz clic en la opción Jupyter. 
 2. Marca la casilla "Sí, entiendo" y haz clic en el botón Continuar.
-![notebook-1](../../../../translated_images/notebook-1.12998af7b02c83f536c11b3aeba561be16e0f05e94146600728ec64270ce1105.es.png)
+![notebook-1](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-1.PNG)
 3. Esto debería abrir una nueva pestaña del navegador con tu instancia de notebook de Jupyter como se muestra. Haz clic en el botón "Nuevo" para crear un notebook.
 
-![notebook-2](../../../../translated_images/notebook-2.9a657c037e34f1cf26c0212f5ee9e2da8545b3e107c7682c55114e494167a8aa.es.png)
+![notebook-2](../../../../5-Data-Science-In-Cloud/19-Azure/images/notebook-2.PNG)
 
 Ahora que tenemos un Notebook, podemos comenzar a entrenar el modelo con Azure ML SDK.
 
@@ -124,7 +124,7 @@ from azureml.core import Experiment
 experiment_name = 'aml-experiment'
 experiment = Experiment(ws, experiment_name)
 ```
-Para obtener o crear un experimento desde un espacio de trabajo, solicitas el experimento utilizando el nombre del experimento. El nombre del experimento debe tener entre 3 y 36 caracteres, comenzar con una letra o un número, y solo puede contener letras, números, guiones bajos y guiones. Si el experimento no se encuentra en el espacio de trabajo, se crea uno nuevo.
+Para obtener o crear un experimento desde un espacio de trabajo, solicitas el experimento utilizando el nombre del experimento. El nombre del experimento debe tener entre 3 y 36 caracteres, comenzar con una letra o un número, y solo puede contener letras, números, guiones bajos y guiones. Si el experimento no se encuentra en el espacio de trabajo, se crea un nuevo experimento.
 
 Ahora necesitas crear un clúster de cómputo para el entrenamiento utilizando el siguiente código. Ten en cuenta que este paso puede tardar unos minutos. 
 
@@ -158,7 +158,7 @@ Para configurar AutoML, utiliza la clase [AutoMLConfig](https://docs.microsoft.c
 
 Como se describe en la documentación, hay muchos parámetros con los que puedes jugar. Para este proyecto, utilizaremos los siguientes parámetros:
 
-- `experiment_timeout_minutes`: El tiempo máximo (en minutos) que se permite que el experimento se ejecute antes de que se detenga automáticamente y los resultados estén disponibles automáticamente.
+- `experiment_timeout_minutes`: El tiempo máximo (en minutos) que se permite que el experimento se ejecute antes de que se detenga automáticamente y los resultados se hagan disponibles automáticamente.
 - `max_concurrent_iterations`: El número máximo de iteraciones de entrenamiento concurrentes permitidas para el experimento.
 - `primary_metric`: La métrica principal utilizada para determinar el estado del experimento.
 - `compute_target`: El objetivo de cómputo de Azure Machine Learning para ejecutar el experimento de aprendizaje automático automatizado.
@@ -230,7 +230,7 @@ model = best_run.register_model(model_name = model_name,
 ```
 ### 3.2 Despliegue del modelo
 
-Una vez que el mejor modelo está guardado, podemos desplegarlo con la clase [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig representa la configuración de un entorno personalizado utilizado para el despliegue. La clase [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) representa un modelo de aprendizaje automático desplegado como un endpoint de servicio web en Azure Container Instances. Un servicio desplegado se crea a partir de un modelo, un script y archivos asociados. El servicio web resultante es un endpoint HTTP balanceado con una API REST. Puedes enviar datos a esta API y recibir la predicción devuelta por el modelo.
+Una vez que el mejor modelo está guardado, podemos desplegarlo con la clase [InferenceConfig](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py?ocid=AID3041109). InferenceConfig representa la configuración para un entorno personalizado utilizado para el despliegue. La clase [AciWebservice](https://docs.microsoft.com/python/api/azureml-core/azureml.core.webservice.aciwebservice?view=azure-ml-py) representa un modelo de aprendizaje automático desplegado como un endpoint de servicio web en Azure Container Instances. Un servicio web desplegado se crea a partir de un modelo, script y archivos asociados. El servicio web resultante es un endpoint HTTP balanceado con una API REST. Puedes enviar datos a esta API y recibir la predicción devuelta por el modelo.
 
 El modelo se despliega utilizando el método [deploy](https://docs.microsoft.com/python/api/azureml-core/azureml.core.model(class)?view=azure-ml-py#deploy-workspace--name--models--inference-config-none--deployment-config-none--deployment-target-none--overwrite-false--show-output-false-?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109).
 
@@ -288,23 +288,25 @@ Esto debería generar `'{"result": [false]}'`. Esto significa que la entrada del
 
 ¡Felicidades! Acabas de consumir el modelo desplegado y entrenado en Azure ML con el Azure ML SDK.
 
-> **_NOTE:_** Una vez que termines el proyecto, no olvides eliminar todos los recursos.
+> **_NOTA:_** Una vez que termines el proyecto, no olvides eliminar todos los recursos.
 
 ## 🚀 Desafío
 
-Hay muchas otras cosas que puedes hacer a través del SDK, pero desafortunadamente no podemos verlas todas en esta lección. Pero buenas noticias, aprender a explorar la documentación del SDK puede llevarte muy lejos por tu cuenta. Echa un vistazo a la documentación del Azure ML SDK y encuentra la clase `Pipeline` que te permite crear pipelines. Un Pipeline es una colección de pasos que pueden ejecutarse como un flujo de trabajo.
+Hay muchas otras cosas que puedes hacer a través del SDK; desafortunadamente, no podemos verlas todas en esta lección. Pero buenas noticias: aprender a explorar la documentación del SDK puede llevarte muy lejos por tu cuenta. Echa un vistazo a la documentación del Azure ML SDK y encuentra la clase `Pipeline`, que te permite crear pipelines. Un Pipeline es una colección de pasos que pueden ejecutarse como un flujo de trabajo.
 
-**PISTA:** Ve a la [documentación del SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) y escribe palabras clave en la barra de búsqueda como "Pipeline". Deberías encontrar la clase `azureml.pipeline.core.Pipeline` en los resultados de búsqueda.
+**PISTA:** Ve a la [documentación del SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) y escribe palabras clave como "Pipeline" en la barra de búsqueda. Deberías encontrar la clase `azureml.pipeline.core.Pipeline` en los resultados de búsqueda.
 
-## [Cuestionario posterior a la lección](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/37)
+## [Cuestionario posterior a la lección](https://ff-quizzes.netlify.app/en/ds/quiz/37)
 
-## Revisión y autoestudio
+## Revisión y Autoestudio
 
-En esta lección, aprendiste cómo entrenar, desplegar y consumir un modelo para predecir el riesgo de insuficiencia cardíaca con el Azure ML SDK en la nube. Consulta esta [documentación](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) para obtener más información sobre el Azure ML SDK. Intenta crear tu propio modelo con el Azure ML SDK.
+En esta lección, aprendiste a entrenar, desplegar y consumir un modelo para predecir el riesgo de insuficiencia cardíaca con el Azure ML SDK en la nube. Consulta esta [documentación](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py?WT.mc_id=academic-77958-bethanycheum&ocid=AID3041109) para obtener más información sobre el Azure ML SDK. Intenta crear tu propio modelo con el Azure ML SDK.
 
 ## Tarea
 
 [Proyecto de Ciencia de Datos usando Azure ML SDK](assignment.md)
 
+---
+
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por garantizar la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.

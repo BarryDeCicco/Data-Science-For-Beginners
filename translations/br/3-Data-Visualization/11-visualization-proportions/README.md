@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "af6a12015c6e250e500b570a9fa42593",
-  "translation_date": "2025-08-27T18:44:22+00:00",
+  "original_hash": "42119bcc97bee88254e381156d770f3c",
+  "translation_date": "2025-09-06T08:32:24+00:00",
   "source_file": "3-Data-Visualization/11-visualization-proportions/README.md",
   "language_code": "br"
 }
@@ -21,7 +21,7 @@ Nesta lição, você usará um conjunto de dados com foco na natureza para visua
 
 > 💡 Um projeto muito interessante chamado [Charticulator](https://charticulator.com) da Microsoft Research oferece uma interface gratuita de arrastar e soltar para visualizações de dados. Em um de seus tutoriais, eles também utilizam este conjunto de dados de cogumelos! Assim, você pode explorar os dados e aprender a biblioteca ao mesmo tempo: [Tutorial do Charticulator](https://charticulator.com/tutorials/tutorial4.html).
 
-## [Quiz pré-aula](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/20)
+## [Quiz pré-aula](https://ff-quizzes.netlify.app/en/ds/quiz/20)
 
 ## Conheça seus cogumelos 🍄
 
@@ -37,12 +37,12 @@ Uma tabela é exibida com ótimos dados para análise:
 
 | classe    | formato do chapéu | superfície do chapéu | cor do chapéu | machucados | odor    | fixação das lamelas | espaçamento das lamelas | tamanho das lamelas | cor das lamelas | formato do caule | raiz do caule | superfície acima do anel | superfície abaixo do anel | cor acima do anel | cor abaixo do anel | tipo de véu | cor do véu | número de anéis | tipo de anel | cor do esporo | população | habitat |
 | --------- | ----------------- | -------------------- | ------------- | ---------- | ------- | ------------------- | ----------------------- | ------------------- | --------------- | --------------- | ------------ | ------------------------ | ------------------------ | ----------------- | ----------------- | ----------- | ---------- | -------------- | ------------ | ------------- | ---------- | ------- |
-| Venenoso  | Convexo           | Liso                | Marrom        | Machucado  | Pungente | Livre              | Fechado                | Estreito           | Preto           | Alargado         | Igual         | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Preto         | Espalhado  | Urbano  |
-| Comestível| Convexo           | Liso                | Amarelo       | Machucado  | Amêndoa | Livre              | Fechado                | Largo             | Preto           | Alargado         | Club          | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Marrom        | Numeroso   | Grama   |
-| Comestível| Sino             | Liso                | Branco        | Machucado  | Anis    | Livre              | Fechado                | Largo             | Marrom          | Alargado         | Club          | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Marrom        | Numeroso   | Campos  |
-| Venenoso  | Convexo           | Escamoso            | Branco        | Machucado  | Pungente | Livre              | Fechado                | Estreito           | Marrom          | Alargado         | Igual         | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Preto         | Espalhado  | Urbano  |
+| Venenoso  | Convexo           | Liso                | Marrom        | Machucados | Pungente | Livre              | Fechado                | Estreito           | Preto           | Alargado         | Igual         | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Preto         | Espalhado  | Urbano  |
+| Comestível| Convexo           | Liso                | Amarelo       | Machucados | Amêndoa  | Livre              | Fechado                | Largo              | Preto           | Alargado         | Club          | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Marrom        | Numeroso   | Grama   |
+| Comestível| Sino             | Liso                | Branco        | Machucados | Anis     | Livre              | Fechado                | Largo              | Marrom          | Alargado         | Club          | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Marrom        | Numeroso   | Campos  |
+| Venenoso  | Convexo           | Escamoso            | Branco        | Machucados | Pungente | Livre              | Fechado                | Estreito           | Marrom          | Alargado         | Igual         | Liso                     | Liso                     | Branco            | Branco            | Parcial     | Branco      | Um              | Pendente     | Preto         | Espalhado  | Urbano  |
 
-Logo de cara, você percebe que todos os dados são textuais. Será necessário converter esses dados para poder utilizá-los em um gráfico. Na verdade, a maioria dos dados está representada como um objeto:
+De imediato, você percebe que todos os dados são textuais. Será necessário converter esses dados para utilizá-los em um gráfico. Na verdade, a maior parte dos dados está representada como um objeto:
 
 ```python
 print(mushrooms.select_dtypes(["object"]).columns)
@@ -59,7 +59,7 @@ Index(['class', 'cap-shape', 'cap-surface', 'cap-color', 'bruises', 'odor',
        'ring-type', 'spore-print-color', 'population', 'habitat'],
       dtype='object')
 ```
-Pegue esses dados e converta a coluna 'classe' em uma categoria:
+Pegue esses dados e converta a coluna 'classe' para uma categoria:
 
 ```python
 cols = mushrooms.select_dtypes(["object"]).columns
@@ -75,7 +75,7 @@ Agora, se você imprimir os dados dos cogumelos, verá que eles foram agrupados 
 
 |           | formato do chapéu | superfície do chapéu | cor do chapéu | machucados | odor | fixação das lamelas | espaçamento das lamelas | tamanho das lamelas | cor das lamelas | formato do caule | ... | superfície abaixo do anel | cor acima do anel | cor abaixo do anel | tipo de véu | cor do véu | número de anéis | tipo de anel | cor do esporo | população | habitat |
 | --------- | ----------------- | -------------------- | ------------- | ---------- | ---- | ------------------- | ----------------------- | ------------------- | --------------- | --------------- | --- | ------------------------ | ----------------- | ----------------- | ----------- | ---------- | -------------- | ------------ | ------------- | ---------- | ------- |
-| classe    |                   |                      |               |            |      |                     |                        |                     |                 |                 |     |                          |                   |                   |             |            |                |              |               |            |         |
+| classe    |                   |                     |               |            |      |                     |                       |                     |                 |                 |     |                          |                   |                   |             |            |                |              |               |            |         |
 | Comestível| 4208              | 4208                | 4208          | 4208       | 4208 | 4208                | 4208                   | 4208                | 4208            | 4208            | ... | 4208                     | 4208             | 4208             | 4208        | 4208       | 4208            | 4208        | 4208          | 4208       | 4208    |
 | Venenoso  | 3916              | 3916                | 3916          | 3916       | 3916 | 3916                | 3916                   | 3916                | 3916            | 3916            | ... | 3916                     | 3916             | 3916             | 3916        | 3916       | 3916            | 3916        | 3916          | 3916       | 3916    |
 
@@ -89,9 +89,9 @@ plt.pie(edibleclass['population'],labels=labels,autopct='%.1f %%')
 plt.title('Edible?')
 plt.show()
 ```
-Voilá, um gráfico de pizza mostrando as proporções desses dados de acordo com essas duas classes de cogumelos. É muito importante obter a ordem dos rótulos correta, especialmente aqui, então certifique-se de verificar a ordem com a qual o array de rótulos foi construído!
+Voilá, um gráfico de pizza mostrando as proporções desses dados de acordo com essas duas classes de cogumelos. É muito importante acertar a ordem dos rótulos, especialmente aqui, então certifique-se de verificar a ordem com a qual o array de rótulos foi construído!
 
-![gráfico de pizza](../../../../translated_images/pie1-wb.e201f2fcc335413143ce37650fb7f5f0bb21358e7823a327ed8644dfb84be9db.br.png)
+![gráfico de pizza](../../../../3-Data-Visualization/11-visualization-proportions/images/pie1-wb.png)
 
 ## Roscas!
 
@@ -121,7 +121,7 @@ plt.title('Mushroom Habitats')
 plt.show()
 ```
 
-![gráfico de rosca](../../../../translated_images/donut-wb.be3c12a22712302b5d10c40014d5389d4a1ae4412fe1655b3cf4af57b64f799a.br.png)
+![gráfico de rosca](../../../../3-Data-Visualization/11-visualization-proportions/images/donut-wb.png)
 
 Este código desenha um gráfico e um círculo central, depois adiciona esse círculo ao gráfico. Edite a largura do círculo central alterando `0.40` para outro valor.
 
@@ -169,16 +169,17 @@ fig = plt.figure(
 
 Usando um gráfico de waffle, você pode ver claramente as proporções das cores dos chapéus neste conjunto de dados de cogumelos. Curiosamente, há muitos cogumelos com chapéus verdes!
 
-![gráfico de waffle](../../../../translated_images/waffle.5455dbae4ccf17d53bb40ff0a657ecef7b8aa967e27a19cc96325bd81598f65e.br.png)
+![gráfico de waffle](../../../../3-Data-Visualization/11-visualization-proportions/images/waffle.png)
 
 ✅ O PyWaffle suporta ícones dentro dos gráficos que utilizam qualquer ícone disponível no [Font Awesome](https://fontawesome.com/). Faça alguns experimentos para criar um gráfico de waffle ainda mais interessante usando ícones em vez de quadrados.
 
-Nesta lição, você aprendeu três maneiras de visualizar proporções. Primeiro, você precisa agrupar seus dados em categorias e depois decidir qual é a melhor maneira de exibir os dados - pizza, rosca ou waffle. Todos são deliciosos e proporcionam ao usuário uma visão instantânea de um conjunto de dados.
+Nesta lição, você aprendeu três maneiras de visualizar proporções. Primeiro, você precisa agrupar seus dados em categorias e depois decidir qual é a melhor maneira de exibir os dados - pizza, rosca ou waffle. Todas são deliciosas e proporcionam ao usuário uma visão instantânea de um conjunto de dados.
 
 ## 🚀 Desafio
 
 Tente recriar esses gráficos saborosos no [Charticulator](https://charticulator.com).
-## [Quiz pós-aula](https://purple-hill-04aebfb03.1.azurestaticapps.net/quiz/21)
+
+## [Quiz pós-aula](https://ff-quizzes.netlify.app/en/ds/quiz/21)
 
 ## Revisão e Autoestudo
 
